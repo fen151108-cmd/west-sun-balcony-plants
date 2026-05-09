@@ -54,6 +54,9 @@
 
 /* v16 hero background + interactive quiz polish */
 .hero{position:relative;min-height:760px;padding:120px 0 130px;background:linear-gradient(90deg,rgba(250,246,237,.96) 0%,rgba(250,246,237,.86) 38%,rgba(250,246,237,.22) 72%,rgba(250,246,237,.08) 100%),url('assets/plant-hero-painted-banner-v13.jpg') center right/cover no-repeat;overflow:hidden}.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:180px;background:linear-gradient(180deg,rgba(250,246,237,0),var(--cream));pointer-events:none}.hero-grid{position:relative;z-index:1;display:block;min-height:auto}.hero-copy{max-width:620px;background:rgba(255,253,247,.70);border:1px solid rgba(221,210,192,.68);border-radius:42px;padding:42px 44px;backdrop-filter:blur(8px);box-shadow:0 24px 80px rgba(48,52,42,.10)}.hero-copy .lead{color:#414b40}.hero-bg-note{position:absolute;z-index:2;right:9vw;bottom:90px;max-width:360px;background:rgba(32,63,49,.86);color:#fffdf7;border-radius:30px;padding:22px 28px;font-size:20px;line-height:1.45;backdrop-filter:blur(10px);box-shadow:0 20px 60px rgba(20,35,27,.18)}.answer-pills span{cursor:pointer;transition:.18s ease}.answer-pills span:hover,.answer-pills span.is-selected{background:#315b45;color:#fffdf7;border-color:#315b45}.live-result{grid-column:1/-1;margin-top:16px;background:#fffdf7;color:var(--green);border-radius:28px;padding:24px 26px;border:1px solid rgba(255,253,247,.45)}.live-result .result-label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8a7a5f;font-weight:800;margin-bottom:8px}.live-result strong{font-size:22px;display:block;margin-bottom:8px}.live-result p{margin:0;color:#5d6258;line-height:1.7}@media(max-width:880px){.hero{min-height:720px;padding:84px 0 96px;background:linear-gradient(180deg,rgba(250,246,237,.62) 0%,rgba(250,246,237,.36) 42%,rgba(250,246,237,.94) 78%,var(--cream) 100%),url('assets/plant-hero-painted-banner-v13.jpg') center top/cover no-repeat}.hero-copy{margin-top:300px;padding:28px 26px;border-radius:32px;background:rgba(255,253,247,.84)}.hero-bg-note{position:relative;right:auto;bottom:auto;margin:18px 22px 0;font-size:16px;border-radius:24px}.hero .h1{font-size:45px}.hero .lead{font-size:17px}.btn-row{flex-wrap:wrap}.btn{width:100%}}
+
+/* v17 position illustration + flip cards */
+.position-illustration-card{position:relative;border-radius:34px;overflow:hidden;border:1px solid var(--line);background:#e7dfd0;box-shadow:var(--shadow);min-height:520px}.position-illustration-card img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}.position-illustration-note{position:absolute;left:28px;bottom:28px;max-width:360px;background:rgba(32,63,49,.84);color:#fffdf7;border-radius:26px;padding:18px 22px;line-height:1.55;backdrop-filter:blur(8px)}.plant-thumb img[src*="monstera"]{object-position:center center}.plant-thumb img[src*="pittosporum"],.plant-thumb img[src*="baishui"]{object-position:center center}.flip-grid{perspective:1000px}.flip-card{min-height:150px;cursor:pointer}.flip-inner{position:relative;min-height:150px;transform-style:preserve-3d;transition:transform .55s ease}.flip-card:hover .flip-inner,.flip-card.is-flipped .flip-inner{transform:rotateY(180deg)}.flip-front,.flip-back{position:absolute;inset:0;border-radius:22px;background:#fffdf7;color:var(--green);backface-visibility:hidden;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:20px;font-weight:850}.flip-front:after{content:"點一下翻牌";position:absolute;bottom:16px;font-size:12px;color:#9a8a70;letter-spacing:.08em}.flip-back{transform:rotateY(180deg);display:block;text-align:left;font-size:16px}.flip-back b{display:block;font-size:20px;margin-bottom:8px}.flip-back small{color:#665f52;line-height:1.55}@media(max-width:880px){.position-intro{grid-template-columns:1fr}.position-illustration-card,.position-illustration-card img{min-height:360px}.position-illustration-note{left:18px;right:18px;bottom:18px}.flip-card,.flip-inner{min-height:132px}}
 </style>
 </head>
 <body>
@@ -131,10 +134,9 @@
     <div class="wrap ref-position">
       <div class="position-intro">
         <div class="position-intro-copy" style="position:relative"><div class="eyebrow">Position × Plant</div><h2 class="h2">每個家的位置，<br>都有適合它的植物。</h2><p class="lead">光線、通風、方位、動線與生活習慣不同，適合留下來的植物也不同。這一段要像生活選物頁：先看見家的畫面，再理解植物為什麼放在那裡。</p></div>
-        <div class="photo-mosaic">
-          <div class="photo-tile big"><img src="assets/plant-position-mosaic-new-v13.jpg" alt="不同位置的居家植物拼貼情境"></div>
-          <div class="photo-tile"><img src="assets/cover.jpg" alt="居家植物情境"></div>
-          <div class="photo-tile"><img src="assets/baishui.jpg" alt="陽台植物情境"></div>
+        <div class="position-illustration-card">
+          <img src="assets/plant-position-human-illustration-v17.jpg" alt="人在家中照顧植物的舒適手繪情境">
+          <div class="position-illustration-note">不是每個角落都要放滿，<br>而是讓植物剛好接住人的生活。</div>
         </div>
       </div>
       <div class="mini-place-cards">
@@ -168,34 +170,34 @@
       <div class="section-head"><div><div class="eyebrow">20 Plant Characters</div><h2 class="h2">20 種家的綠意性格，<br>找到適合你生活的那一株。</h2></div><p>不是每個人都是綠手指。這一段要幫人快速判斷：我養不養得活、我家光線夠不夠、我會不會忘記澆水、它適合放哪裡，以及它會讓家多出什麼樣的狀態。</p></div><p class="plant-section-note"><strong>先讓每一株植物像一張生活選物卡。</strong> 圖片負責第一眼的美感，文字負責判斷：適合誰、怎麼照顧、放在哪裡，和它會把家帶往什麼狀態。</p>
       <div class="plant-groups-v3">
         <div class="group-block"><div class="group-title"><h3>客廳主景型｜讓家有重心</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/monstera.jpg" alt="龜背芋 圖片"></div><div class="plant-mini-content"><h4>龜背芋</h4><div class="fit">適合想讓客廳有存在感的人</div><p>明亮散射光｜水分中等｜需留生長空間</p><small>家的意象：大葉撐住空間，像家裡有一個會呼吸的主角。</small><div class="meaning"><b>小風水：</b>開展人緣、帶動人氣流動，適合讓客廳氣場打開。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/fiddle.jpg" alt="琴葉榕 圖片"></div><div class="plant-mini-content"><h4>琴葉榕</h4><div class="fit">適合有明亮窗邊、願意觀察葉況的人</div><p>明亮光｜怕亂搬｜需穩定照顧</p><small>家的意象：高挑、有氣質，讓客廳像生活雜誌但不冷。</small><div class="meaning"><b>小風水：</b>向上生長、提升氣勢，適合做空間主景與事業成長感。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/radermachera.jpg" alt="小豆樹 圖片"></div><div class="plant-mini-content"><h4>小豆樹</h4><div class="fit">適合喜歡柔軟樹形與自然感的人</div><p>明亮散射光｜水分中等｜需通風</p><small>家的意象：讓角落有樹的感覺，溫柔但有骨架。</small><div class="meaning"><b>小風水：</b>柔和生長、帶來貴人與陪伴感，適合安定小角落。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/moneytree.jpg" alt="發財樹 圖片"></div><div class="plant-mini-content"><h4>發財樹</h4><div class="fit">適合想要穩定、好照顧主景的人</div><p>明亮至半陰｜少水｜新手友善</p><small>家的意象：穩住客廳，也有慢慢累積的祝福感。</small><div class="meaning"><b>小風水：</b>招財納氣、穩穩累積，適合玄關或客廳迎好運。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/monstera.jpg" alt="龜背芋 圖片"></div><div class="plant-mini-content"><h4>龜背芋</h4><div class="fit">適合想讓客廳有存在感的人</div><p>明亮散射光｜水分中等｜需留生長空間</p><small>家的意象：大葉撐住空間，像家裡有一個會呼吸的主角。</small><div class="meaning"><b>小風水：</b>開展人緣、帶動人氣流動，適合讓客廳氣場打開。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/fiddle.jpg" alt="琴葉榕 圖片"></div><div class="plant-mini-content"><h4>琴葉榕</h4><div class="fit">適合有明亮窗邊、願意觀察葉況的人</div><p>明亮光｜怕亂搬｜需穩定照顧</p><small>家的意象：高挑、有氣質，讓客廳像生活雜誌但不冷。</small><div class="meaning"><b>小風水：</b>向上生長、提升氣勢，適合做空間主景與事業成長感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/radermachera.jpg" alt="小豆樹 圖片"></div><div class="plant-mini-content"><h4>小豆樹</h4><div class="fit">適合喜歡柔軟樹形與自然感的人</div><p>明亮散射光｜水分中等｜需通風</p><small>家的意象：讓角落有樹的感覺，溫柔但有骨架。</small><div class="meaning"><b>小風水：</b>柔和生長、帶來貴人與陪伴感，適合安定小角落。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/moneytree.jpg" alt="發財樹 圖片"></div><div class="plant-mini-content"><h4>發財樹</h4><div class="fit">適合想要穩定、好照顧主景的人</div><p>明亮至半陰｜少水｜新手友善</p><small>家的意象：穩住客廳，也有慢慢累積的祝福感。</small><div class="meaning"><b>小風水：</b>招財納氣、穩穩累積，適合玄關或客廳迎好運。</div></div></article>
         </div></div>
         <div class="group-block"><div class="group-title"><h3>玄關／穩定祝福型｜讓回家第一眼更穩</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/zz.jpg" alt="金錢樹 圖片"></div><div class="plant-mini-content"><h4>金錢樹</h4><div class="fit">適合忙碌、常忘記澆水的人</div><p>耐低光｜少水｜出國耐受高</p><small>家的意象：圓厚葉片像把入口穩住，不是招金感，是累積感。</small><div class="meaning"><b>小風水：</b>聚財、守財、耐久穩定，適合入口與財位意象。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/polyscias.jpg" alt="福祿桐 圖片"></div><div class="plant-mini-content"><h4>福祿桐</h4><div class="fit">適合想讓玄關更圓潤、有福氣的人</div><p>明亮散射光｜水分中等｜怕積水</p><small>家的意象：讓進門第一眼更圓滿、更有人味。</small><div class="meaning"><b>小風水：</b>福氣圓滿、家庭和樂，適合回家第一眼的位置。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/snake.jpg" alt="虎尾蘭 圖片"></div><div class="plant-mini-content"><h4>虎尾蘭</h4><div class="fit">適合新手、低維護、想要俐落線條的人</div><p>耐陰耐旱｜少水｜出國友善</p><small>家的意象：乾淨、挺直，適合需要秩序感的入口。</small><div class="meaning"><b>小風水：</b>守護、擋煞、建立界線，適合需要乾淨秩序的空間。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/peperomia.jpg" alt="圓葉椒草 圖片"></div><div class="plant-mini-content"><h4>圓葉椒草</h4><div class="fit">適合小玄關、小櫃面與租屋族</div><p>明亮散射光｜少量澆水｜小空間友善</p><small>家的意象：小小一盆，也能讓入口有柔和表情。</small><div class="meaning"><b>小風水：</b>圓融、和氣、小空間聚氣，適合櫃面與玄關小角落。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/zz.jpg" alt="金錢樹 圖片"></div><div class="plant-mini-content"><h4>金錢樹</h4><div class="fit">適合忙碌、常忘記澆水的人</div><p>耐低光｜少水｜出國耐受高</p><small>家的意象：圓厚葉片像把入口穩住，不是招金感，是累積感。</small><div class="meaning"><b>小風水：</b>聚財、守財、耐久穩定，適合入口與財位意象。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/polyscias.jpg" alt="福祿桐 圖片"></div><div class="plant-mini-content"><h4>福祿桐</h4><div class="fit">適合想讓玄關更圓潤、有福氣的人</div><p>明亮散射光｜水分中等｜怕積水</p><small>家的意象：讓進門第一眼更圓滿、更有人味。</small><div class="meaning"><b>小風水：</b>福氣圓滿、家庭和樂，適合回家第一眼的位置。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/snake.jpg" alt="虎尾蘭 圖片"></div><div class="plant-mini-content"><h4>虎尾蘭</h4><div class="fit">適合新手、低維護、想要俐落線條的人</div><p>耐陰耐旱｜少水｜出國友善</p><small>家的意象：乾淨、挺直，適合需要秩序感的入口。</small><div class="meaning"><b>小風水：</b>守護、擋煞、建立界線，適合需要乾淨秩序的空間。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/peperomia.jpg" alt="圓葉椒草 圖片"></div><div class="plant-mini-content"><h4>圓葉椒草</h4><div class="fit">適合小玄關、小櫃面與租屋族</div><p>明亮散射光｜少量澆水｜小空間友善</p><small>家的意象：小小一盆，也能讓入口有柔和表情。</small><div class="meaning"><b>小風水：</b>圓融、和氣、小空間聚氣，適合櫃面與玄關小角落。</div></div></article>
         </div></div>
         <div class="group-block"><div class="group-title"><h3>桌面／小角落陪伴型｜工作很煩時的安靜</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/aralia.jpg" alt="孔雀木 圖片"></div><div class="plant-mini-content"><h4>孔雀木</h4><div class="fit">適合書桌、工作角落，喜歡細緻葉形的人</div><p>明亮散射光｜水分中等｜避免太乾</p><small>家的意象：像一個安靜陪伴，不吵也不搶畫面。</small><div class="meaning"><b>小風水：</b>整理思緒、提升專注，也有貴人扶持的細緻感。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/aglaonema.jpg" alt="粗肋草 圖片"></div><div class="plant-mini-content"><h4>粗肋草</h4><div class="fit">適合室內明亮角落與新手</div><p>散射光｜水分中等｜避免曝曬</p><small>家的意象：用斑紋和顏色讓小角落有層次。</small><div class="meaning"><b>小風水：</b>活絡陰角、柔化低氣壓，讓室內多一點好氣色。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/succulent.jpg" alt="多肉小盆 圖片"></div><div class="plant-mini-content"><h4>多肉小盆</h4><div class="fit">適合窗邊、小桌面、照顧頻率低的人</div><p>高光｜少水｜怕悶濕</p><small>家的意象：小小的生命感，適合慢慢觀察。</small><div class="meaning"><b>小風水：</b>穩定累積、守住小確幸，適合桌面與工作旁的小祝福。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/peace.jpg" alt="白鶴芋 圖片"></div><div class="plant-mini-content"><h4>白鶴芋</h4><div class="fit">適合想要一點花感、空間柔和的人</div><p>半陰至散射光｜喜濕｜缺水會垂</p><small>家的意象：白色花苞讓角落安靜、乾淨、有呼吸。</small><div class="meaning"><b>小風水：</b>淨化、平衡、安定情緒，讓空間更清爽乾淨。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/aralia.jpg" alt="孔雀木 圖片"></div><div class="plant-mini-content"><h4>孔雀木</h4><div class="fit">適合書桌、工作角落，喜歡細緻葉形的人</div><p>明亮散射光｜水分中等｜避免太乾</p><small>家的意象：像一個安靜陪伴，不吵也不搶畫面。</small><div class="meaning"><b>小風水：</b>整理思緒、提升專注，也有貴人扶持的細緻感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/aglaonema.jpg" alt="粗肋草 圖片"></div><div class="plant-mini-content"><h4>粗肋草</h4><div class="fit">適合室內明亮角落與新手</div><p>散射光｜水分中等｜避免曝曬</p><small>家的意象：用斑紋和顏色讓小角落有層次。</small><div class="meaning"><b>小風水：</b>活絡陰角、柔化低氣壓，讓室內多一點好氣色。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/succulent.jpg" alt="多肉小盆 圖片"></div><div class="plant-mini-content"><h4>多肉小盆</h4><div class="fit">適合窗邊、小桌面、照顧頻率低的人</div><p>高光｜少水｜怕悶濕</p><small>家的意象：小小的生命感，適合慢慢觀察。</small><div class="meaning"><b>小風水：</b>穩定累積、守住小確幸，適合桌面與工作旁的小祝福。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/peace.jpg" alt="白鶴芋 圖片"></div><div class="plant-mini-content"><h4>白鶴芋</h4><div class="fit">適合想要一點花感、空間柔和的人</div><p>半陰至散射光｜喜濕｜缺水會垂</p><small>家的意象：白色花苞讓角落安靜、乾淨、有呼吸。</small><div class="meaning"><b>小風水：</b>淨化、平衡、安定情緒，讓空間更清爽乾淨。</div></div></article>
         </div></div>
         <div class="group-block"><div class="group-title"><h3>層架／水耕／流動型｜讓冷硬線條變柔和</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/pothos.jpg" alt="黃金葛 圖片"></div><div class="plant-mini-content"><h4>黃金葛</h4><div class="fit">適合新手、層架、水耕與垂墜感</div><p>耐陰｜水分彈性高｜很好照顧</p><small>家的意象：讓綠意沿著層架流動，冷硬線條變柔。</small><div class="meaning"><b>小風水：</b>生生不息、延展好運，適合柔化層架與帶動流動感。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/syngonium.jpg" alt="合果芋 圖片"></div><div class="plant-mini-content"><h4>合果芋</h4><div class="fit">適合想要葉色變化、又不想太難照顧的人</div><p>散射光｜水分中等｜可水耕</p><small>家的意象：有一點活潑，讓家不只是米色和木頭。</small><div class="meaning"><b>小風水：</b>方向明確、關係圓融，適合讓小角落變活潑。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/ivy.jpg" alt="常春藤 圖片"></div><div class="plant-mini-content"><h4>常春藤</h4><div class="fit">適合喜歡垂墜、歐式窗邊感的人</div><p>明亮光｜喜通風｜怕悶熱</p><small>家的意象：讓牆邊和層架長出時間感。</small><div class="meaning"><b>小風水：</b>長久、延續、關係連結，適合牆面與層架的柔和生長感。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/spider.jpg" alt="吊蘭 圖片"></div><div class="plant-mini-content"><h4>吊蘭</h4><div class="fit">適合明亮窗邊、想要輕盈線條的人</div><p>散射光｜水分中等｜繁殖容易</p><small>家的意象：像一串會呼吸的線條，讓空間變輕。</small><div class="meaning"><b>小風水：</b>清新、延續、子株繁生，有家庭生生不息的意象。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/pothos.jpg" alt="黃金葛 圖片"></div><div class="plant-mini-content"><h4>黃金葛</h4><div class="fit">適合新手、層架、水耕與垂墜感</div><p>耐陰｜水分彈性高｜很好照顧</p><small>家的意象：讓綠意沿著層架流動，冷硬線條變柔。</small><div class="meaning"><b>小風水：</b>生生不息、延展好運，適合柔化層架與帶動流動感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/syngonium.jpg" alt="合果芋 圖片"></div><div class="plant-mini-content"><h4>合果芋</h4><div class="fit">適合想要葉色變化、又不想太難照顧的人</div><p>散射光｜水分中等｜可水耕</p><small>家的意象：有一點活潑，讓家不只是米色和木頭。</small><div class="meaning"><b>小風水：</b>方向明確、關係圓融，適合讓小角落變活潑。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/ivy.jpg" alt="常春藤 圖片"></div><div class="plant-mini-content"><h4>常春藤</h4><div class="fit">適合喜歡垂墜、歐式窗邊感的人</div><p>明亮光｜喜通風｜怕悶熱</p><small>家的意象：讓牆邊和層架長出時間感。</small><div class="meaning"><b>小風水：</b>長久、延續、關係連結，適合牆面與層架的柔和生長感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/spider.jpg" alt="吊蘭 圖片"></div><div class="plant-mini-content"><h4>吊蘭</h4><div class="fit">適合明亮窗邊、想要輕盈線條的人</div><p>散射光｜水分中等｜繁殖容易</p><small>家的意象：像一串會呼吸的線條，讓空間變輕。</small><div class="meaning"><b>小風水：</b>清新、延續、子株繁生，有家庭生生不息的意象。</div></div></article>
         </div></div>
         <div class="group-block"><div class="group-title"><h3>陽台／戶外光感型｜接住風、光與外面的衝感</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/pittosporum.jpg" alt="海桐 圖片"></div><div class="plant-mini-content"><h4>海桐</h4><div class="fit">適合開放或半開放陽台，不適合當室內盆栽寫</div><p>戶外光｜耐風｜需通風</p><small>家的意象：形成綠意屏障，替家接住外面的風。</small><div class="meaning"><b>小風水：</b>擋風、屏障、穩住外氣，適合陽台形成保護感。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/baishui.jpg" alt="白水木 圖片"></div><div class="plant-mini-content"><h4>白水木</h4><div class="fit">適合有日照與通風的戶外位置</div><p>戶外強光｜耐曬｜需排水</p><small>家的意象：銀綠葉色有海風感，讓陽台有度假氣息。</small><div class="meaning"><b>小風水：</b>安定、清涼、化解外在衝感，適合陽台放鬆氣息。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/variegated.jpg" alt="斑葉非洲茉莉 圖片"></div><div class="plant-mini-content"><h4>斑葉非洲茉莉</h4><div class="fit">適合明亮陽台與需要視覺層次的位置</div><p>明亮光｜水分中等｜需修剪</p><small>家的意象：斑葉讓陽台不只綠，而是有層次。</small><div class="meaning"><b>小風水：</b>提亮、招光、帶來好氣色，讓陽台更有生氣。</div></div></article>
-          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v12-assets/species/rosemary.jpg" alt="迷迭香 圖片"></div><div class="plant-mini-content"><h4>迷迭香</h4><div class="fit">適合有陽光、喜歡香氣與料理感的人</div><p>全日照｜少水｜怕悶濕</p><small>家的意象：一點香氣，讓陽台和餐桌之間有生活連結。</small><div class="meaning"><b>小風水：</b>淨化、提神、守護日常，也讓家有清醒的生活味。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/pittosporum.jpg" alt="海桐 圖片"></div><div class="plant-mini-content"><h4>海桐</h4><div class="fit">適合開放或半開放陽台，不適合當室內盆栽寫</div><p>戶外光｜耐風｜需通風</p><small>家的意象：形成綠意屏障，替家接住外面的風。</small><div class="meaning"><b>小風水：</b>擋風、屏障、穩住外氣，適合陽台形成保護感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/baishui.jpg" alt="白水木 圖片"></div><div class="plant-mini-content"><h4>白水木</h4><div class="fit">適合有日照與通風的戶外位置</div><p>戶外強光｜耐曬｜需排水</p><small>家的意象：銀綠葉色有海風感，讓陽台有度假氣息。</small><div class="meaning"><b>小風水：</b>安定、清涼、化解外在衝感，適合陽台放鬆氣息。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/variegated.jpg" alt="斑葉非洲茉莉 圖片"></div><div class="plant-mini-content"><h4>斑葉非洲茉莉</h4><div class="fit">適合明亮陽台與需要視覺層次的位置</div><p>明亮光｜水分中等｜需修剪</p><small>家的意象：斑葉讓陽台不只綠，而是有層次。</small><div class="meaning"><b>小風水：</b>提亮、招光、帶來好氣色，讓陽台更有生氣。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v17-assets/species/rosemary.jpg" alt="迷迭香 圖片"></div><div class="plant-mini-content"><h4>迷迭香</h4><div class="fit">適合有陽光、喜歡香氣與料理感的人</div><p>全日照｜少水｜怕悶濕</p><small>家的意象：一點香氣，讓陽台和餐桌之間有生活連結。</small><div class="meaning"><b>小風水：</b>淨化、提神、守護日常，也讓家有清醒的生活味。</div></div></article>
         </div></div>
       </div>
       </div>
@@ -205,29 +207,33 @@
     <div class="wrap quiz">
       <div>
         <div class="eyebrow">Plant Match</div>
-        <h2 class="h2">配對不是小遊戲，<br>是一份家的綠意提案</h2>
-        <p>這裡之後會做成 3-step：先看你想改變哪個位置，再看家的光、風與方位，最後看照顧習慣。不是直接丟一株植物給你，而是整理出一份放得住、養得活、也讓空間變好的配置。</p>
-        <div class="quiz-outcome"><strong>輸出結果會像：</strong><br>你的家適合「窗邊流動型」：主植物、輔助小盆、照顧提醒、擺放位置與家的意象。</div>
+        <h2 class="h2">配對不是小遊戲，<br>是一場綠意體驗</h2>
+        <p>它不只問光線與位置，也問你的個性、喜歡的生活風格、希望家帶來什麼感覺。最後像翻一張植物卡牌，給你一份「這就是我家需要的」綠意建議。</p>
+        <div class="quiz-outcome"><strong>輸出結果會像：</strong><br>你的植物卡牌：主植物、輔助小盆、小風水、照顧節奏與適合放的位置。</div>
       </div>
       <div class="quiz-steps">
-        <div class="quiz-step"><div class="step-num">01</div><h3 class="h3">先選位置</h3><p>客廳、玄關、書桌、餐桌、窗邊或陽台；從你最想改變的地方開始。</p></div>
-        <div class="quiz-step"><div class="step-num">02</div><h3 class="h3">再看條件</h3><p>光線、通風、東西南北向、開放或半開放，決定植物能不能留下。</p></div>
-        <div class="quiz-step"><div class="step-num">03</div><h3 class="h3">最後看生活</h3><p>你忙不忙、會不會出國、多久澆水一次，決定配置要多好照顧。</p></div>
+        <div class="quiz-step"><div class="step-num">01</div><h3 class="h3">先看你想被哪裡接住</h3><p>是玄關第一眼、工作角落、窗邊光，還是陽台小花園？</p></div>
+        <div class="quiz-step"><div class="step-num">02</div><h3 class="h3">再看你的生活個性</h3><p>你喜歡安靜、熱鬧、可愛小造景，還是俐落高級感？</p></div>
+        <div class="quiz-step"><div class="step-num">03</div><h3 class="h3">最後翻出植物卡牌</h3><p>把位置、風格、小風水和照顧習慣，合成一張可執行的建議卡。</p></div>
 
         <div class="quiz-question-set"><h3>測驗題目樣品</h3><div class="question-grid">
-          <div class="question-card"><strong>Q1｜你最想先改變家裡哪個位置？</strong><div class="answer-pills"><span>客廳主角</span><span>玄關第一眼</span><span>書桌工作角</span><span>窗邊光線</span><span>開放陽台</span></div></div>
-          <div class="question-card"><strong>Q2｜那個位置的光線比較像哪一種？</strong><div class="answer-pills"><span>明亮散射光</span><span>半陰但不暗</span><span>全日照</span><span>西曬強光</span><span>北向偏陰</span></div></div>
-          <div class="question-card"><strong>Q3｜你希望植物幫家帶來什麼小風水？</strong><div class="answer-pills"><span>招好運</span><span>圓滿和氣</span><span>聚財穩定</span><span>守護擋煞</span><span>淨化放鬆</span><span>貴人桃花</span></div></div>
-          <div class="question-card"><strong>Q4｜你平常照顧植物的狀態？</strong><div class="answer-pills"><span>常忘記澆水</span><span>願意每週照顧</span><span>常出差</span><span>喜歡觀察植物</span><span>我是新手</span></div></div>
-          <div class="question-card"><strong>Q5｜你想要最後得到什麼？</strong><div class="answer-pills"><span>一株主植物</span><span>一組角落配置</span><span>陽台屏障方案</span><span>好照顧清單</span></div></div>
+          <div class="question-card"><strong>Q1｜你最想讓家裡哪個地方變不一樣？</strong><div class="answer-pills"><span>客廳有主角</span><span>玄關有好運</span><span>書桌不煩躁</span><span>窗邊有光感</span><span>陽台像小花園</span></div></div>
+          <div class="question-card"><strong>Q2｜你的生活個性比較像哪一種？</strong><div class="answer-pills"><span>忙但想被療癒</span><span>喜歡可愛小造景</span><span>喜歡乾淨高級感</span><span>想要熱鬧有生氣</span><span>新手怕養死</span></div></div>
+          <div class="question-card"><strong>Q3｜你喜歡家的風格是？</strong><div class="answer-pills"><span>溫柔奶油色</span><span>自然木質感</span><span>日系清爽</span><span>陽光戶外感</span><span>小動物療癒感</span></div></div>
+          <div class="question-card"><strong>Q4｜你想要植物帶來哪種小風水？</strong><div class="answer-pills"><span>招好運</span><span>圓滿和氣</span><span>聚財穩定</span><span>守護擋煞</span><span>淨化放鬆</span><span>貴人桃花</span></div></div>
+          <div class="question-card"><strong>Q5｜你真實照顧植物的節奏？</strong><div class="answer-pills"><span>常忘記澆水</span><span>每天會看一下</span><span>願意修剪造景</span><span>常出差</span><span>想從簡單開始</span></div></div>
         </div></div>
         <div class="live-result" id="liveResult"><div class="result-label">你的即時配對方向</div><strong>先選幾個答案，我會把它組成一份家的綠意提案。</strong><p>例如：玄關＋聚財穩定＋新手照顧 → 金錢樹／福祿桐，放在回家第一眼看得到的位置。</p></div>
-        <div class="quiz-demo"><strong>樣品結果預覽</strong><div class="quiz-demo-grid"><div class="quiz-demo-card">窗邊流動型<small>龜背芋＋黃金葛；接住散射光，讓窗邊有綠意流動。</small></div><div class="quiz-demo-card">玄關安定型<small>金錢樹＋福祿桐；回家第一眼更穩，也有累積感。</small></div><div class="quiz-demo-card">陽台屏障型<small>海桐＋白水木；用耐風植物形成會呼吸的屏風。</small></div></div></div>
+        <div class="quiz-demo"><strong>翻卡牌看結果</strong><div class="quiz-demo-grid flip-grid">
+          <div class="flip-card"><div class="flip-inner"><div class="flip-front">玄關好運卡</div><div class="flip-back"><b>金錢樹＋福祿桐</b><small>聚財穩定、圓滿和氣，放在回家第一眼。</small></div></div></div>
+          <div class="flip-card"><div class="flip-inner"><div class="flip-front">工作放鬆卡</div><div class="flip-back"><b>白鶴芋＋孔雀木</b><small>淨化放鬆、整理思緒，適合書桌旁。</small></div></div></div>
+          <div class="flip-card"><div class="flip-inner"><div class="flip-front">陽台花園卡</div><div class="flip-back"><b>海桐＋白水木</b><small>守護擋煞、接住風光，適合戶外落地盆。</small></div></div></div>
+        </div></div>
       </div>
     </div>
   </section>
 </main>
-<footer class="footer"><div class="wrap"><strong>版本說明：</strong>GitHub Pages v16。開始補專屬手繪圖：位置區不再共用同一葉子佔位；測驗區修成 3-step 配對提案邏輯，後續再補精準照片與刪減內容。<div class="source">圖片使用本機既有素材與植物專案資產；正式商用版需逐張替換或確認授權。</div></div></footer>
+<footer class="footer"><div class="wrap"><strong>版本說明：</strong>GitHub Pages v17。開始補專屬手繪圖：位置區不再共用同一葉子佔位；測驗區修成 3-step 配對提案邏輯，後續再補精準照片與刪減內容。<div class="source">圖片使用本機既有素材與植物專案資產；正式商用版需逐張替換或確認授權。</div></div></footer>
 
 <script>
 (() => {
@@ -238,16 +244,18 @@
   const makeResult = () => {
     const vals = Object.values(selected);
     const text = vals.join('、');
-    let title = '先選幾個答案，我會把它組成一份家的綠意提案。';
-    let body = '例如：玄關＋聚財穩定＋新手照顧 → 金錢樹／福祿桐，放在回家第一眼看得到的位置。';
+    let title = '先選幾個答案，我會替你翻出一張植物卡牌。';
+    let body = '它會把你的個性、家的位置、喜歡的風格和照顧節奏，合成一份綠意建議。';
     if (vals.length >= 3) {
-      const wantsMoney = text.includes('聚財') || text.includes('招好運') || text.includes('玄關');
-      const wantsCalm = text.includes('淨化') || text.includes('書桌') || text.includes('北向');
-      const balcony = text.includes('陽台') || text.includes('全日照') || text.includes('西曬');
-      if (balcony) { title = '你比較像「陽台屏障型」'; body = '建議用海桐、白水木或迷迭香，先接住風、光與外在衝感，再讓陽台變成會呼吸的小花園。'; }
-      else if (wantsMoney) { title = '你比較像「玄關好運型」'; body = '建議從金錢樹、福祿桐或圓葉椒草開始：第一眼穩、寓意清楚，也比較適合新手。'; }
-      else if (wantsCalm) { title = '你比較像「工作放鬆型」'; body = '建議用白鶴芋、孔雀木或黃金葛，放在視線會停留的位置，讓煩躁慢慢降下來。'; }
-      else { title = '你比較像「窗邊流動型」'; body = '建議用龜背芋、黃金葛或合果芋，把散射光、角落與家的呼吸感串起來。'; }
+      const cute = text.includes('可愛') || text.includes('小動物') || text.includes('修剪造景');
+      const balcony = text.includes('陽台') || text.includes('戶外') || text.includes('守護');
+      const money = text.includes('玄關') || text.includes('聚財') || text.includes('招好運');
+      const calm = text.includes('煩躁') || text.includes('淨化') || text.includes('忙但想被療癒');
+      if (cute) { title = '你抽到「療癒小宇宙卡」'; body = '建議多肉小盆＋小狗/小貓/小兔造景，放在每天會看見的位置，讓照顧變成生活裡的小儀式。'; }
+      else if (balcony) { title = '你抽到「陽台守護卡」'; body = '建議海桐、白水木或迷迭香，用戶外落地盆接住風光，也形成舒服的綠色屏障。'; }
+      else if (money) { title = '你抽到「玄關好運卡」'; body = '建議金錢樹、福祿桐或圓葉椒草，讓回家第一眼有穩定、圓滿和好運感。'; }
+      else if (calm) { title = '你抽到「工作放鬆卡」'; body = '建議白鶴芋、孔雀木或黃金葛，放在視線會停下來的位置，讓煩躁慢慢降下來。'; }
+      else { title = '你抽到「窗邊流動卡」'; body = '建議龜背芋、黃金葛或合果芋，把光線、角落和家的呼吸感串起來。'; }
     }
     result.innerHTML = `<div class="result-label">你的即時配對方向</div><strong>${title}</strong><p>${body}</p>`;
   };
@@ -261,6 +269,7 @@
       });
     });
   });
+  document.querySelectorAll('.flip-card').forEach(card => card.addEventListener('click', () => card.classList.toggle('is-flipped')));
 })();
 </script>
 </body>
