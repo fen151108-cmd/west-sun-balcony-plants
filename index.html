@@ -61,6 +61,9 @@
 /* v18 hand-painted result cards */
 .flip-grid{gap:18px}.flip-card{min-height:210px}.flip-inner{min-height:210px}.flip-front,.flip-back{overflow:hidden;isolation:isolate;border:1px solid rgba(255,253,247,.65);box-shadow:0 18px 45px rgba(24,42,31,.16);color:#fffdf7;text-shadow:0 2px 14px rgba(25,38,29,.36)}.flip-front{font-size:24px;letter-spacing:.02em}.flip-front:before,.flip-back:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--card-img) center/cover no-repeat;filter:saturate(.94) contrast(.96)}.flip-front:after{color:rgba(255,253,247,.88);text-shadow:none}.flip-front .nothing{display:none}.flip-front:before{transform:scale(1.04)}.flip-front:after,.flip-back:after{z-index:1}.flip-front,.flip-back{background:transparent}.flip-front::selection,.flip-back::selection{background:rgba(255,253,247,.25)}.flip-front{align-items:flex-end;justify-content:flex-start;text-align:left;padding:26px}.flip-front:after{left:26px;right:auto;bottom:22px;transform:translateY(28px);font-weight:700}.flip-front{padding-bottom:58px}.flip-front::after{content:"點一下翻牌";position:absolute;font-size:12px;letter-spacing:.12em}.flip-back{padding:24px;background:transparent}.flip-back:after,.flip-front .veil{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(32,63,49,.16),rgba(32,63,49,.78))}.flip-back:after{background:linear-gradient(180deg,rgba(32,63,49,.82),rgba(32,63,49,.92))}.flip-back b,.flip-back small{position:relative;z-index:2;color:#fffdf7}.flip-back small{color:rgba(255,253,247,.88)}.card-luck{--card-img:url('assets/plant-hero-painted-banner-v13.jpg')}.card-calm{--card-img:url('assets/plant-position-human-illustration-v17.jpg')}.card-balcony{--card-img:url('assets/plant-position-mosaic-new-v13.jpg')}@media(max-width:880px){.flip-card,.flip-inner{min-height:190px}}
 .brand-subline{margin:18px 0 0;color:#6b765f;font-size:15px;font-weight:750;letter-spacing:.04em}.brand span:last-child{font-family:var(--serif);font-size:22px;letter-spacing:.08em;color:var(--green)}
+
+/* v21 fuller illustrated quiz area */
+.quiz{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 10%,rgba(214,224,195,.20),transparent 28%),radial-gradient(circle at 8% 86%,rgba(247,240,228,.18),transparent 30%),linear-gradient(135deg,#203f31,#315b45)}.quiz:before{content:"";position:absolute;left:-56px;top:-44px;width:310px;height:310px;background:url('assets/plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.22;transform:rotate(-18deg);pointer-events:none}.quiz:after{content:"";position:absolute;left:-38px;bottom:-70px;width:380px;height:380px;background:url('assets/plant-position-human-illustration-v17.jpg') center/cover no-repeat;border-radius:48% 52% 43% 57%;opacity:.16;filter:saturate(.85) contrast(.9);pointer-events:none}.quiz>div{position:relative;z-index:1}.quiz-outcome{position:relative;overflow:hidden}.quiz-outcome:after{content:"";position:absolute;right:-34px;bottom:-38px;width:150px;height:150px;background:url('assets/plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.16}.question-card{position:relative;overflow:hidden}.question-card:after{content:"";position:absolute;right:-24px;bottom:-30px;width:118px;height:118px;background:url('assets/plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.08;pointer-events:none}.quiz-question-set{background:rgba(255,253,247,.14);box-shadow:inset 0 1px 0 rgba(255,253,247,.12)}.quiz-question-set h3:after{content:"  ✦ 依直覺選，不用想太久";font-size:13px;letter-spacing:.08em;color:rgba(255,253,247,.72);font-weight:600;margin-left:10px}.live-result{position:relative;overflow:hidden}.live-result:after{content:"";position:absolute;right:-40px;top:-38px;width:170px;height:170px;background:url('assets/plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.10;pointer-events:none}@media(max-width:880px){.quiz:before{width:220px;height:220px}.quiz:after{width:260px;height:260px;opacity:.10}.quiz-question-set h3:after{display:block;margin:8px 0 0}}
 </style>
 </head>
 <body>
@@ -211,8 +214,8 @@
     <div class="wrap quiz">
       <div>
         <div class="eyebrow">Plant Match</div>
-        <h2 class="h2">配對不是小遊戲，<br>是一場綠意體驗</h2>
-        <p>它不只問光線與位置，也問你的個性、喜歡的生活風格、希望家帶來什麼感覺。最後像翻一張植物卡牌，給你一份「這就是我家需要的」綠意建議。</p>
+        <h2 class="h2">配對不是小遊戲，<br>是一場綠意遊戲</h2>
+        <p>它不只問光線與位置，也問你的個性、喜歡的生活風格、希望家帶來什麼感覺。像在家裡翻一張植物卡牌，慢慢找到「這就是我需要的那一株」。</p>
         <div class="quiz-outcome"><strong>輸出結果會像：</strong><br>你的植物卡牌：主植物、輔助小盆、小風水、照顧節奏與適合放的位置。</div>
       </div>
       <div class="quiz-steps">
@@ -237,7 +240,7 @@
     </div>
   </section>
 </main>
-<footer class="footer"><div class="wrap"><strong>版本說明：</strong>GitHub Pages v20。開始補專屬手繪圖：位置區不再共用同一葉子佔位；測驗區修成 3-step 配對提案邏輯，後續再補精準照片與刪減內容。<div class="source">圖片使用本機既有素材與植物專案資產；正式商用版需逐張替換或確認授權。</div></div></footer>
+<footer class="footer"><div class="wrap"><strong>版本說明：</strong>GitHub Pages v21。開始補專屬手繪圖：位置區不再共用同一葉子佔位；測驗區修成 3-step 配對提案邏輯，後續再補精準照片與刪減內容。<div class="source">圖片使用本機既有素材與植物專案資產；正式商用版需逐張替換或確認授權。</div></div></footer>
 
 <script>
 (() => {
