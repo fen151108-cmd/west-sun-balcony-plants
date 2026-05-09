@@ -31,6 +31,16 @@ html{font-size:16px} body,button,input,select,textarea{font-size:16px}.brand sma
 
 /* v14 extra mobile safety margin */
 @media(max-width:900px){.wrap,.navin{width:min(330px,calc(100vw - 48px))!important;max-width:min(330px,calc(100vw - 48px))!important;margin-left:auto!important;margin-right:auto!important}.stickyCTA{width:min(330px,calc(100vw - 48px))!important;max-width:min(330px,calc(100vw - 48px))!important}.heroBannerImage,.panel,.photoPanel,.moodVisual,.plantProfileWide{border-radius:20px!important}.h1{font-size:32px!important}.h2{font-size:28px!important}.eyebrow,.brand small,.num,.tag,.badge,.plantMeta,.stepDot{font-size:13px!important}.links a,.btn,.microCard,.gameCard,.toggleCard,.colorChoice,.opt,.card,.condition,.type,.plant,.resultCard,.plantProfileWide p{font-size:16px!important}}
+
+/* v15 mobile screenshot fixes: banner no-crop + sticky not covering content */
+.heroBannerImage{min-height:0!important}.heroBannerImage img{height:auto!important;object-fit:contain!important;position:relative!important}.stickyCTA{bottom:calc(74px + env(safe-area-inset-bottom,0px))!important}.footer{padding-bottom:150px!important}body{padding-bottom:160px!important}.recipe,.types,.plantGalleryWide,.resultGrid{scroll-margin-bottom:160px}
+@media(max-width:900px){.heroBannerImage{padding:0!important;background:transparent!important;box-shadow:none!important;border:0!important}.heroBannerImage img{width:100%!important;height:auto!important;display:block!important;object-fit:contain!important;border-radius:22px!important}.stickyCTA{bottom:calc(82px + env(safe-area-inset-bottom,0px))!important;width:min(330px,calc(100vw - 48px))!important}.footer{padding-bottom:170px!important}body{padding-bottom:180px!important}section:last-of-type{padding-bottom:190px!important}.types{padding-bottom:140px!important}}
+
+/* v16 sticky cover final fix */
+@media(max-width:900px){.stickyCTA{bottom:calc(96px + env(safe-area-inset-bottom,0px))!important}.footer{padding-bottom:260px!important}body{padding-bottom:280px!important}#types{padding-bottom:260px!important}#types .types{margin-bottom:170px!important}section{scroll-margin-bottom:240px!important}}
+
+/* v17 mobile sticky becomes in-flow to avoid covering content */
+@media(max-width:900px){.stickyCTA{position:static!important;transform:none!important;width:calc(100% - 28px)!important;margin:14px auto 0!important;border-radius:999px!important}.nav{position:sticky!important}body{padding-bottom:40px!important}.footer{padding-bottom:70px!important}#types{padding-bottom:80px!important}#types .types{margin-bottom:0!important}}
 </style>
 </head>
 <body>
