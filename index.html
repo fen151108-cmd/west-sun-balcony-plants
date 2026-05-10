@@ -650,9 +650,9 @@
             <h3>植物諮詢單</h3>
             <p>先留下家的位置與想了解的植物；按下送出後，再補姓名、LINE 與電話，方便後續接洽。</p>
             <div class="consult-grid">
-              <div class="consult-field"><label for="consultPlace">想改變的位置</label><select class="consult-select" id="consultPlace" name="place"><option>玄關</option><option>書桌／工作角落</option><option>客廳</option><option>窗邊</option><option>陽台</option><option>小造景角落</option></select></div>
+              <div class="consult-field"><label for="consultPlace">想改變的位置</label><select class="consult-select" id="consultPlace" name="place"><option>玄關</option><option>書桌／工作角落</option><option>客廳</option><option>窗邊</option><option>陽台</option><option>小造景角落</option><option>不確定，想請你判斷</option></select></div>
               <div class="consult-field"><label for="consultLight">目前光線</label><select class="consult-select" id="consultLight" name="light"><option>東向柔光</option><option>南向光足</option><option>西曬較強</option><option>北向偏陰</option><option>不確定，想請你判斷</option></select></div>
-              <div class="consult-field"><label for="consultPlant">想了解的植物</label><input class="consult-input" id="consultPlant" name="plant" placeholder="例：金錢樹、白水木、龜背芋"></div>
+              <div class="consult-field"><label for="consultPlant">想了解的植物</label><input class="consult-input" id="consultPlant" name="plant" list="plantIdeas" placeholder="例：金錢樹、白水木、龜背芋，或不確定想請你推薦"><datalist id="plantIdeas"><option value="不確定，想請你推薦"><option value="想了解耐陰植物"><option value="想了解低維護植物"><option value="想了解陽台植物"></datalist></div>
               <div class="consult-field"><label for="consultHabit">照顧習慣</label><select class="consult-select" id="consultHabit" name="habit"><option>常忘記澆水</option><option>每天會看一下</option><option>願意修剪整理</option><option>常出差，希望低維護</option><option>新手，想從簡單開始</option></select></div>
               <div class="consult-field full"><label for="consultNote">想補充的狀況</label><textarea class="consult-textarea" id="consultNote" name="note" placeholder="例：想讓陽台比較有遮擋、書桌不要太煩、玄關想要穩一點。"></textarea></div>
             </div>
@@ -743,16 +743,18 @@
     });
   });
 
-  const contactModal = document.getElementById('contactModal');
-  const contactSummary = document.getElementById('contactSummary');
-  const contactSuccess = document.getElementById('contactSuccess');
-  const openContactModal = () => { if (contactModal) contactModal.classList.add('is-open'); };
-  const closeContactModal = () => { if (contactModal) contactModal.classList.remove('is-open'); };
+  const getContactModal = () => document.getElementById('contactModal');
+  const getContactSummary = () => document.getElementById('contactSummary');
+  const getContactSuccess = () => document.getElementById('contactSuccess');
+  const openContactModal = () => { const modal = getContactModal(); if (modal) modal.classList.add('is-open'); };
+  const closeContactModal = () => { const modal = getContactModal(); if (modal) modal.classList.remove('is-open'); };
   const consultForm = document.getElementById('plantConsultForm');
   if (consultForm) {
     consultForm.addEventListener('submit', (e) => {
       e.preventDefault();
       consultPayload = Object.fromEntries(new FormData(consultForm).entries());
+      const contactSummary = getContactSummary();
+      const contactSuccess = getContactSuccess();
       if (contactSummary) contactSummary.textContent = `你想了解：${consultPayload.place || '家裡某個角落'}／${consultPayload.light || '光線待確認'}／${consultPayload.plant || '想請我們推薦植物'}`;
       if (contactSuccess) contactSuccess.classList.remove('is-visible');
       openContactModal();
@@ -765,6 +767,7 @@
       e.preventDefault();
       const contact = Object.fromEntries(new FormData(contactForm).entries());
       console.log('植覺配諮詢資料', { consult: consultPayload, contact });
+      const contactSuccess = getContactSuccess();
       if (contactSuccess) contactSuccess.classList.add('is-visible');
     });
   }
