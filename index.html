@@ -524,9 +524,9 @@
     <div class="wrap quiz game-v50">
       <div class="game-intro">
         <div class="eyebrow">Plant Match</div>
-        <h2 class="h2">選一個角落，<br>抽一張植物牌</h2>
-        <p>不用填很多題。選家的位置、選現在的狀態，再抽一張牌，就會得到一張植物小提案。</p>
-        <div class="match-steps" aria-label="植物配對三步驟"><span><b>1</b> 選位置</span><span><b>2</b> 選狀態</span><span><b>3</b> 抽風格牌</span></div>
+        <h2 class="h2">選一個角落，<br>翻一張語氣牌</h2>
+        <p>不用填很多題。先選家的位置與現在的狀態，最後翻一張生活語氣牌，得到一張植物小提案。</p>
+        <div class="match-steps" aria-label="植物配對三步驟"><span><b>1</b> 選位置</span><span><b>2</b> 選狀態</span><span><b>3</b> 翻語氣牌</span></div>
       </div>
       <div class="quiz-steps game-flow">
         <div class="game-panel"><div class="game-panel-head"><span>STEP 1</span><h3>你想先改變哪個角落？</h3></div><div class="choice-grid location-grid">
@@ -545,18 +545,18 @@
           <button class="choice-card" data-game="state">陪伴<span>不吵，但一直在</span></button>
           <button class="choice-card" data-game="state">活起來<span>把冷硬處變成生活</span></button>
         </div></div>
-        <div class="live-result" id="liveResult"><div class="result-label">目前選擇</div><strong>先選一個位置和一種狀態。</strong><p>前兩步會先決定主植物，最後再抽風格牌。</p></div>
-        <div class="card-game"><div class="card-game-head"><strong>STEP 3｜抽一張風格牌</strong><span>前兩步決定植物方向，這張牌只加上家的語氣。</span></div>
+        <div class="live-result" id="liveResult"><div class="result-label">目前選擇</div><strong>先選一個位置和一種狀態。</strong><p>前兩步會先決定主植物，最後再翻生活語氣牌。</p></div>
+        <div class="card-game"><div class="card-game-head"><strong>STEP 3｜翻一張生活語氣牌</strong><span>前兩步決定植物，這張牌只決定家的氛圍。</span></div>
           <div class="oracle-grid">
-            <button class="oracle-card" data-card="entry"><img src="./oracle-card-assets-v41/entry-luck.jpg" alt="玄關好運植物牌"><span>玄關好運牌</span><small>回家第一眼先穩</small></button>
-            <button class="oracle-card" data-card="work"><img src="./oracle-card-assets-v41/work-calm.jpg" alt="工作放鬆植物牌"><span>工作放鬆牌</span><small>讓煩躁慢慢降下來</small></button>
-            <button class="oracle-card" data-card="cute"><img src="./oracle-card-assets-v41/cute-world.jpg" alt="療癒小宇宙植物牌"><span>療癒小宇宙牌</span><small>養一個可愛小世界</small></button>
-            <button class="oracle-card" data-card="balcony"><img src="./oracle-card-assets-v41/balcony-guard.jpg" alt="陽台守護植物牌"><span>陽台守護牌</span><small>讓風光變成屏障</small></button>
+            <button class="oracle-card" data-card="morning"><img src="./oracle-card-assets-v41/entry-luck.jpg" alt="晨光停留語氣牌"><span>晨光停留牌</span><small>讓角落先亮起來</small></button>
+            <button class="oracle-card" data-card="breath"><img src="./oracle-card-assets-v41/work-calm.jpg" alt="鬆一口氣語氣牌"><span>鬆一口氣牌</span><small>把煩躁慢慢放下</small></button>
+            <button class="oracle-card" data-card="tiny"><img src="./oracle-card-assets-v41/cute-world.jpg" alt="小宇宙語氣牌"><span>小宇宙牌</span><small>讓角落有一點故事</small></button>
+            <button class="oracle-card" data-card="guard"><img src="./oracle-card-assets-v41/balcony-guard.jpg" alt="守護感語氣牌"><span>守護感牌</span><small>替家接住外面的風</small></button>
           </div>
           <div class="card-result result-card-preview" id="cardResult">
             <div class="result-kicker">植物結果卡預覽</div>
-            <b>玄關好運牌</b>
-            <p>位置和狀態會先決定主植物；最後一張牌只幫這份提案加上風格與祝福語氣。</p>
+            <b>晨光停留牌</b>
+            <p>位置和狀態會先決定主植物；最後翻一張生活語氣牌，幫這份提案加上情緒與畫面。</p>
             <div class="result-lines">
               <span><strong>主植物</strong>金錢樹</span>
               <span><strong>適合位置</strong>玄關／入口櫃</span>
@@ -580,11 +580,11 @@
     const place = selected.place;
     const state = selected.state;
     if (!place && !state) {
-      result.innerHTML = `<div class="result-label">目前選擇</div><strong>先選一個位置和一種狀態。</strong><p>前兩步會先決定主植物，最後再抽風格牌。</p>`;
+      result.innerHTML = `<div class="result-label">目前選擇</div><strong>先選一個位置和一種狀態。</strong><p>前兩步會先決定主植物，最後再翻生活語氣牌。</p>`;
       return;
     }
     const title = place && state ? `你選了：${place} × ${state}` : `已選：${place || state}`;
-    const body = place && state ? '很好，主植物方向已經由你的角落和狀態決定。現在抽風格牌，讓提案長出家的語氣。' : '再選另一個選項，主植物方向會更準。';
+    const body = place && state ? '很好，主植物方向已經由你的角落和狀態決定。現在翻一張生活語氣牌，讓提案長出畫面。' : '再選另一個選項，主植物方向會更準。';
     result.innerHTML = `<div class="result-label">目前選擇</div><strong>${title}</strong><p>${body}</p>`;
   };
   document.querySelectorAll('.choice-card').forEach(btn => {
@@ -614,10 +614,10 @@
     '活起來': { title:'活起來配方', add:'用垂墜、斑葉或小造景，把冷硬角落變成有故事的地方。', blessing:'流動、生氣、讓空間重新有表情' }
   };
   const cardTone = {
-    entry: { name:'玄關好運牌', tone:'把這份提案往「回家第一眼先穩」的方向收束。' },
-    work: { name:'工作放鬆牌', tone:'把這份提案往「降低煩躁、讓視線停下來」的方向收束。' },
-    cute: { name:'療癒小宇宙牌', tone:'把這份提案往「可愛、靠近、每天想看一眼」的方向收束。' },
-    balcony: { name:'陽台守護牌', tone:'把這份提案往「接住風光、形成保護感」的方向收束。' }
+    morning: { name:'晨光停留牌', tone:'這個角落適合放在每天會被光照到、也會被你看見的位置，像早上先替家點一盞小燈。' },
+    breath: { name:'鬆一口氣牌', tone:'這個角落不用太熱鬧，重點是讓視線停下來，幫人從工作和訊息裡退回生活。' },
+    tiny: { name:'小宇宙牌', tone:'這個角落可以多一點可愛細節，讓植物、小物和光線變成一個會想靠近的小世界。' },
+    guard: { name:'守護感牌', tone:'這個角落適合做成安定的邊界，替家接住外面的風、光和壓力。' }
   };
   document.querySelectorAll('.oracle-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -627,7 +627,7 @@
       const state = selected.state || '安定';
       const base = placePlan[place] || placePlan['玄關'];
       const tune = stateTune[state] || stateTune['安定'];
-      const tone = cardTone[card.dataset.card] || cardTone.entry;
+      const tone = cardTone[card.dataset.card] || cardTone.morning;
       if (cardResult) cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><b>${place} × ${state}｜${tune.title}</b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
     });
   });
