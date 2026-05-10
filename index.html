@@ -650,6 +650,23 @@
   .you-section .scene-tags{position:relative!important;padding-bottom:42px!important;}
   .you-section .scene-tags::after{content:"";position:absolute;right:4px;bottom:4px;width:76px;height:38px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.14;pointer-events:none;}
 }
+
+/* v85 mobile typography audit: minimum 12px + prettier line rhythm */
+@media(max-width:700px){
+  body{font-size:16px!important;line-height:1.76!important;}
+  p,.lead,.body-lg,.brand-subline,.hero-inline-note,.story-words p,.you-section p,.place-copy p,.plant-mini p,.condition-visual p,.balcony-col p,.consult-form p,.contact-box p{font-size:16px!important;line-height:1.78!important;}
+  small,.source,.plant-mini small,.group-title span,.anchor span,.place-meta,.fit,.meaning,.chip,.scene-tags span,.answer-pills span,.result-label,.result-kicker,.flip-picked,.visual-label,.consult-note,.mobile-nav-menu a span{font-size:12.5px!important;line-height:1.55!important;}
+  .eyebrow,.you-section .eyebrow,#match .eyebrow{font-size:12px!important;line-height:1.55!important;letter-spacing:.14em!important;}
+  .nav-links a,.brand-word{line-height:1.35!important;}
+  .h1{line-height:1.10!important;}
+  .h2{line-height:1.27!important;}
+  .h3,.group-title h3,.plant-mini h4{line-height:1.34!important;}
+  .match-steps span{font-size:13px!important;line-height:1.45!important;}
+  .match-steps b{font-size:16px!important;line-height:1.2!important;}
+  #match .choice-card span,#match .oracle-card small,#match .result-lines span{font-size:13px!important;line-height:1.55!important;}
+  label,input,textarea,select,button{font-size:14px!important;line-height:1.45!important;}
+  .btn{font-size:15px!important;line-height:1.38!important;}
+}
 </style>
 </head>
 <body>
