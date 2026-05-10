@@ -526,7 +526,7 @@
         <div class="eyebrow">Plant Match</div>
         <h2 class="h2">選一個角落，<br>抽一張植物牌</h2>
         <p>不用填很多題。選家的位置、選現在的狀態，再抽一張牌，就會得到一張植物小提案。</p>
-        <div class="match-steps" aria-label="植物配對三步驟"><span><b>1</b> 選位置</span><span><b>2</b> 選狀態</span><span><b>3</b> 抽植物牌</span></div>
+        <div class="match-steps" aria-label="植物配對三步驟"><span><b>1</b> 選位置</span><span><b>2</b> 選狀態</span><span><b>3</b> 抽風格牌</span></div>
       </div>
       <div class="quiz-steps game-flow">
         <div class="game-panel"><div class="game-panel-head"><span>STEP 1</span><h3>你想先改變哪個角落？</h3></div><div class="choice-grid location-grid">
@@ -545,8 +545,8 @@
           <button class="choice-card" data-game="state">陪伴<span>不吵，但一直在</span></button>
           <button class="choice-card" data-game="state">活起來<span>把冷硬處變成生活</span></button>
         </div></div>
-        <div class="live-result" id="liveResult"><div class="result-label">目前選擇</div><strong>先選一個位置和一種狀態。</strong><p>選好後，再抽一張植物牌。</p></div>
-        <div class="card-game"><div class="card-game-head"><strong>STEP 3｜抽一張植物牌</strong><span>選第一眼想靠近的那張。</span></div>
+        <div class="live-result" id="liveResult"><div class="result-label">目前選擇</div><strong>先選一個位置和一種狀態。</strong><p>前兩步會先決定主植物，最後再抽風格牌。</p></div>
+        <div class="card-game"><div class="card-game-head"><strong>STEP 3｜抽一張風格牌</strong><span>前兩步決定植物方向，這張牌只加上家的語氣。</span></div>
           <div class="oracle-grid">
             <button class="oracle-card" data-card="entry"><img src="./oracle-card-assets-v41/entry-luck.jpg" alt="玄關好運植物牌"><span>玄關好運牌</span><small>回家第一眼先穩</small></button>
             <button class="oracle-card" data-card="work"><img src="./oracle-card-assets-v41/work-calm.jpg" alt="工作放鬆植物牌"><span>工作放鬆牌</span><small>讓煩躁慢慢降下來</small></button>
@@ -556,7 +556,7 @@
           <div class="card-result result-card-preview" id="cardResult">
             <div class="result-kicker">植物結果卡預覽</div>
             <b>玄關好運牌</b>
-            <p>先選位置與狀態，再抽一張植物牌；這裡會整理成可以直接放進家的小提案。</p>
+            <p>位置和狀態會先決定主植物；最後一張牌只幫這份提案加上風格與祝福語氣。</p>
             <div class="result-lines">
               <span><strong>主植物</strong>金錢樹</span>
               <span><strong>適合位置</strong>玄關／入口櫃</span>
@@ -580,11 +580,11 @@
     const place = selected.place;
     const state = selected.state;
     if (!place && !state) {
-      result.innerHTML = `<div class="result-label">目前選擇</div><strong>先選一個位置和一種狀態。</strong><p>選好後，再抽一張植物牌。</p>`;
+      result.innerHTML = `<div class="result-label">目前選擇</div><strong>先選一個位置和一種狀態。</strong><p>前兩步會先決定主植物，最後再抽風格牌。</p>`;
       return;
     }
     const title = place && state ? `你選了：${place} × ${state}` : `已選：${place || state}`;
-    const body = place && state ? '很好，這個角落已經有方向了。現在抽一張植物牌，讓它長成一份植物小提案。' : '再選另一個選項，配對會更完整。';
+    const body = place && state ? '很好，主植物方向已經由你的角落和狀態決定。現在抽風格牌，讓提案長出家的語氣。' : '再選另一個選項，主植物方向會更準。';
     result.innerHTML = `<div class="result-label">目前選擇</div><strong>${title}</strong><p>${body}</p>`;
   };
   document.querySelectorAll('.choice-card').forEach(btn => {
@@ -597,20 +597,38 @@
     });
   });
   const cardResult = document.getElementById('cardResult');
-  const cardText = {
-    entry: ['玄關好運牌｜金錢樹＋福祿桐', '適合放在回家第一眼看得到的位置。小風水是聚財穩定、圓滿和氣；照顧上不需要太黏人，只要保持明亮、不要積水，家一進門就會比較穩。'],
-    work: ['工作放鬆牌｜白鶴芋＋孔雀木', '適合放在書桌旁、視線會停下來的地方。小風水是淨化放鬆、整理思緒；當工作很煩，它不是叫你立刻振作，而是讓那個角落先安靜。'],
-    cute: ['療癒小宇宙牌｜多肉小盆＋小動物造景', '適合放在每天早上會看見、會順手整理的位置。小風水是守住小確幸與慢慢累積；小狗、小貓、小兔和多肉一起，會讓角落像一個可愛的小世界。'],
-    balcony: ['陽台守護牌｜斑葉海桐＋白水木', '適合放在戶外陽台、需要擋風或整理外在衝感的位置。小風水是守護擋煞、安定外氣；前段用斑葉海桐接住視線，底部用姿態型白水木穩住空間，把陽光和風變成家的屏障。']
+  const placePlan = {
+    '玄關': { plant:'金錢樹＋福祿桐', spot:'玄關／入口櫃', care:'少水、耐陰、避免積水', image:'回家第一眼先穩下來' },
+    '書桌': { plant:'白鶴芋＋孔雀木', spot:'書桌旁／工作角落', care:'明亮散射光、保持微濕', image:'工作很煩時，有一點安靜陪著你' },
+    '客廳': { plant:'龜背芋＋琴葉榕', spot:'客廳主視覺角落', care:'明亮散射光、水分中等', image:'讓家的中心長出會呼吸的主角' },
+    '窗邊': { plant:'黃金葛＋合果芋', spot:'室內窗邊／層架', care:'散射光、水分彈性高', image:'把光留在一個柔和的位置' },
+    '陽台': { plant:'斑葉海桐＋白水木', spot:'開放／半開放陽台', care:'戶外光、通風、排水要好', image:'替家接住風、光與外面的衝感' },
+    '小造景': { plant:'多肉小盆＋小動物造景', spot:'櫃面／窗邊小角落', care:'高光、少水、避免悶濕', image:'養一個會讓你靠近的小世界' }
+  };
+  const stateTune = {
+    '安定': { title:'安定配方', add:'選擇圓葉、厚葉或樹形穩的植物，讓角落先把心穩住。', blessing:'穩定、聚氣、把回家的節奏放慢' },
+    '放鬆': { title:'放鬆配方', add:'植物不要太搶戲，葉色柔和、線條安靜，讓視線可以停下來。', blessing:'淨化、降噪、讓煩躁慢慢退開' },
+    '提亮': { title:'提亮配方', add:'加入斑葉、淺色盆器或靠近光的位置，讓角落多一點亮度。', blessing:'提亮氣場、讓家有清爽感' },
+    '好運': { title:'好運配方', add:'用圓潤、向上或有祝福感的植物，放在每天會看見的位置。', blessing:'聚財、圓滿、迎接好的開始' },
+    '陪伴': { title:'陪伴配方', add:'選小一點、能每天觀察變化的植物，不吵但一直在。', blessing:'陪伴、貴人、把日常接回來' },
+    '活起來': { title:'活起來配方', add:'用垂墜、斑葉或小造景，把冷硬角落變成有故事的地方。', blessing:'流動、生氣、讓空間重新有表情' }
+  };
+  const cardTone = {
+    entry: { name:'玄關好運牌', tone:'把這份提案往「回家第一眼先穩」的方向收束。' },
+    work: { name:'工作放鬆牌', tone:'把這份提案往「降低煩躁、讓視線停下來」的方向收束。' },
+    cute: { name:'療癒小宇宙牌', tone:'把這份提案往「可愛、靠近、每天想看一眼」的方向收束。' },
+    balcony: { name:'陽台守護牌', tone:'把這份提案往「接住風光、形成保護感」的方向收束。' }
   };
   document.querySelectorAll('.oracle-card').forEach(card => {
     card.addEventListener('click', () => {
       document.querySelectorAll('.oracle-card').forEach(c => c.classList.remove('is-picked'));
       card.classList.add('is-picked');
-      const [title, body] = cardText[card.dataset.card];
-      const place = selected.place || '你選的角落';
-      const state = selected.state || '現在需要的狀態';
-      if (cardResult) cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><b>${title}</b><p>這張牌把你選的角落和狀態整理成一份植物小提案。</p><div class="result-lines"><span><strong>位置</strong>${place}</span><span><strong>狀態</strong>${state}</span><span><strong>植物提案</strong>${body}</span></div>`;
+      const place = selected.place || '玄關';
+      const state = selected.state || '安定';
+      const base = placePlan[place] || placePlan['玄關'];
+      const tune = stateTune[state] || stateTune['安定'];
+      const tone = cardTone[card.dataset.card] || cardTone.entry;
+      if (cardResult) cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><b>${place} × ${state}｜${tune.title}</b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
     });
   });
 })();
