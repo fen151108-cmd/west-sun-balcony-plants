@@ -406,6 +406,12 @@
 #match .card-result.is-revealed{animation:resultReveal .46s ease both;}
 @keyframes resultReveal{0%{opacity:.25;transform:translateY(18px) scale(.97) rotateX(8deg)}100%{opacity:1;transform:translateY(0) scale(1) rotateX(0)}}
 #match .share-title{display:block;font-size:15px!important;line-height:1.6!important;color:#7d6244!important;margin-top:8px!important;}
+
+/* v62 remove accidental line crossing match step pills */
+#match .match-steps,#match .match-steps span,#match .match-steps b{position:relative!important;text-decoration:none!important;background-image:none!important;}
+#match .match-steps:before,#match .match-steps:after,#match .match-steps span:before,#match .match-steps span:after{content:none!important;display:none!important;}
+#match .match-steps{overflow:visible!important;}
+#match .match-steps span{z-index:1!important;}
 </style>
 </head>
 <body>
