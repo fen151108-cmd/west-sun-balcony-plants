@@ -547,7 +547,7 @@
   .section-transition-cta strong{font-family:var(--serif);font-size:24px;letter-spacing:.02em;}
   .section-transition-cta p{margin:6px 0 0;color:rgba(255,253,247,.78);font-size:16px;line-height:1.65;}
   .section-transition-cta a{flex:0 0 auto;text-decoration:none;background:#fffdf7;color:#244635;border-radius:999px;padding:12px 18px;font-weight:900;box-shadow:0 10px 26px rgba(18,35,26,.16);}
-  #match .oracle-card:not(.is-picked)::before{content:"翻一張";position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:radial-gradient(circle at 50% 38%,rgba(255,253,247,.22),transparent 34%),linear-gradient(145deg,rgba(36,70,53,.94),rgba(49,91,69,.88));color:#fffdf7;font-family:var(--serif);font-size:25px;letter-spacing:.16em;text-indent:.16em;border-radius:26px;transition:.24s ease;box-shadow:inset 0 0 0 1px rgba(255,253,247,.28),inset 0 0 0 10px rgba(255,253,247,.06);}
+  #match .oracle-card:not(.is-picked)::before{content:"翻開這張語氣牌";position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:radial-gradient(circle at 50% 38%,rgba(255,253,247,.22),transparent 34%),linear-gradient(145deg,rgba(36,70,53,.94),rgba(49,91,69,.88));color:#fffdf7;font-family:var(--serif);font-size:25px;letter-spacing:.16em;text-indent:.16em;border-radius:26px;transition:.24s ease;box-shadow:inset 0 0 0 1px rgba(255,253,247,.28),inset 0 0 0 10px rgba(255,253,247,.06);}
   #match .oracle-card:not(.is-picked):hover::before{opacity:.18;transform:scale(.96);}
   #match .oracle-card.is-picked{animation:cardFlipOpen .48s ease both;}
   @keyframes cardFlipOpen{0%{transform:translateY(0) rotateY(0)}55%{transform:translateY(-6px) rotateY(90deg)}100%{transform:translateY(-4px) rotateY(0)}}
@@ -839,6 +839,7 @@
 
   const result = document.getElementById('liveResult');
   const selected = {};
+  let latestMatchResult = null;
 
   let consultPayload = {};
   const makeResult = () => {
@@ -859,6 +860,7 @@
       document.querySelectorAll(`.choice-card[data-game="${group}"]`).forEach(x => x.classList.remove('is-selected'));
       btn.classList.add('is-selected');
       selected[group] = btn.childNodes[0].textContent.trim();
+      latestMatchResult = null;
       makeResult();
     });
   });
@@ -902,8 +904,19 @@
       const base = placePlan[place] || placePlan['玄關'];
       const tune = stateTune[state] || stateTune['安定'];
       const tone = cardTone[card.dataset.card] || cardTone.morning;
+      const name = resultName(place, state, tone.name, base, tune);
+      latestMatchResult = {
+        place,
+        state,
+        tone: tone.name,
+        plant: base.plant,
+        resultName: name,
+        spot: base.spot,
+        care: base.care,
+        image: base.image,
+        stateTitle: tune.title
+      };
       if (cardResult) {
-        const name = resultName(place, state, tone.name, base, tune);
         cardResult.classList.remove('is-revealed');
         cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><div class="flip-picked">你翻到的是：${tone.name}</div><b>${name}<span class="share-title">${tune.title}：${base.plant}</span></b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
         requestAnimationFrame(() => cardResult.classList.add('is-revealed'));
@@ -921,10 +934,15 @@
   if (consultForm) {
     consultForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      consultPayload = Object.fromEntries(new FormData(consultForm).entries());
+      const formPayload = Object.fromEntries(new FormData(consultForm).entries());
+      consultPayload = latestMatchResult ? { ...formPayload, match: latestMatchResult } : formPayload;
       const contactSummary = getContactSummary();
       const contactSuccess = getContactSuccess();
-      if (contactSummary) contactSummary.textContent = `你想了解：${consultPayload.place || '家裡某個角落'}／${consultPayload.light || '光線待確認'}／${consultPayload.plant || '想請我們推薦植物'}`;
+      if (contactSummary) {
+        contactSummary.textContent = latestMatchResult
+          ? `你剛配到：${latestMatchResult.place} × ${latestMatchResult.state} × ${latestMatchResult.tone}｜推薦植物：${latestMatchResult.plant}｜${latestMatchResult.resultName}`
+          : `你想了解：${formPayload.place || '家裡某個角落'}／${formPayload.light || '光線待確認'}／${formPayload.plant || '想請我們推薦植物'}`;
+      }
       if (contactSuccess) contactSuccess.classList.remove('is-visible');
       openContactModal();
     });
