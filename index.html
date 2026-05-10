@@ -575,11 +575,11 @@
 }
 
 
-/* v72 mobile botanical illustration placement: avoid cropped corner ghost */
+/* v73 mobile story illustration: keep only Monstera line art */
 @media(max-width:700px){
   .soft-card.sketch-card{min-height:360px!important;padding-bottom:118px!important;background:#fffdf7!important;}
   .soft-card.sketch-card svg{display:block!important;right:18px!important;bottom:22px!important;width:64%!important;height:auto!important;opacity:.28!important;transform:none!important;}
-  .soft-card.sketch-card::after{content:"";position:absolute;right:14px;bottom:16px;width:215px;height:140px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.11;pointer-events:none;}
+  .soft-card.sketch-card::after{display:none!important;content:none!important;}
 }
 
 </style>
