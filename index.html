@@ -379,6 +379,14 @@
 #match .result-lines strong{display:block!important;color:var(--green)!important;font-size:12px!important;letter-spacing:.08em!important;margin-bottom:3px!important;}
 #match .result-lines span:last-child{grid-column:1/-1!important;}
 @media(max-width:700px){#match .match-steps{grid-template-columns:1fr!important;gap:10px!important;}#match .match-steps span{min-height:52px!important;}#match .result-lines{grid-template-columns:1fr!important;}#match .card-result{padding:22px!important;}}
+
+/* v58 desktop readability: balcony direction copy should not be tiny */
+@media(min-width:701px){
+  .balcony-copy p{font-size:17px!important;line-height:1.75!important;}
+  .balcony-col{padding:30px 22px!important;}
+  .balcony-col h4{font-size:21px!important;line-height:1.35!important;margin-bottom:10px!important;}
+  .balcony-col p{font-size:16px!important;line-height:1.75!important;margin:0!important;color:#4f564d!important;}
+}
 </style>
 </head>
 <body>
