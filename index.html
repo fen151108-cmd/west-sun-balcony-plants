@@ -188,6 +188,12 @@
 /* v38 final2: remove background botanical sketch watermarks */
 .mini-place,.soft-card.sketch-card{background-image:none!important;}
 .line-art-watermark{display:none!important;}
+
+/* v39 complete-plant-photo rule: do not crop plant photos in plant cards */
+.plant-thumb{height:auto!important;min-height:260px!important;display:flex!important;align-items:center!important;justify-content:center!important;background:#eee4d6!important;padding:14px!important;}
+.plant-thumb img{width:100%!important;height:auto!important;max-height:360px!important;object-fit:contain!important;object-position:center center!important;border-radius:18px!important;display:block!important;}
+.oracle-card img{height:220px!important;object-fit:contain!important;object-position:center center!important;background:#eee4d6!important;padding:10px!important;}
+@media(max-width:700px){.plant-thumb{min-height:230px!important;padding:12px!important}.plant-thumb img{max-height:320px!important}.oracle-card img{height:210px!important;object-fit:contain!important}}
 </style>
 </head>
 <body>
