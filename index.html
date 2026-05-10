@@ -213,6 +213,30 @@
 /* v41 oracle cards are hand-painted cards; plant cards remain complete photos */
 .oracle-card img{height:260px!important;object-fit:cover!important;object-position:center center!important;background:#fff8ea!important;padding:0!important;}
 @media(max-width:700px){.oracle-card img{height:250px!important;object-fit:cover!important;padding:0!important;}}
+
+/* v42 mobile headline readability: prevent oversized story copy from hitting browser edges */
+@media(max-width:700px){
+  .you-section{padding:26px 18px!important;border-radius:28px!important;}
+  .you-section .eyebrow{font-size:11px!important;letter-spacing:.14em!important;line-height:1.4!important;}
+  .you-section .h2{font-size:30px!important;line-height:1.24!important;letter-spacing:-.02em!important;margin-bottom:18px!important;}
+  .you-quote{font-size:24px!important;line-height:1.45!important;letter-spacing:-.015em!important;}
+  .you-section p,.you-section .micro-item{font-size:16px!important;line-height:1.75!important;}
+}
+@media(max-width:390px){
+  .you-section .h2{font-size:28px!important;}
+  .you-quote{font-size:22px!important;}
+}
+
+/* v43 stronger mobile text safe-area: make story text narrower than card */
+@media(max-width:700px){
+  .wrap{width:calc(100vw - 48px)!important;max-width:calc(100vw - 48px)!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important;}
+  .you-section,.story-words,.hero-copy,.soft-card,.group-block,.place-copy{padding-left:18px!important;padding-right:18px!important;}
+  .you-section .h2,.you-quote,.you-section p,.you-section .micro-item,.story-words p,.read-note,.lead,.brand-subline{
+    max-width:calc(100vw - 96px)!important;margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important;
+  }
+  .you-section .h2{font-size:27px!important;line-height:1.28!important;}
+  .you-quote{font-size:21px!important;line-height:1.55!important;}
+}
 </style>
 </head>
 <body>
