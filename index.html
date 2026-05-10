@@ -640,6 +640,16 @@
   #plants .plant-thumb{height:230px!important;min-height:230px!important;padding:0!important;background:#e7dfd0!important;display:block!important;}
   #plants .plant-thumb img{width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;border-radius:0!important;padding:0!important;display:block!important;}
 }
+
+/* v82 mobile breathing-space ornament and centered hero plants */
+@media(max-width:700px){
+  .mobile-hero-art img{content:url('./plant-hero-mobile-centered-v82.jpg')!important;object-position:center center!important;transform:none!important;}
+  .quiet-cta{position:relative!important;margin-bottom:18px!important;}
+  .quiet-cta::after{content:"";display:block;width:86px;height:30px;margin:18px auto -4px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.18;filter:saturate(.8);}
+  .you-section{position:relative!important;}
+  .you-section .scene-tags{position:relative!important;padding-bottom:42px!important;}
+  .you-section .scene-tags::after{content:"";position:absolute;right:4px;bottom:4px;width:76px;height:38px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.14;pointer-events:none;}
+}
 </style>
 </head>
 <body>
