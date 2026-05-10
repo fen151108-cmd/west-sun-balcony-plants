@@ -632,6 +632,12 @@
   #match .match-steps span{display:flex!important;align-items:center!important;justify-content:center!important;min-height:0!important;padding:7px 8px!important;border-radius:999px!important;font-size:12px!important;line-height:1.2!important;text-align:center!important;background:rgba(255,253,247,.12)!important;border-color:rgba(255,253,247,.20)!important;box-shadow:none!important;white-space:nowrap!important;}
   #match .match-steps b{width:20px!important;height:20px!important;display:inline-grid!important;place-items:center!important;margin:0 5px 0 0!important;font-size:12px!important;background:rgba(255,253,247,.20)!important;color:#fffdf7!important;}
 }
+
+/* v80 mobile plant cards: avoid narrow portrait image strips */
+@media(max-width:700px){
+  #plants .plant-thumb{height:230px!important;min-height:230px!important;padding:0!important;background:#e7dfd0!important;display:block!important;}
+  #plants .plant-thumb img{width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;border-radius:0!important;padding:0!important;display:block!important;}
+}
 </style>
 </head>
 <body>
