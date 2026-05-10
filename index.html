@@ -446,12 +446,19 @@
 .contact-box{width:min(560px,100%);background:#fffdf7;color:var(--green);border-radius:32px;padding:30px;border:1px solid #e3d3bb;box-shadow:0 32px 90px rgba(18,35,26,.28);position:relative;}
 .contact-close{position:absolute;right:18px;top:16px;width:36px;height:36px;border-radius:999px;border:1px solid #d9c8af;background:#fff8ea;color:var(--green);font-size:20px;cursor:pointer;}
 .contact-box h3{margin:0 0 8px;font-size:28px;color:var(--green);}.contact-box p{margin:0 0 18px;color:#5b5f55;line-height:1.7}.contact-grid{display:grid;gap:12px}.contact-grid label{font-size:12px;letter-spacing:.08em;color:#a87855;font-weight:900;display:block;margin-bottom:6px}.contact-grid input{width:100%;border:1px solid #e3d3bb;border-radius:16px;background:#fffaf0;color:#2f3f34;font:inherit;padding:12px 14px;outline:none}.contact-grid input:focus{border-color:#a87855;box-shadow:0 0 0 3px rgba(168,120,85,.15)}.contact-submit{margin-top:16px;border:0;border-radius:999px;background:var(--green);color:#fffdf7;padding:13px 20px;font:inherit;font-weight:900;cursor:pointer}.contact-success{display:none;margin-top:14px;background:#edf2e7;border:1px solid #d2dec9;border-radius:16px;padding:12px 14px;color:#315b45;font-weight:800}.contact-success.is-visible{display:block;}
+
+/* v69 brand mark from logo standard */
+.brand{gap:10px!important;letter-spacing:.06em!important;}
+.brand-mark{width:38px!important;height:38px!important;border:0!important;border-radius:0!important;display:inline-grid!important;place-items:center!important;}
+.brand-mark svg{width:38px;height:38px;display:block;}
+.brand-word{font-family:var(--serif)!important;font-size:24px!important;letter-spacing:.12em!important;color:#244635!important;font-weight:700!important;}
+@media(max-width:600px){.brand-mark,.brand-mark svg{width:34px!important;height:34px!important}.brand-word{font-size:21px!important;}}
 </style>
 </head>
 <body>
 <nav class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top"><span class="brand-mark">✦</span><span>植覺配</span></a>
+    <a class="brand" href="#top" aria-label="植覺配首頁"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 38c0 8 5 14 12 14s12-6 12-14H20Z" stroke="#244635" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 39V17" stroke="#244635" stroke-width="4" stroke-linecap="round"/><path d="M32 26C21 25 14 18 12 9c11 1 19 7 20 17Z" stroke="#244635" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 27c10-2 17-8 20-17-10 1-18 7-20 17Z" stroke="#244635" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="31" r="4" fill="#B27A55"/><path d="M17 58h30" stroke="#244635" stroke-width="3" stroke-linecap="round"/></svg></span><span class="brand-word">植覺配</span></a>
     <div class="nav-links">
       <a href="#story">品牌記憶</a><a href="#positions">依位置找</a><a href="#conditions">看光與風</a><a href="#plants">植物性格</a><a href="#match" class="nav-cta">開始配對</a>
     </div>
