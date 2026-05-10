@@ -625,6 +625,13 @@
 .consult-match-hint{display:none;margin:0 0 14px;padding:12px 14px;border-radius:18px;background:#edf2e7;border:1px solid #d2dec9;color:#315b45;font-size:14px;font-weight:850;line-height:1.55;}
 .consult-match-hint.is-visible{display:block;}
 
+
+/* v78 mobile match progress: lighter game cue */
+@media(max-width:700px){
+  #match .match-steps{display:flex!important;grid-template-columns:none!important;gap:7px!important;margin-top:18px!important;overflow:visible!important;}
+  #match .match-steps span{display:flex!important;align-items:center!important;justify-content:center!important;min-height:0!important;padding:7px 8px!important;border-radius:999px!important;font-size:12px!important;line-height:1.2!important;text-align:center!important;background:rgba(255,253,247,.12)!important;border-color:rgba(255,253,247,.20)!important;box-shadow:none!important;white-space:nowrap!important;}
+  #match .match-steps b{width:20px!important;height:20px!important;display:inline-grid!important;place-items:center!important;margin:0 5px 0 0!important;font-size:12px!important;background:rgba(255,253,247,.20)!important;color:#fffdf7!important;}
+}
 </style>
 </head>
 <body>
