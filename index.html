@@ -947,7 +947,10 @@
       openContactModal();
     });
   }
-  document.querySelectorAll('[data-close-contact]').forEach(btn => btn.addEventListener('click', closeContactModal));
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-close-contact]')) closeContactModal();
+    if (e.target.id === 'contactModal') closeContactModal();
+  });
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
