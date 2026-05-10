@@ -144,6 +144,13 @@
   .h1{font-size:40px!important;letter-spacing:-.035em!important;}
   .h2{font-size:31px!important;}
 }
+
+/* mobile wrap correction: allow Chinese copy to break naturally */
+@media(max-width:700px){
+  .nowrap{white-space:normal!important;}
+  .lead,.brand-subline,.hero-inline-note,.story-words p,.you-section p,.micro-item,.quote{white-space:normal!important;word-break:break-all!important;overflow-wrap:anywhere!important;}
+  .hero-copy{max-width:calc(100vw - 56px)!important;}
+}
 </style>
 </head>
 <body>
