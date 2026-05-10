@@ -366,6 +366,19 @@
   #match .game-intro{margin:0!important;}
   #match .game-panel:first-child{margin-top:0!important;}
 }
+
+/* v51 半夏只修配對區：步驟間距與結果卡視覺，其餘版面不動 */
+#match .match-steps{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;margin-top:20px!important;}
+#match .match-steps span{display:grid!important;grid-template-columns:36px 1fr!important;align-items:center!important;column-gap:10px!important;min-height:58px!important;text-align:left!important;white-space:normal!important;}
+#match .match-steps b{width:32px!important;height:32px!important;display:grid!important;place-items:center!important;margin:0!important;border-radius:999px!important;background:rgba(255,253,247,.20)!important;color:#ead9b9!important;}
+#match .card-result{padding:26px!important;}
+#match .result-kicker{font-size:12px!important;letter-spacing:.16em!important;text-transform:uppercase!important;color:#a87855!important;font-weight:900!important;margin-bottom:8px!important;}
+#match .card-result b:before{content:none!important;}
+#match .result-lines{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin-top:16px!important;}
+#match .result-lines span{display:block!important;background:#f5eddf!important;border:1px solid #e3d3bb!important;border-radius:18px!important;padding:12px 14px!important;color:#455143!important;line-height:1.55!important;}
+#match .result-lines strong{display:block!important;color:var(--green)!important;font-size:12px!important;letter-spacing:.08em!important;margin-bottom:3px!important;}
+#match .result-lines span:last-child{grid-column:1/-1!important;}
+@media(max-width:700px){#match .match-steps{grid-template-columns:1fr!important;gap:10px!important;}#match .match-steps span{min-height:52px!important;}#match .result-lines{grid-template-columns:1fr!important;}#match .card-result{padding:22px!important;}}
 </style>
 </head>
 <body>
@@ -513,7 +526,7 @@
         <div class="eyebrow">Plant Match</div>
         <h2 class="h2">選一個角落，<br>抽一張植物牌</h2>
         <p>不用填很多題。選家的位置、選現在的狀態，再抽一張牌，就會得到一張植物小提案。</p>
-        <div class="match-steps"><span><b>1</b> 選位置</span><span><b>2</b> 選狀態</span><span><b>3</b> 抽植物牌</span></div>
+        <div class="match-steps" aria-label="植物配對三步驟"><span><b>1</b> 選位置</span><span><b>2</b> 選狀態</span><span><b>3</b> 抽植物牌</span></div>
       </div>
       <div class="quiz-steps game-flow">
         <div class="game-panel"><div class="game-panel-head"><span>STEP 1</span><h3>你想先改變哪個角落？</h3></div><div class="choice-grid location-grid">
@@ -540,7 +553,17 @@
             <button class="oracle-card" data-card="cute"><img src="./oracle-card-assets-v41/cute-world.jpg" alt="療癒小宇宙植物牌"><span>療癒小宇宙牌</span><small>養一個可愛小世界</small></button>
             <button class="oracle-card" data-card="balcony"><img src="./oracle-card-assets-v41/balcony-guard.jpg" alt="陽台守護植物牌"><span>陽台守護牌</span><small>讓風光變成屏障</small></button>
           </div>
-          <div class="card-result" id="cardResult"><b>還沒抽牌</b><p>抽牌後，這裡會變成你的植物結果卡。</p></div>
+          <div class="card-result result-card-preview" id="cardResult">
+            <div class="result-kicker">植物結果卡預覽</div>
+            <b>玄關好運牌</b>
+            <p>先選位置與狀態，再抽一張植物牌；這裡會整理成可以直接放進家的小提案。</p>
+            <div class="result-lines">
+              <span><strong>主植物</strong>金錢樹</span>
+              <span><strong>適合位置</strong>玄關／入口櫃</span>
+              <span><strong>照顧節奏</strong>少水、耐陰、好照顧</span>
+              <span><strong>家的意象</strong>回家第一眼先穩下來</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -587,7 +610,7 @@
       const [title, body] = cardText[card.dataset.card];
       const place = selected.place || '你選的角落';
       const state = selected.state || '現在需要的狀態';
-      if (cardResult) cardResult.innerHTML = `<b>${title}</b><p><strong>位置：</strong>${place}<br><strong>狀態：</strong>${state}<br><strong>植物提案：</strong>${body}</p>`;
+      if (cardResult) cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><b>${title}</b><p>這張牌把你選的角落和狀態整理成一份植物小提案。</p><div class="result-lines"><span><strong>位置</strong>${place}</span><span><strong>狀態</strong>${state}</span><span><strong>植物提案</strong>${body}</span></div>`;
     });
   });
 })();
