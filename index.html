@@ -412,6 +412,16 @@
 #match .match-steps:before,#match .match-steps:after,#match .match-steps span:before,#match .match-steps span:after{content:none!important;display:none!important;}
 #match .match-steps{overflow:visible!important;}
 #match .match-steps span{z-index:1!important;}
+
+/* v63 closing consultation section */
+.closing-consult{padding:96px 0 118px;background:linear-gradient(180deg,#f6f0e5,#efe6d8);}
+.closing-panel{position:relative;overflow:hidden;border-radius:42px;min-height:520px;background:#203f31 url('./closing-assets-v63/consultation-bg.jpg') center/cover no-repeat;box-shadow:0 28px 80px rgba(32,45,34,.18);border:1px solid rgba(221,210,192,.8);}
+.closing-panel:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,45,34,.88),rgba(20,45,34,.62) 44%,rgba(20,45,34,.18));}
+.closing-content{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:end;min-height:520px;padding:52px;color:#fffdf7;}
+.closing-copy .eyebrow{color:#ead9b9}.closing-copy .h2{color:#fffdf7}.closing-copy p{font-size:18px;line-height:1.8;color:rgba(255,253,247,.86);max-width:520px;}
+.consult-form{background:rgba(255,253,247,.92);color:var(--green);border:1px solid rgba(255,253,247,.65);border-radius:30px;padding:28px;box-shadow:0 20px 58px rgba(20,45,34,.18);backdrop-filter:blur(12px);}
+.consult-form h3{margin:0 0 10px;font-size:25px;color:var(--green)}.consult-form p{margin:0 0 18px;color:#5b5f55;line-height:1.65}.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.consult-field{background:#f5eddf;border:1px solid #e3d3bb;border-radius:18px;padding:14px 16px;min-height:58px;color:#4f564d}.consult-field.full{grid-column:1/-1;min-height:92px}.consult-field b{display:block;color:#a87855;font-size:12px;letter-spacing:.08em;margin-bottom:4px}.consult-submit{margin-top:16px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--green);color:#fffdf7;padding:13px 20px;font-weight:900;text-decoration:none}.consult-note{font-size:13px!important;color:#777060!important;margin-top:12px!important;}
+@media(max-width:800px){.closing-consult{padding:64px 0 84px}.closing-panel{border-radius:30px}.closing-panel:before{background:linear-gradient(180deg,rgba(20,45,34,.82),rgba(20,45,34,.58));}.closing-content{grid-template-columns:1fr;min-height:auto;padding:28px}.consult-grid{grid-template-columns:1fr}.closing-copy p{font-size:16px}}
 </style>
 </head>
 <body>
@@ -596,6 +606,34 @@
               <span><strong>照顧節奏</strong>少水、耐陰、好照顧</span>
               <span><strong>家的意象</strong>回家第一眼先穩下來</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consult" class="closing-consult">
+    <div class="wrap">
+      <div class="closing-panel">
+        <div class="closing-content">
+          <div class="closing-copy">
+            <div class="eyebrow">Next Step</div>
+            <h2 class="h2">想讓哪個角落，
+真的開始變不一樣？</h2>
+            <p>測完之後，可以把你家的位置、光線和想了解的植物留下來。我們會依照家的條件，整理更適合你的植物方向。</p>
+          </div>
+          <div class="consult-form" aria-label="植物諮詢表單預覽">
+            <h3>植物諮詢單</h3>
+            <p>留下你想了解的角落與植物，我們可以再幫你整理成更完整的配置建議。</p>
+            <div class="consult-grid">
+              <div class="consult-field"><b>想改變的位置</b>玄關／書桌／客廳／陽台</div>
+              <div class="consult-field"><b>目前光線</b>東向／南向／西曬／北向</div>
+              <div class="consult-field"><b>想了解的植物</b>金錢樹、白水木、龜背芋…</div>
+              <div class="consult-field"><b>照顧習慣</b>常忘記澆水／每天會看</div>
+              <div class="consult-field full"><b>想補充的狀況</b>例如：想讓陽台比較有遮擋、書桌不要太煩、玄關想要穩一點。</div>
+            </div>
+            <a class="consult-submit" href="#consult">我想了解更多</a>
+            <p class="consult-note">正式版可接 Google Form / Notion 表單 / LINE 諮詢入口。</p>
           </div>
         </div>
       </div>
