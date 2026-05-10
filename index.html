@@ -585,6 +585,7 @@
 }
 
 
+
 /* v79 mobile full pass: repair rhythm, plant cards, and match width */
 @media(max-width:700px){
   main>section,.hero{scroll-margin-top:82px!important;}
@@ -619,6 +620,11 @@
   #match .game-panel,#match .card-game,#match .quiz-question-set,#match .live-result,#match .card-result{padding-left:16px!important;padding-right:16px!important;}
   #match .choice-card{min-height:86px!important;}
 }
+
+/* v77 consultation match carry-in hint */
+.consult-match-hint{display:none;margin:0 0 14px;padding:12px 14px;border-radius:18px;background:#edf2e7;border:1px solid #d2dec9;color:#315b45;font-size:14px;font-weight:850;line-height:1.55;}
+.consult-match-hint.is-visible{display:block;}
+
 </style>
 </head>
 <body>
@@ -645,7 +651,7 @@
       <div class="eyebrow">植覺配｜Plants for Home</div>
       <h1 class="h1">植物讓家，<br>變得不一樣</h1>
       <p class="lead">植物不是裝飾，是讓家多一個可以停下來的角落。</p><p class="brand-subline">用植物的直覺，配對家的位置與人的狀態。</p><p class="hero-inline-note">讓光、風和角落，都有停留的理由。</p>
-      <div class="btn-row"><a class="btn primary" href="#positions">看看不同位置怎麼選</a><a class="btn ghost" href="#match">做植物配對</a></div>
+      <div class="btn-row"><a class="btn primary" href="#positions">找適合這個家的植物</a><a class="btn ghost" href="#match">1 分鐘做植物配對</a></div>
     </div>
 
   </div>
@@ -832,6 +838,7 @@
           <form class="consult-form" id="plantConsultForm" aria-label="植物諮詢表單">
             <h3>植物諮詢單</h3>
             <p>先留下家的位置與想了解的植物；按下送出後，再補姓名、LINE 與電話，方便後續接洽。</p>
+            <div class="consult-match-hint" id="consultMatchHint" aria-live="polite"></div>
             <div class="consult-grid">
               <div class="consult-field"><label for="consultPlace">想改變的位置</label><select class="consult-select" id="consultPlace" name="place"><option>玄關</option><option>書桌／工作角落</option><option>客廳</option><option>窗邊</option><option>陽台</option><option>小造景角落</option><option>不確定，想請你判斷</option></select></div>
               <div class="consult-field"><label for="consultLight">目前光線</label><select class="consult-select" id="consultLight" name="light"><option>東向柔光</option><option>南向光足</option><option>西曬較強</option><option>北向偏陰</option><option>不確定，想請你判斷</option></select></div>
@@ -891,6 +898,17 @@
     const body = place && state ? '很好，主植物方向已經由你的角落和狀態決定。現在選一種生活語氣，讓提案長出畫面。' : '再選另一個選項，主植物方向會更準。';
     result.innerHTML = `<div class="result-label">目前選擇</div><strong>${title}</strong><p>${body}</p>`;
   };
+  const updateConsultMatchHint = () => {
+    const hint = document.getElementById('consultMatchHint');
+    if (!hint) return;
+    if (!latestMatchResult) {
+      hint.classList.remove('is-visible');
+      hint.textContent = '';
+      return;
+    }
+    hint.textContent = `已帶入你的配對結果：${latestMatchResult.place} × ${latestMatchResult.state} × ${latestMatchResult.tone}｜推薦植物：${latestMatchResult.plant}`;
+    hint.classList.add('is-visible');
+  };
   document.querySelectorAll('.choice-card').forEach(btn => {
     btn.addEventListener('click', () => {
       const group = btn.dataset.game || 'choice';
@@ -898,6 +916,7 @@
       btn.classList.add('is-selected');
       selected[group] = btn.childNodes[0].textContent.trim();
       latestMatchResult = null;
+      updateConsultMatchHint();
       makeResult();
     });
   });
@@ -953,6 +972,7 @@
         image: base.image,
         stateTitle: tune.title
       };
+      updateConsultMatchHint();
       if (cardResult) {
         cardResult.classList.remove('is-revealed');
         cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><div class="flip-picked">你翻到的是：${tone.name}</div><b>${name}<span class="share-title">${tune.title}：${base.plant}</span></b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
