@@ -422,6 +422,23 @@
 .consult-form{background:rgba(255,253,247,.92);color:var(--green);border:1px solid rgba(255,253,247,.65);border-radius:30px;padding:28px;box-shadow:0 20px 58px rgba(20,45,34,.18);backdrop-filter:blur(12px);}
 .consult-form h3{margin:0 0 10px;font-size:25px;color:var(--green)}.consult-form p{margin:0 0 18px;color:#5b5f55;line-height:1.65}.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.consult-field{background:#f5eddf;border:1px solid #e3d3bb;border-radius:18px;padding:14px 16px;min-height:58px;color:#4f564d}.consult-field.full{grid-column:1/-1;min-height:92px}.consult-field b{display:block;color:#a87855;font-size:12px;letter-spacing:.08em;margin-bottom:4px}.consult-submit{margin-top:16px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--green);color:#fffdf7;padding:13px 20px;font-weight:900;text-decoration:none}.consult-note{font-size:13px!important;color:#777060!important;margin-top:12px!important;}
 @media(max-width:800px){.closing-consult{padding:64px 0 84px}.closing-panel{border-radius:30px}.closing-panel:before{background:linear-gradient(180deg,rgba(20,45,34,.82),rgba(20,45,34,.58));}.closing-content{grid-template-columns:1fr;min-height:auto;padding:28px}.consult-grid{grid-template-columns:1fr}.closing-copy p{font-size:16px}}
+
+/* v64 closing: full-page render + real fillable consultation form */
+.closing-consult{position:relative;min-height:100vh;padding:0!important;background:#203f31 url('./closing-assets-v63/consultation-bg.jpg') center/cover no-repeat!important;}
+.closing-consult:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,45,34,.90),rgba(20,45,34,.68) 48%,rgba(20,45,34,.30));}
+.closing-consult .wrap{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;}
+.closing-panel{width:100%;min-height:auto!important;background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;}
+.closing-panel:before{display:none!important;}
+.closing-content{min-height:auto!important;padding:86px 0!important;}
+.consult-input,.consult-select,.consult-textarea{width:100%;border:1px solid #e3d3bb;border-radius:16px;background:#fffdf7;color:#2f3f34;font:inherit;padding:12px 14px;outline:none;}
+.consult-input:focus,.consult-select:focus,.consult-textarea:focus{border-color:#a87855;box-shadow:0 0 0 3px rgba(168,120,85,.15);}
+.consult-textarea{min-height:94px;resize:vertical;}
+.consult-field{padding:0!important;background:transparent!important;border:0!important;min-height:0!important;}
+.consult-field label{display:block;color:#a87855;font-size:12px;letter-spacing:.08em;font-weight:900;margin-bottom:6px;}
+.consult-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px;}
+.consult-submit{border:0;cursor:pointer;font:inherit;}
+.consult-secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid #d9c8af;color:var(--green);background:#fffdf7;padding:12px 18px;font-weight:850;text-decoration:none;}
+@media(max-width:800px){.closing-consult .wrap{min-height:auto}.closing-content{padding:58px 0!important}.closing-consult:before{background:linear-gradient(180deg,rgba(20,45,34,.86),rgba(20,45,34,.62));}}
 </style>
 </head>
 <body>
@@ -622,19 +639,19 @@
 真的開始變不一樣？</h2>
             <p>測完之後，可以把你家的位置、光線和想了解的植物留下來。我們會依照家的條件，整理更適合你的植物方向。</p>
           </div>
-          <div class="consult-form" aria-label="植物諮詢表單預覽">
+          <form class="consult-form" id="plantConsultForm" aria-label="植物諮詢表單">
             <h3>植物諮詢單</h3>
-            <p>留下你想了解的角落與植物，我們可以再幫你整理成更完整的配置建議。</p>
+            <p>填完後會開啟 Google 表單送出頁；正式 Google 表單連結接上後，就能直接收回覆。</p>
             <div class="consult-grid">
-              <div class="consult-field"><b>想改變的位置</b>玄關／書桌／客廳／陽台</div>
-              <div class="consult-field"><b>目前光線</b>東向／南向／西曬／北向</div>
-              <div class="consult-field"><b>想了解的植物</b>金錢樹、白水木、龜背芋…</div>
-              <div class="consult-field"><b>照顧習慣</b>常忘記澆水／每天會看</div>
-              <div class="consult-field full"><b>想補充的狀況</b>例如：想讓陽台比較有遮擋、書桌不要太煩、玄關想要穩一點。</div>
+              <div class="consult-field"><label for="consultPlace">想改變的位置</label><select class="consult-select" id="consultPlace" name="place"><option>玄關</option><option>書桌／工作角落</option><option>客廳</option><option>窗邊</option><option>陽台</option><option>小造景角落</option></select></div>
+              <div class="consult-field"><label for="consultLight">目前光線</label><select class="consult-select" id="consultLight" name="light"><option>東向柔光</option><option>南向光足</option><option>西曬較強</option><option>北向偏陰</option><option>不確定，想請你判斷</option></select></div>
+              <div class="consult-field"><label for="consultPlant">想了解的植物</label><input class="consult-input" id="consultPlant" name="plant" placeholder="例：金錢樹、白水木、龜背芋"></div>
+              <div class="consult-field"><label for="consultHabit">照顧習慣</label><select class="consult-select" id="consultHabit" name="habit"><option>常忘記澆水</option><option>每天會看一下</option><option>願意修剪整理</option><option>常出差，希望低維護</option><option>新手，想從簡單開始</option></select></div>
+              <div class="consult-field full"><label for="consultNote">想補充的狀況</label><textarea class="consult-textarea" id="consultNote" name="note" placeholder="例：想讓陽台比較有遮擋、書桌不要太煩、玄關想要穩一點。"></textarea></div>
             </div>
-            <a class="consult-submit" href="#consult">我想了解更多</a>
-            <p class="consult-note">正式版可接 Google Form / Notion 表單 / LINE 諮詢入口。</p>
-          </div>
+            <div class="consult-actions"><button class="consult-submit" type="submit">送出諮詢</button><a class="consult-secondary" id="openGoogleForm" href="#consult" target="_blank" rel="noopener">開啟 Google 表單</a></div>
+            <p class="consult-note">目前先保留可替換的 Google 表單入口；拿到正式表單連結後可直接接上預填欄位。</p>
+          </form>
         </div>
       </div>
     </div>
@@ -646,6 +663,16 @@
 (() => {
   const result = document.getElementById('liveResult');
   const selected = {};
+
+  const GOOGLE_FORM_URL = '';
+  const openConsultForm = (payload = {}) => {
+    if (!GOOGLE_FORM_URL) {
+      alert('這裡會接到 Google 表單。請提供正式 Google 表單連結後，就能把欄位預填並送出。');
+      return;
+    }
+    const url = new URL(GOOGLE_FORM_URL);
+    window.open(url.toString(), '_blank', 'noopener');
+  };
   const makeResult = () => {
     if (!result) return;
     const place = selected.place;
@@ -716,6 +743,22 @@
       }
     });
   });
+
+  const consultForm = document.getElementById('plantConsultForm');
+  if (consultForm) {
+    consultForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      openConsultForm(Object.fromEntries(new FormData(consultForm).entries()));
+    });
+  }
+  const openGoogleForm = document.getElementById('openGoogleForm');
+  if (openGoogleForm) {
+    openGoogleForm.addEventListener('click', (e) => {
+      e.preventDefault();
+      const form = document.getElementById('plantConsultForm');
+      openConsultForm(form ? Object.fromEntries(new FormData(form).entries()) : {});
+    });
+  }
 })();
 </script>
 
