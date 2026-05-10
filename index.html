@@ -398,6 +398,14 @@
   .soft-card.sketch-card{background:#fffdf7 url('./plant-botanical-line-art-v7.png') right bottom/58% auto no-repeat!important;}
   .soft-card.sketch-card svg{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:86%!important;height:auto!important;opacity:.42!important;pointer-events:none!important;}
 }
+
+/* v61 result naming + flip-card interaction */
+#match .oracle-card{transform-style:preserve-3d!important;will-change:transform!important;}
+#match .oracle-card.is-picked{transform:translateY(-4px) rotateY(8deg)!important;}
+#match .oracle-card.is-picked:after{content:"已翻開"!important;background:#315b45!important;color:#fffdf7!important;}
+#match .card-result.is-revealed{animation:resultReveal .46s ease both;}
+@keyframes resultReveal{0%{opacity:.25;transform:translateY(18px) scale(.97) rotateX(8deg)}100%{opacity:1;transform:translateY(0) scale(1) rotateX(0)}}
+#match .share-title{display:block;font-size:15px!important;line-height:1.6!important;color:#7d6244!important;margin-top:8px!important;}
 </style>
 </head>
 <body>
@@ -485,7 +493,7 @@
         <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/balcony.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>開放／半開放陽台</h3><div class="meta">戶外條件｜風與光</div><p>這裡要放真的能吹風見光的植物，不寫成一般室內植物。</p><p class="fit">適合植物：斑葉海桐、白水木、斑葉非洲茉莉</p></div></article>
         <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/directions.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>小造景角落</h3><div class="meta">家的個性｜活潑細節</div><p>小盆栽、小動物、畫作與光線可以一起形成家的表情。</p><p class="fit">適合植物：小盆栽、多肉、水耕組合</p></div></article>
       </div>
-      <div class="balcony-band"><div class="balcony-copy"><h3 class="h3">陽台不只是一種陽台</h3><p>同樣是陽台，方位不同，光照、風、曝曬與植物答案都不同。這裡要像指南，但不能像教科書。</p></div><div class="balcony-cols"><div class="balcony-col"><h4>東向</h4><p>光線溫和，適合需要明亮但不曝曬的植物。</p></div><div class="balcony-col"><h4>南向</h4><p>日照充足，適合喜光、能承受較高光照的植物。</p></div><div class="balcony-col"><h4>西向</h4><p>午後曝曬強，需選耐熱、耐曬且排水好的植物。</p></div><div class="balcony-col"><h4>北向</h4><p>光線較弱，適合耐陰、喜散射光的植物。</p></div></div></div>
+      <div class="balcony-band"><div class="balcony-copy"><h3 class="h3">陽台不只是一種陽台</h3><p>同樣是陽台，方位不同，光、風與曝曬也不同。先看方向，再選真正能留下來的植物。</p></div><div class="balcony-cols"><div class="balcony-col"><h4>東向</h4><p>光線溫和，適合需要明亮但不曝曬的植物。</p></div><div class="balcony-col"><h4>南向</h4><p>日照充足，適合喜光、能承受較高光照的植物。</p></div><div class="balcony-col"><h4>西向</h4><p>午後曝曬強，需選耐熱、耐曬且排水好的植物。</p></div><div class="balcony-col"><h4>北向</h4><p>光線較弱，適合耐陰、喜散射光的植物。</p></div></div></div>
     </div>
   </section>
 
@@ -625,12 +633,20 @@
     '小造景': { plant:'多肉小盆＋小動物造景', spot:'櫃面／窗邊小角落', care:'高光、少水、避免悶濕', image:'養一個會讓你靠近的小世界' }
   };
   const stateTune = {
-    '安定': { title:'安定配方', add:'選擇圓葉、厚葉或樹形穩的植物，讓角落先把心穩住。', blessing:'穩定、聚氣、把回家的節奏放慢' },
-    '放鬆': { title:'放鬆配方', add:'植物不要太搶戲，葉色柔和、線條安靜，讓視線可以停下來。', blessing:'淨化、降噪、讓煩躁慢慢退開' },
-    '提亮': { title:'提亮配方', add:'加入斑葉、淺色盆器或靠近光的位置，讓角落多一點亮度。', blessing:'提亮氣場、讓家有清爽感' },
-    '好運': { title:'好運配方', add:'用圓潤、向上或有祝福感的植物，放在每天會看見的位置。', blessing:'聚財、圓滿、迎接好的開始' },
-    '陪伴': { title:'陪伴配方', add:'選小一點、能每天觀察變化的植物，不吵但一直在。', blessing:'陪伴、貴人、把日常接回來' },
-    '活起來': { title:'活起來配方', add:'用垂墜、斑葉或小造景，把冷硬角落變成有故事的地方。', blessing:'流動、生氣、讓空間重新有表情' }
+    '安定': { title:'安定入口組', add:'選擇圓葉、厚葉或樹形穩的植物，讓角落先把心穩住。', blessing:'穩定、聚氣、把回家的節奏放慢' },
+    '放鬆': { title:'鬆一口氣角落', add:'植物不要太搶戲，葉色柔和、線條安靜，讓視線可以停下來。', blessing:'淨化、降噪、讓煩躁慢慢退開' },
+    '提亮': { title:'晨光提亮組', add:'加入斑葉、淺色盆器或靠近光的位置，讓角落多一點亮度。', blessing:'提亮氣場、讓家有清爽感' },
+    '好運': { title:'好運迎門組', add:'用圓潤、向上或有祝福感的植物，放在每天會看見的位置。', blessing:'聚財、圓滿、迎接好的開始' },
+    '陪伴': { title:'安靜陪伴組', add:'選小一點、能每天觀察變化的植物，不吵但一直在。', blessing:'陪伴、貴人、把日常接回來' },
+    '活起來': { title:'角落甦醒組', add:'用垂墜、斑葉或小造景，把冷硬角落變成有故事的地方。', blessing:'流動、生氣、讓空間重新有表情' }
+  };
+  const resultName = (place, state, toneName, base, tune) => {
+    if (place === '玄關' && state === '安定') return `玄關安定型：回家第一眼的穩定植栽`;
+    if (toneName === '晨光停留') return `晨光${place}配方：把一天慢慢接住`;
+    if (toneName === '鬆一口氣') return `${place}放鬆型：讓煩躁先停下來`;
+    if (toneName === '小宇宙') return `${place}小宇宙：養一個會想靠近的角落`;
+    if (toneName === '守護感') return `${place}守護組：替家接住外面的風`;
+    return `${place}${state}組：${base.plant}`;
   };
   const cardTone = {
     morning: { name:'晨光停留', tone:'這個角落適合放在每天會被光照到、也會被你看見的位置，像早上先替家點一盞小燈。' },
@@ -648,7 +664,10 @@
       const tune = stateTune[state] || stateTune['安定'];
       const tone = cardTone[card.dataset.card] || cardTone.morning;
       if (cardResult) {
-        cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><b>${place} × ${state}｜${tune.title}</b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
+        const name = resultName(place, state, tone.name, base, tune);
+        cardResult.classList.remove('is-revealed');
+        cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><b>${name}<span class="share-title">${tune.title}：${base.plant}</span></b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
+        requestAnimationFrame(() => cardResult.classList.add('is-revealed'));
         requestAnimationFrame(() => cardResult.scrollIntoView({ behavior:'smooth', block:'start' }));
       }
     });
