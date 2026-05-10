@@ -575,9 +575,11 @@
 }
 
 
-/* v77 mobile story illustration: use original Monstera artwork */
+/* v78 mobile polish after integrated main: safer hamburger + original Monstera without excess blank */
 @media(max-width:700px){
-  .soft-card.sketch-card{min-height:350px!important;padding-bottom:145px!important;background:#fffdf7 url('./plant-botanical-line-art-v7.png') center bottom 22px/245px auto no-repeat!important;}
+  .nav .wrap.nav-inner{width:calc(100vw - 64px)!important;max-width:326px!important;padding-left:0!important;padding-right:0!important;overflow:visible!important;}
+  .mobile-menu-toggle{width:44px!important;height:40px!important;flex:0 0 44px!important;margin-right:0!important;}
+  .soft-card.sketch-card{min-height:auto!important;padding-bottom:116px!important;background:#fffdf7 url('./plant-botanical-line-art-v7.png') center bottom 18px/220px auto no-repeat!important;}
   .soft-card.sketch-card svg{display:none!important;}
   .soft-card.sketch-card::after{display:none!important;content:none!important;}
 }
