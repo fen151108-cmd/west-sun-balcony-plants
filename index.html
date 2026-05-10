@@ -315,6 +315,30 @@
 .choice-card span{display:block;margin-top:6px;font-size:12.5px;line-height:1.45;color:#706858;font-weight:650;}
 .choice-card.is-selected{background:#ead9b9;border-color:#fffdf7;transform:translateY(-2px);}
 @media(max-width:700px){.game-panel{padding:18px!important;border-radius:24px!important}.choice-grid{grid-template-columns:1fr!important;gap:9px!important}.choice-card{font-size:17px!important;padding:14px!important}.game-panel-head h3{font-size:24px!important}}
+
+/* v49 reduce copy, stronger game feel, lighter plant cards */
+.match-steps{gap:14px!important;}
+.match-steps span{border-radius:22px!important;box-shadow:0 12px 28px rgba(18,35,26,.12);}
+.choice-card{position:relative;}
+.choice-card:after{content:"選我";position:absolute;right:12px;top:12px;font-size:11px;letter-spacing:.08em;color:#9a8a70;background:#f4eadb;border-radius:999px;padding:4px 7px;font-weight:800;}
+.choice-card.is-selected{background:#ead9b9!important;border-color:#fffdf7!important;box-shadow:0 18px 42px rgba(18,35,26,.22)!important;transform:translateY(-3px)!important;}
+.choice-card.is-selected:after{content:"已選";background:#315b45;color:#fffdf7;}
+.card-result{border:1px solid rgba(234,217,185,.75)!important;box-shadow:0 18px 45px rgba(18,35,26,.12)!important;}
+.card-result b:before{content:"你的植物結果卡｜";font-size:13px;letter-spacing:.08em;color:#a87855;display:block;margin-bottom:6px;}
+.plant-mini .fit{font-size:13px!important;}
+.plant-mini p{font-size:13.5px!important;}
+.plant-mini small{font-size:13px!important;}
+.plant-mini .meaning{font-size:12.5px!important;}
+@media(max-width:700px){
+  .match-steps{gap:10px!important;}
+  .match-steps span{display:grid!important;grid-template-columns:34px 1fr!important;align-items:center!important;column-gap:10px!important;white-space:normal!important;}
+  .match-steps b{width:28px;height:28px;display:grid!important;place-items:center;background:rgba(255,253,247,.18);border-radius:999px;}
+  .choice-card{padding-right:58px!important;}
+  .choice-card span{font-size:12.5px!important;}
+  .plant-mini-content{padding:16px!important;}
+  .plant-mini small{display:none!important;}
+  .plant-mini .meaning{margin-top:7px!important;}
+}
 </style>
 </head>
 <body>
@@ -346,9 +370,7 @@
         <div class="story-words">
           <div class="eyebrow">Brand Memory</div>
           <h2 class="h2">植物不是裝飾，<br>是家的狀態</h2>
-          <p>有些家不是不漂亮，只是少了一點能讓人放鬆下來的氣息。</p>
-          <p>一盆植物放在對的位置，會讓空間變得柔和、安定，也讓原本太空、太硬、太急的地方，慢慢有了生命感。</p>
-          <p>我們選植物，不只看它漂不漂亮。也看它適不適合這個家的光、風、位置，以及你希望這個地方變成什麼樣子。</p>
+          <p>有些家不是少了裝飾，而是少了一個會呼吸的角落。</p><p>植物放在對的位置，家就多了一個能把人接住的地方。</p>
         </div>
         <div class="mood-photo"><img src="./plant-story-painted-corner-v13.jpg" alt="植物放在對的位置的畫感情境"><div class="hero-note">植物放在對的位置，<br>家會先慢下來。</div></div>
       </div>
@@ -360,9 +382,7 @@
         <div class="story-words">
           <div class="eyebrow">Real Life</div>
           <h2 class="h2">工作很煩，<br>植物很安靜</h2>
-          <p>有些時候，工作不是單純忙，而是煩。事情要處理，人要溝通，情緒要吞下去，回到家以後，連解釋自己為什麼累都覺得累。</p>
-          <p>植物不會催你、不會評論你，也不會要求你立刻變好。你只是走到陽台，澆一點水、剪掉枯葉、把小盆栽挪到有光的位置。</p>
-          <p>然後你發現：原來照顧它們的時候，也是在把自己從工作裡慢慢帶回家。</p>
+          <p>工作很煩，植物很安靜。</p><p>你不一定需要很大的改變，只需要一個能讓視線停下來的位置。</p>
         </div>
       </div>
       <div class="quiet-cta"><strong>先從一個你最想改變的位置開始。</strong><br>不是一次改完整個家，而是看看哪一種植物，能讓那個地方慢慢變得不一樣。</div>
@@ -375,15 +395,13 @@
       <div>
         <div class="eyebrow">Why It Feels Like You</div>
         <h2 class="h2">不是買一盆植物，<br>是讓家重新接住你。</h2>
-        <p class="body-lg">真正療癒的不是植物被擺得多漂亮，而是每天早上願意走出去看一看：哪一盆又長新葉、哪一片葉子該修掉、哪個角落需要再澆一點水。</p>
-        <div class="scene-tags"><span>陽台小花園</span><span>小恐龍與狗狗造景</span><span>早晨澆水</span><span>修剪枯葉</span><span>把心慢慢帶回來</span></div>
+        <p class="body-lg">真正療癒的不是擺得多漂亮，而是每天願意多看一眼，讓家慢慢有回應。</p>
+        <div class="scene-tags"><span>陽台小花園</span><span>小造景</span><span>早晨澆水</span><span>新葉</span></div>
       </div>
       <div>
-        <p class="you-quote">如果你也曾經在很煩的一天後，被一盆植物、一個小造景、一點早晨的光接住，那這個網站說的，就是你的家。</p>
+        <p class="you-quote">如果你也曾經被一片新葉、一點早晨的光接住，這裡就是為你整理的植物入口。</p>
         <div class="micro-list">
-          <div class="micro-item"><strong>小造景不是裝飾。</strong> 小恐龍、狗狗、石頭、玻璃瓶和植物放在一起，會讓角落像一個有故事的小世界。</div>
-          <div class="micro-item"><strong>澆水不是工作。</strong> 它是一個把節奏放慢的入口，讓人從訊息、壓力和煩躁裡退回生活。</div>
-          <div class="micro-item"><strong>植物配置不是美化。</strong> 是讓家的光、風、位置和人的狀態重新對齊。</div>
+          <div class="micro-item"><strong>小造景不是裝飾。</strong> 它讓角落有故事。</div><div class="micro-item"><strong>澆水不是工作。</strong> 它讓節奏慢下來。</div><div class="micro-item"><strong>植物配置不是美化。</strong> 是讓光、風、位置和人重新對齊。</div>
         </div>
       </div>
     </div>
