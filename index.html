@@ -439,6 +439,13 @@
 .consult-submit{border:0;cursor:pointer;font:inherit;}
 .consult-secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid #d9c8af;color:var(--green);background:#fffdf7;padding:12px 18px;font-weight:850;text-decoration:none;}
 @media(max-width:800px){.closing-consult .wrap{min-height:auto}.closing-content{padding:58px 0!important}.closing-consult:before{background:linear-gradient(180deg,rgba(20,45,34,.86),rgba(20,45,34,.62));}}
+
+/* v65 contact modal instead of Google Form */
+.contact-modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(20,35,27,.62);backdrop-filter:blur(8px);}
+.contact-modal.is-open{display:flex;}
+.contact-box{width:min(560px,100%);background:#fffdf7;color:var(--green);border-radius:32px;padding:30px;border:1px solid #e3d3bb;box-shadow:0 32px 90px rgba(18,35,26,.28);position:relative;}
+.contact-close{position:absolute;right:18px;top:16px;width:36px;height:36px;border-radius:999px;border:1px solid #d9c8af;background:#fff8ea;color:var(--green);font-size:20px;cursor:pointer;}
+.contact-box h3{margin:0 0 8px;font-size:28px;color:var(--green);}.contact-box p{margin:0 0 18px;color:#5b5f55;line-height:1.7}.contact-grid{display:grid;gap:12px}.contact-grid label{font-size:12px;letter-spacing:.08em;color:#a87855;font-weight:900;display:block;margin-bottom:6px}.contact-grid input{width:100%;border:1px solid #e3d3bb;border-radius:16px;background:#fffaf0;color:#2f3f34;font:inherit;padding:12px 14px;outline:none}.contact-grid input:focus{border-color:#a87855;box-shadow:0 0 0 3px rgba(168,120,85,.15)}.contact-submit{margin-top:16px;border:0;border-radius:999px;background:var(--green);color:#fffdf7;padding:13px 20px;font:inherit;font-weight:900;cursor:pointer}.contact-success{display:none;margin-top:14px;background:#edf2e7;border:1px solid #d2dec9;border-radius:16px;padding:12px 14px;color:#315b45;font-weight:800}.contact-success.is-visible{display:block;}
 </style>
 </head>
 <body>
@@ -641,7 +648,7 @@
           </div>
           <form class="consult-form" id="plantConsultForm" aria-label="植物諮詢表單">
             <h3>植物諮詢單</h3>
-            <p>填完後會開啟 Google 表單送出頁；正式 Google 表單連結接上後，就能直接收回覆。</p>
+            <p>先留下家的位置與想了解的植物；按下送出後，再補姓名、LINE 與電話，方便後續接洽。</p>
             <div class="consult-grid">
               <div class="consult-field"><label for="consultPlace">想改變的位置</label><select class="consult-select" id="consultPlace" name="place"><option>玄關</option><option>書桌／工作角落</option><option>客廳</option><option>窗邊</option><option>陽台</option><option>小造景角落</option></select></div>
               <div class="consult-field"><label for="consultLight">目前光線</label><select class="consult-select" id="consultLight" name="light"><option>東向柔光</option><option>南向光足</option><option>西曬較強</option><option>北向偏陰</option><option>不確定，想請你判斷</option></select></div>
@@ -649,8 +656,8 @@
               <div class="consult-field"><label for="consultHabit">照顧習慣</label><select class="consult-select" id="consultHabit" name="habit"><option>常忘記澆水</option><option>每天會看一下</option><option>願意修剪整理</option><option>常出差，希望低維護</option><option>新手，想從簡單開始</option></select></div>
               <div class="consult-field full"><label for="consultNote">想補充的狀況</label><textarea class="consult-textarea" id="consultNote" name="note" placeholder="例：想讓陽台比較有遮擋、書桌不要太煩、玄關想要穩一點。"></textarea></div>
             </div>
-            <div class="consult-actions"><button class="consult-submit" type="submit">送出諮詢</button><a class="consult-secondary" id="openGoogleForm" href="#consult" target="_blank" rel="noopener">開啟 Google 表單</a></div>
-            <p class="consult-note">目前先保留可替換的 Google 表單入口；拿到正式表單連結後可直接接上預填欄位。</p>
+            <div class="consult-actions"><button class="consult-submit" type="submit">送出諮詢</button></div>
+            <p class="consult-note">送出後會跳出聯絡資料視窗，留下姓名、LINE 與電話。</p>
           </form>
         </div>
       </div>
@@ -664,15 +671,7 @@
   const result = document.getElementById('liveResult');
   const selected = {};
 
-  const GOOGLE_FORM_URL = '';
-  const openConsultForm = (payload = {}) => {
-    if (!GOOGLE_FORM_URL) {
-      alert('這裡會接到 Google 表單。請提供正式 Google 表單連結後，就能把欄位預填並送出。');
-      return;
-    }
-    const url = new URL(GOOGLE_FORM_URL);
-    window.open(url.toString(), '_blank', 'noopener');
-  };
+  let consultPayload = {};
   const makeResult = () => {
     if (!result) return;
     const place = selected.place;
@@ -744,23 +743,49 @@
     });
   });
 
+  const contactModal = document.getElementById('contactModal');
+  const contactSummary = document.getElementById('contactSummary');
+  const contactSuccess = document.getElementById('contactSuccess');
+  const openContactModal = () => { if (contactModal) contactModal.classList.add('is-open'); };
+  const closeContactModal = () => { if (contactModal) contactModal.classList.remove('is-open'); };
   const consultForm = document.getElementById('plantConsultForm');
   if (consultForm) {
     consultForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      openConsultForm(Object.fromEntries(new FormData(consultForm).entries()));
+      consultPayload = Object.fromEntries(new FormData(consultForm).entries());
+      if (contactSummary) contactSummary.textContent = `你想了解：${consultPayload.place || '家裡某個角落'}／${consultPayload.light || '光線待確認'}／${consultPayload.plant || '想請我們推薦植物'}`;
+      if (contactSuccess) contactSuccess.classList.remove('is-visible');
+      openContactModal();
     });
   }
-  const openGoogleForm = document.getElementById('openGoogleForm');
-  if (openGoogleForm) {
-    openGoogleForm.addEventListener('click', (e) => {
+  document.querySelectorAll('[data-close-contact]').forEach(btn => btn.addEventListener('click', closeContactModal));
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const form = document.getElementById('plantConsultForm');
-      openConsultForm(form ? Object.fromEntries(new FormData(form).entries()) : {});
+      const contact = Object.fromEntries(new FormData(contactForm).entries());
+      console.log('植覺配諮詢資料', { consult: consultPayload, contact });
+      if (contactSuccess) contactSuccess.classList.add('is-visible');
     });
   }
 })();
 </script>
+
+
+<div class="contact-modal" id="contactModal" role="dialog" aria-modal="true" aria-label="留下聯絡資料">
+  <div class="contact-box">
+    <button class="contact-close" type="button" data-close-contact aria-label="關閉">×</button>
+    <h3>留下聯絡資料</h3>
+    <p id="contactSummary">我們會依照你的植物諮詢內容，再回覆更適合的配置方向。</p>
+    <form id="contactForm" class="contact-grid">
+      <div><label for="contactName">姓名</label><input id="contactName" name="name" required placeholder="請輸入姓名"></div>
+      <div><label for="contactLine">LINE ID</label><input id="contactLine" name="line" placeholder="例：@yourline 或 LINE ID"></div>
+      <div><label for="contactPhone">聯絡電話</label><input id="contactPhone" name="phone" inputmode="tel" placeholder="請輸入電話"></div>
+      <button class="contact-submit" type="submit">確認送出</button>
+      <div class="contact-success" id="contactSuccess">已留下資料。正式版接上後，這裡會送到指定收件方式。</div>
+    </form>
+  </div>
+</div>
 
 <a class="back-top" href="#top" aria-label="回到上方">↑</a>
 </body>
