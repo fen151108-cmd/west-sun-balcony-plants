@@ -540,6 +540,25 @@
   .wrap,.nav .wrap.nav-inner,#match .wrap,.closing-consult .wrap{width:calc(100vw - 64px)!important;max-width:326px!important;}
 }
 
+
+/* v71 mobile hamburger quick-jump menu */
+.mobile-menu-toggle{display:none;border:1px solid rgba(36,70,53,.24);background:rgba(255,253,247,.78);border-radius:999px;width:46px;height:40px;align-items:center;justify-content:center;flex-direction:column;gap:4px;padding:0;box-shadow:0 10px 26px rgba(50,55,42,.08)}
+.mobile-menu-toggle span{display:block;width:18px;height:2px;background:var(--green);border-radius:999px;transition:.22s ease}
+.mobile-nav-menu{display:none}
+@media(max-width:880px){
+  .nav{overflow:visible!important;z-index:80!important}
+  .nav .wrap.nav-inner{width:calc(100vw - 28px)!important;max-width:362px!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}
+  .mobile-menu-toggle{display:flex!important;flex:0 0 46px;margin-left:auto;position:relative;z-index:91}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .mobile-nav-menu{display:grid!important;visibility:hidden;position:fixed;left:50%;top:70px;transform:translateX(-50%) translateY(-10px);width:min(342px,calc(100vw - 36px));z-index:90;background:rgba(255,253,247,.98);border:1px solid rgba(221,210,192,.92);border-radius:28px;padding:10px;box-shadow:0 24px 70px rgba(36,48,37,.22);opacity:0;pointer-events:none;transition:.22s ease;backdrop-filter:blur(18px)}
+  .mobile-nav-menu.is-open{visibility:visible;opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+  .mobile-nav-menu a{display:flex;justify-content:space-between;align-items:center;gap:14px;text-decoration:none;color:var(--green);font-weight:850;padding:14px 15px;border-radius:20px;border:1px solid transparent}
+  .mobile-nav-menu a+a{margin-top:4px}
+  .mobile-nav-menu a:hover,.mobile-nav-menu a:focus{background:#edf2e7;border-color:#d2dec9;outline:none}
+  .mobile-nav-menu a span{font-size:12px;font-weight:650;color:#7a7467;text-align:right;line-height:1.35}
+}
 </style>
 </head>
 <body>
@@ -549,6 +568,14 @@
     <div class="nav-links">
       <a href="#story">品牌記憶</a><a href="#positions">依位置找</a><a href="#conditions">看光與風</a><a href="#plants">植物性格</a><a href="#match" class="nav-cta">開始配對</a>
     </div>
+    <button class="mobile-menu-toggle" type="button" aria-label="開啟快速選單" aria-expanded="false" aria-controls="mobileNavMenu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav-menu" id="mobileNavMenu" aria-hidden="true">
+    <a href="#story">品牌記憶<span>先看品牌感覺</span></a>
+    <a href="#positions">依位置找<span>客廳、玄關、書桌</span></a>
+    <a href="#conditions">看光與風<span>方位與照顧條件</span></a>
+    <a href="#plants">植物性格<span>找到適合的植物</span></a>
+    <a href="#match">開始配對<span>直接玩植物配對</span></a>
   </div>
 </nav>
 <header id="top" class="hero">
@@ -762,6 +789,29 @@
 
 <script>
 (() => {
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobileNavMenu');
+  const closeMobileMenu = () => {
+    if (!menuToggle || !mobileMenu) return;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    mobileMenu.classList.remove('is-open');
+  };
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      const open = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!open));
+      mobileMenu.setAttribute('aria-hidden', String(open));
+      mobileMenu.classList.toggle('is-open', !open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileMenu(); });
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.classList.contains('is-open')) return;
+      if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMobileMenu();
+    });
+  }
+
   const result = document.getElementById('liveResult');
   const selected = {};
 
