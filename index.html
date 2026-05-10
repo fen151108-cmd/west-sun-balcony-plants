@@ -628,7 +628,10 @@
       const base = placePlan[place] || placePlan['玄關'];
       const tune = stateTune[state] || stateTune['安定'];
       const tone = cardTone[card.dataset.card] || cardTone.morning;
-      if (cardResult) cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><b>${place} × ${state}｜${tune.title}</b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
+      if (cardResult) {
+        cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><b>${place} × ${state}｜${tune.title}</b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
+        requestAnimationFrame(() => cardResult.scrollIntoView({ behavior:'smooth', block:'start' }));
+      }
     });
   });
 })();
