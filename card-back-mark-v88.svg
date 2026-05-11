@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" role="img" aria-label="生活語氣牌背符號">
+  <rect x="34" y="28" width="92" height="104" rx="28" stroke="#fffdf7" stroke-opacity="0.86" stroke-width="4"/>
+  <path d="M80 48C86 64 96 74 112 80C96 86 86 96 80 112C74 96 64 86 48 80C64 74 74 64 80 48Z" fill="#fffdf7" fill-opacity="0.82"/>
+  <circle cx="80" cy="80" r="10" fill="#244635" fill-opacity="0.36"/>
+  <path d="M54 122H106" stroke="#fffdf7" stroke-opacity="0.58" stroke-width="4" stroke-linecap="round"/>
+  <path d="M54 38H106" stroke="#fffdf7" stroke-opacity="0.40" stroke-width="4" stroke-linecap="round"/>
+</svg>
