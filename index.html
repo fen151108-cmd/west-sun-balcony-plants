@@ -1120,3 +1120,20 @@
 
 
 <!-- v36 correction: reference photos are identity calibration only; website examples use other styled spaces, not the user home balcony as the main示意. -->
+
+<style id="v89-remove-weird-leaf-art">
+/* v89: 湘雰校正｜桌機不要奇怪的大葉線稿；主視覺只保留龜背芋情境圖 */
+@media(min-width:701px){
+  .soft-card.sketch-card{
+    background:#fffdf7!important;
+    padding-bottom:36px!important;
+    min-height:auto!important;
+  }
+  .soft-card.sketch-card svg,
+  .soft-card.sketch-card::after,
+  .line-art-watermark{
+    display:none!important;
+    content:none!important;
+  }
+}
+</style>
