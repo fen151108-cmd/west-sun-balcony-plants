@@ -726,7 +726,7 @@
     <div class="hero-copy">
       <div class="eyebrow">植覺配｜Plants for Home</div>
       <h1 class="h1">植物讓家，<br>變得不一樣</h1>
-      <p class="lead">植物不是裝飾，是讓家多一個可以停下來的角落。</p><p class="brand-subline">用植物的直覺，配對家的位置與人的狀態。</p><p class="hero-inline-note">讓光、風和角落，都有停留的理由。</p>
+      <p class="lead">植物不是裝飾，是讓家多一個可以停下來的角落。</p><p class="brand-subline">根據你家的光線、位置與生活習慣，推薦真正養得好的植物。</p><p class="hero-inline-note">讓光、風和角落，都有停留的理由。</p>
       <div class="btn-row"><a class="btn primary" href="#positions">找適合這個家的植物</a><a class="btn ghost" href="#match">1 分鐘做植物配對</a></div>
     </div>
 
@@ -921,7 +921,7 @@
               <div class="consult-field"><label for="consultHabit">照顧習慣</label><select class="consult-select" id="consultHabit" name="habit"><option>常忘記澆水</option><option>每天會看一下</option><option>願意修剪整理</option><option>常出差，希望低維護</option><option>新手，想從簡單開始</option></select></div>
               <div class="consult-field full"><label for="consultNote">想補充的狀況</label><textarea class="consult-textarea" id="consultNote" name="note" placeholder="例：想讓陽台比較有遮擋、書桌不要太煩、玄關想要穩一點。"></textarea></div>
             </div>
-            <div class="consult-actions"><button class="consult-submit" type="submit">送出諮詢</button></div>
+            <div class="consult-actions"><button class="consult-submit" type="submit">取得植物建議</button></div>
             <p class="consult-note">送出後會跳出聯絡資料視窗。留下資料後，植物顧問會再和你聯絡。</p>
           </form>
         </div>
@@ -1181,3 +1181,81 @@
   }
 }
 </style>
+
+
+<style id="v98-next-polish-from-saved-version">
+/* v98: 依湘雰 22:35 修正清單｜定位、導覽遮擋、選取狀態、手機資訊密度、CTA */
+#match .game-panel,
+#match .card-game{
+  scroll-margin-top:110px!important;
+}
+#match .choice-card.is-selected{
+  background:#edf5ea!important;
+  border:2px solid #244635!important;
+  color:#244635!important;
+  box-shadow:0 18px 42px rgba(36,70,53,.22)!important;
+  transform:translateY(-3px)!important;
+}
+#match .choice-card.is-selected:after{
+  content:"✓ 已選"!important;
+  background:#244635!important;
+  color:#fffdf7!important;
+  border-radius:999px!important;
+  padding:5px 9px!important;
+}
+#match .oracle-card.is-picked{
+  border:3px solid #244635!important;
+  background:#edf5ea!important;
+  box-shadow:0 24px 60px rgba(36,70,53,.26)!important;
+}
+#match .oracle-card.is-picked:after{
+  content:"✓ 已選"!important;
+  background:#244635!important;
+  color:#fffdf7!important;
+}
+@media(max-width:700px){
+  .nav{position:sticky!important;top:0!important;}
+  #match .game-panel,#match .card-game{scroll-margin-top:96px!important;}
+  #plants .plant-mini.is-collapsed .plant-mini-content small,
+  #plants .plant-mini.is-collapsed .plant-mini-content .meaning{
+    display:none!important;
+  }
+  #plants .plant-mini-more{
+    margin-top:10px;
+    border:1px solid #d2dec9;
+    background:#edf2e7;
+    color:#315b45;
+    border-radius:999px;
+    padding:8px 12px;
+    font-weight:850;
+    font-size:13px!important;
+    line-height:1.2!important;
+  }
+}
+</style>
+<script id="v98-mobile-plant-card-more">
+(function(){
+  function initPlantMore(){
+    if (!window.matchMedia || !window.matchMedia('(max-width: 700px)').matches) return;
+    document.querySelectorAll('#plants .plant-mini').forEach(function(card){
+      if (card.dataset.moreReady === '1') return;
+      var extra = card.querySelector('small, .meaning');
+      var content = card.querySelector('.plant-mini-content');
+      if (!extra || !content) return;
+      card.dataset.moreReady = '1';
+      card.classList.add('is-collapsed');
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'plant-mini-more';
+      btn.textContent = '看更多';
+      btn.addEventListener('click', function(){
+        var collapsed = card.classList.toggle('is-collapsed');
+        btn.textContent = collapsed ? '看更多' : '收起';
+      });
+      content.appendChild(btn);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initPlantMore);
+  else initPlantMore();
+})();
+</script>
