@@ -555,6 +555,17 @@
   .flip-picked{display:inline-flex;margin:0 0 10px;padding:7px 12px;border-radius:999px;background:#edf2e7;color:#315b45;font-size:13px;font-weight:900;letter-spacing:.06em;}
 }
 
+/* v100 desktop flip result: show the actual selected life-tone image */
+#match .result-tone-visual{margin:0 0 18px;border-radius:24px;overflow:hidden;border:1px solid #ead9c4;box-shadow:0 16px 42px rgba(18,35,26,.12);background:#efe6d8;}
+#match .result-tone-visual img{display:block;width:100%;height:220px;object-fit:cover;filter:saturate(.96) contrast(.98);}
+@media(min-width:881px){
+  #match .card-result{display:grid!important;grid-template-columns:minmax(260px,34%) 1fr!important;gap:22px!important;align-items:start!important;}
+  #match .result-tone-visual{grid-row:1 / span 5;margin:0!important;height:100%;min-height:360px;}
+  #match .result-tone-visual img{height:100%;min-height:360px;}
+  #match .result-lines{grid-column:2!important;}
+}
+@media(max-width:880px){#match .result-tone-visual img{height:210px;}}
+
 
 /* v71 mobile hamburger quick-jump menu */
 .mobile-menu-toggle{display:none;border:1px solid rgba(36,70,53,.24);background:rgba(255,253,247,.78);border-radius:999px;width:46px;height:40px;align-items:center;justify-content:center;flex-direction:column;gap:4px;padding:0;box-shadow:0 10px 26px rgba(50,55,42,.08)}
@@ -885,6 +896,7 @@
             <button class="oracle-card" data-card="guard"><img src="./life-tone-assets-v57/guard.png" alt="守護感"><span>守護感</span><small>替家接住外面的風</small></button>
           </div>
           <div class="card-result result-card-preview" id="cardResult">
+            <div class="result-tone-visual"><img src="./life-tone-assets-v57/morning.png" alt="晨光停留語氣圖"></div>
             <div class="result-kicker">植物結果卡預覽</div>
             <b>晨光停留</b>
             <p>位置和狀態會先決定主植物；最後選一種生活語氣，幫這份提案加上情緒與畫面。</p>
@@ -1021,10 +1033,10 @@
     return `${place}${state}組：${base.plant}`;
   };
   const cardTone = {
-    morning: { name:'晨光停留', tone:'這個角落適合放在每天會被光照到、也會被你看見的位置，像早上先替家點一盞小燈。' },
-    breath: { name:'鬆一口氣', tone:'這個角落不用太熱鬧，重點是讓視線停下來，幫人從工作和訊息裡退回生活。' },
-    tiny: { name:'小宇宙', tone:'這個角落可以多一點可愛細節，讓植物、小物和光線變成一個會想靠近的小世界。' },
-    guard: { name:'守護感', tone:'這個角落適合做成安定的邊界，替家接住外面的風、光和壓力。' }
+    morning: { name:'晨光停留', img:'./life-tone-assets-v57/morning.png', tone:'這個角落適合放在每天會被光照到、也會被你看見的位置，像早上先替家點一盞小燈。' },
+    breath: { name:'鬆一口氣', img:'./life-tone-assets-v57/breath.png', tone:'這個角落不用太熱鬧，重點是讓視線停下來，幫人從工作和訊息裡退回生活。' },
+    tiny: { name:'小宇宙', img:'./life-tone-assets-v57/tiny.png', tone:'這個角落可以多一點可愛細節，讓植物、小物和光線變成一個會想靠近的小世界。' },
+    guard: { name:'守護感', img:'./life-tone-assets-v57/guard.png', tone:'這個角落適合做成安定的邊界，替家接住外面的風、光和壓力。' }
   };
   document.querySelectorAll('.oracle-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -1050,7 +1062,7 @@
       updateConsultMatchHint();
       if (cardResult) {
         cardResult.classList.remove('is-revealed');
-        cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><div class="flip-picked">你翻到的是：${tone.name}</div><b>${name}<span class="share-title">${tune.title}：${base.plant}</span></b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
+        cardResult.innerHTML = `<div class="result-tone-visual"><img src="${tone.img}" alt="${tone.name}語氣圖"></div><div class="result-kicker">你的植物結果卡</div><div class="flip-picked">你翻到的是：${tone.name}</div><b>${name}<span class="share-title">${tune.title}：${base.plant}</span></b><p>${tone.name}：${tone.tone}</p><div class="result-lines"><span><strong>主植物</strong>${base.plant}</span><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>小風水</strong>${tune.blessing}</span><span><strong>家的意象</strong>${base.image}</span></div>`;
         requestAnimationFrame(() => cardResult.classList.add('is-revealed'));
         requestAnimationFrame(() => cardResult.scrollIntoView({ behavior:'smooth', block:'start' }));
       }
