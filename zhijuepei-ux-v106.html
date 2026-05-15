@@ -1,0 +1,1199 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>植覺配｜植物讓家，變得不一樣</title>
+<style>
+:root{
+  --bg:#f6f0e5;--paper:#fffdf7;--paper2:#f0eadf;--green:#203f31;--green2:#315b45;
+  --sage:#839677;--sage2:#dce6d4;--line:#ddd2c0;--ink:#383c35;--muted:#77786d;
+  --clay:#a87855;--sun:#ead9b9;--shadow:0 24px 70px rgba(50,55,42,.12);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.72}.nowrap{white-space:nowrap}.wrap{max-width:1200px;margin:0 auto;padding:0 40px}.nav{position:sticky;top:0;z-index:20;background:rgba(246,240,229,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(221,210,192,.7)}.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--green);font-weight:800;letter-spacing:.08em}.brand-mark{width:34px;height:34px;border-radius:50%;border:1px solid var(--green);display:grid;place-items:center;font-family:serif}.nav-links{display:flex;gap:26px;align-items:center}.nav-links a{color:#596052;text-decoration:none;font-size:14px;font-weight:650}.nav-links .nav-cta{background:var(--green);color:#fffdf7;padding:10px 18px;border-radius:999px}.section{padding:108px 0}.eyebrow{letter-spacing:.18em;text-transform:uppercase;color:var(--sage);font-size:13px;font-weight:800}.hero{padding:56px 0 88px}.hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center;min-height:640px}.hero-copy{padding-top:20px}.h1{font-size:76px;line-height:1.06;letter-spacing:-.055em;color:var(--green);margin:18px 0 28px}.h2{font-size:48px;line-height:1.16;letter-spacing:-.035em;color:var(--green);margin:0 0 22px}.h3{font-size:25px;line-height:1.35;color:var(--green);margin:0 0 12px}.lead{font-size:21px;color:#4c5147;max-width:690px}.body-lg{font-size:18px;color:#55594f}.btn-row{display:flex;gap:14px;align-items:center;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:15px 24px;font-weight:800}.btn.primary{background:var(--green);color:#fffdf7}.btn.ghost{border:1px solid var(--line);color:var(--green);background:rgba(255,253,247,.55)}.hero-photo{position:relative;border-radius:42px;overflow:hidden;background:#e7dfd0;border:1px solid var(--line);height:570px;box-shadow:var(--shadow)}.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}.hero-note{position:absolute;left:34px;bottom:34px;max-width:360px;background:rgba(32,63,49,.88);color:#fffdf7;border-radius:26px;padding:20px 24px;font-size:20px;line-height:1.45;backdrop-filter:blur(10px)}.hero-small-card{position:absolute;right:28px;top:28px;background:rgba(255,253,247,.9);border:1px solid rgba(221,210,192,.85);border-radius:24px;padding:18px 20px;color:var(--green);box-shadow:0 14px 40px rgba(30,45,34,.13)}.two{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}.soft-card{background:var(--paper);border:1px solid var(--line);border-radius:34px;padding:36px;box-shadow:0 18px 48px rgba(50,55,42,.07)}.quote{font-size:28px;color:var(--green);line-height:1.5;border-left:3px solid var(--sage);padding-left:28px;margin:0 0 26px}.sketch-card{min-height:420px;position:relative;overflow:hidden}.sketch-card svg{position:absolute;inset:auto 0 0 auto;width:86%;height:auto;opacity:.55}.anchor-panel{background:var(--green);color:#fffdf7;border-radius:42px;padding:48px;display:grid;grid-template-columns:.82fr 1.18fr;gap:36px;align-items:center}.anchor-panel .h2{color:#fffdf7}.anchor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.anchor{background:rgba(255,253,247,.12);border:1px solid rgba(255,253,247,.22);color:#fffdf7;text-decoration:none;border-radius:22px;padding:18px;min-height:102px}.anchor b{display:block;font-size:18px;margin-bottom:6px}.anchor span{font-size:13px;opacity:.82}.position-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.pos-card{background:var(--paper);border:1px solid var(--line);border-radius:32px;overflow:hidden;box-shadow:0 16px 42px rgba(50,55,42,.07)}.pos-img{height:228px;background:#e7dfd0;overflow:hidden}.pos-img img{width:100%;height:100%;object-fit:cover;display:block}.pos-body{padding:26px}.chips{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}.chip{font-size:12px;color:var(--green);background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 11px}.condition-band{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px}.condition{background:var(--paper2);border:1px solid var(--line);border-radius:28px;padding:26px}.condition .num{font-family:serif;color:var(--clay);font-size:38px;line-height:1}.plant-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:start}.plant-list{display:grid;gap:16px}.plant-row{display:grid;grid-template-columns:118px 1fr;gap:18px;background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:16px}.plant-row img{width:118px;height:118px;object-fit:cover;border-radius:20px;background:#e7dfd0}.mini-illus{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.illus{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:26px;min-height:180px;position:relative;overflow:hidden}.illus svg{position:absolute;right:-16px;bottom:-20px;width:145px;opacity:.38}.quiz{background:linear-gradient(135deg,#203f31,#315b45);color:#fffdf7;border-radius:44px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.quiz .h2{color:#fffdf7}.quiz-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.quiz-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:22px;min-height:120px}.footer{padding:42px 0 64px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.source{font-size:12px;color:var(--muted);margin-top:18px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}.section-head p{margin:0;max-width:560px;color:#5b5f55}.full-photo{border-radius:36px;min-height:420px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#e7dfd0}.full-photo img{width:100%;height:100%;object-fit:cover;display:block}.spacer-line{height:1px;background:var(--line);margin:6px 0 0}
+.place-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.place-card{background:linear-gradient(180deg,#fffdf7,#f4eadb);border:1px solid var(--line);border-radius:30px;padding:24px;min-height:285px;position:relative;overflow:hidden;box-shadow:0 14px 38px rgba(50,55,42,.06)}.place-card:nth-child(2n){background:linear-gradient(180deg,#fbfbf2,#e9f0df)}.place-card:nth-child(3n){background:linear-gradient(180deg,#fffaf1,#f0dfcf)}.place-icon{width:76px;height:76px;border-radius:24px;background:rgba(127,150,118,.14);display:grid;place-items:center;margin-bottom:18px}.place-icon svg{width:48px;height:48px;stroke:var(--green);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.place-meta{font-size:13px;color:var(--clay);font-weight:800;margin:10px 0 8px}.place-result{font-weight:750;color:var(--green)}.plant-groups-v3{display:grid;gap:24px}.group-block{background:var(--paper);border:1px solid var(--line);border-radius:34px;padding:30px;box-shadow:0 16px 42px rgba(50,55,42,.06)}.group-title{display:flex;align-items:baseline;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:18px}.group-title h3{margin:0;color:var(--green);font-size:28px}.group-title span{font-size:13px;color:var(--muted)}.plant-mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.plant-mini{border:1px solid #e4d8c7;background:#fffdf7;border-radius:24px;padding:18px;min-height:230px}.plant-mini h4{font-size:19px;color:var(--green);margin:0 0 8px}.plant-mini .fit{font-size:13px;color:var(--clay);font-weight:800}.plant-mini p{font-size:14px;margin:8px 0;color:#55594f}.plant-mini small{display:block;color:var(--muted);font-size:12px;line-height:1.55}.tone-note{background:#f3eadc;border:1px solid var(--line);border-radius:30px;padding:28px;margin-top:24px;color:#5a594f}.color-strip{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;margin-top:28px}.color-card{border-radius:30px;padding:26px;border:1px solid var(--line);background:#f0eadf}.color-card.sage{background:#e7eedf}.color-card.clay{background:#efe0d1}.color-card.cream{background:#fff8ea}
+
+.story-flow{display:grid;gap:34px}.story-wide{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.story-words{background:var(--paper);border:1px solid var(--line);border-radius:36px;padding:42px;box-shadow:0 16px 42px rgba(50,55,42,.06)}.story-words p{font-size:18px;color:#53574d}.mood-photo{min-height:470px;border-radius:38px;border:1px solid var(--line);overflow:hidden;background:#e9dfcf;position:relative;box-shadow:var(--shadow)}.mood-photo img{width:100%;height:100%;object-fit:cover;display:block}.feature-positions{display:grid;gap:34px}.feature-place{display:grid;grid-template-columns:1.06fr .94fr;gap:34px;align-items:stretch}.feature-place:nth-child(even){grid-template-columns:.94fr 1.06fr}.feature-place:nth-child(even) .visual-frame{order:2}.visual-frame{min-height:360px;border-radius:38px;border:1px solid var(--line);background:linear-gradient(135deg,#efe3d2,#e5eddc);position:relative;overflow:hidden;box-shadow:0 18px 52px rgba(50,55,42,.08)}.visual-frame svg{position:absolute;right:18px;bottom:12px;width:70%;height:auto;opacity:.72}.visual-frame svg .line{fill:none;stroke:#244635;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.visual-frame svg .soft{fill:#dbe6d2;stroke:#244635;stroke-width:3;stroke-linejoin:round}.visual-frame svg .warm{fill:#ead9b9;stroke:#244635;stroke-width:3;stroke-linejoin:round}.visual-frame svg .clayfill{fill:#e7d0bd;stroke:#244635;stroke-width:3;stroke-linejoin:round}.quiz-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.quiz-step{background:#fffdf7;color:var(--green);border-radius:26px;padding:24px;min-height:185px}.quiz-step .step-num{font-family:serif;color:var(--clay);font-size:36px;line-height:1}.quiz-step p{color:#596052;margin:8px 0 0}.quiz-outcome{background:rgba(255,253,247,.12);border:1px solid rgba(255,253,247,.24);border-radius:26px;padding:24px;margin-top:18px}.visual-label{position:absolute;left:24px;top:24px;background:rgba(255,253,247,.82);border:1px solid rgba(221,210,192,.8);border-radius:999px;padding:10px 16px;color:var(--green);font-weight:800;font-size:13px}.visual-note{position:absolute;left:28px;bottom:28px;max-width:340px;color:#53604f;font-size:16px}.place-copy{background:var(--paper);border:1px solid var(--line);border-radius:36px;padding:38px}.place-copy .meta{color:var(--clay);font-weight:850;margin:12px 0}.place-copy p{font-size:17px;color:#53574d}.condition-visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.condition-visual{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:26px;min-height:245px;position:relative;overflow:hidden}.condition-visual svg{width:70px;height:70px;stroke:var(--green);fill:none;stroke-width:2.4;margin-bottom:18px}.plant-mini-grid{grid-template-columns:repeat(2,1fr)}.plant-mini{min-height:205px}.plant-mini h4{font-size:22px}.read-note{font-size:22px;line-height:1.55;color:var(--green);max-width:860px;margin:0 auto 38px;text-align:center}.quiet-cta{background:#fff7e8;border:1px solid #e6d4b8;border-radius:34px;padding:34px;margin-top:28px;text-align:center;color:#65543b}
+
+.ref-position{display:grid;gap:34px}.position-intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center}.position-intro-copy{padding:22px 0}.script-note{font-family:Georgia,serif;font-style:italic;color:#c9cfc0;font-size:38px;line-height:1;position:absolute;right:4%;top:18%;z-index:-1}.photo-mosaic{display:grid;grid-template-columns:1.35fr .8fr;grid-template-rows:210px 210px;gap:12px}.photo-tile{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#e7dfd0;box-shadow:0 12px 38px rgba(50,55,42,.08)}.photo-tile.big{grid-row:span 2}.photo-tile img{width:100%;height:100%;object-fit:cover;display:block}.mini-place-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.mini-place{background:rgba(255,253,247,.88);border:1px solid var(--line);border-radius:24px;padding:24px;min-height:255px;position:relative;overflow:hidden;box-shadow:0 12px 30px rgba(50,55,42,.06)}.mini-place:after{content:"";position:absolute;right:-22px;bottom:-20px;width:160px;height:160px;background:radial-gradient(circle at 35% 35%,rgba(127,150,118,.14),transparent 62%);border-radius:50%}.mini-place svg{position:absolute;right:10px;bottom:8px;width:118px;height:118px;opacity:.23;stroke:#7f9676;fill:none;stroke-width:2}.mini-place h3{font-size:24px;color:var(--green);margin:0 0 12px}.mini-place .meta{font-size:13px;color:var(--clay);font-weight:850;margin-bottom:10px}.mini-place p{font-size:14px;color:#55594f;margin:8px 0;position:relative;z-index:1}.mini-place .fit{font-weight:800;color:var(--green);font-size:13px;margin-top:12px}.balcony-band{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:stretch;border:1px solid var(--line);border-radius:30px;background:linear-gradient(90deg,#f7f0e4,#eef2e8);overflow:hidden}.balcony-copy{padding:32px}.balcony-cols{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--line)}.balcony-col{padding:28px 20px;border-left:1px solid rgba(221,210,192,.7)}.balcony-col:first-child{border-left:0}.balcony-col h4{margin:0 0 10px;color:var(--green);font-size:18px}.balcony-col p{font-size:13px;color:#55594f}.mini-place{background:rgba(255,253,247,.92) url('./plant-botanical-line-art-v7.png') right bottom/190px auto no-repeat}.mini-place svg{display:none}.soft-card.sketch-card{background:#fffdf7 url('./plant-botanical-line-art-v7.png') right bottom/58% auto no-repeat}.sketch-card svg{display:none}.line-art-watermark{position:absolute;right:-40px;bottom:-30px;width:340px;opacity:.16;pointer-events:none}
+.mini-place{padding:0;overflow:hidden;background:rgba(255,253,247,.94)}.mini-place-photo{height:190px;overflow:hidden;border-bottom:1px solid var(--line);background:#e7dfd0}.mini-place-photo img{width:100%;height:100%;object-fit:cover;display:block}.mini-place-body{padding:22px;position:relative}.plant-mini{padding:0;overflow:hidden}.plant-thumb{height:190px;overflow:hidden;border-bottom:1px solid #e4d8c7;background:#e7dfd0}.plant-thumb img{width:100%;height:100%;object-fit:cover;display:block}.plant-mini-content{padding:18px}.color-strip{display:none!important}
+.plant-thumb{position:relative}.plant-groups-v3{gap:34px}.group-block{background:linear-gradient(180deg,#fffdf7,#f7f0e6);padding:34px}.group-title{align-items:end}.plant-mini{display:grid;grid-template-columns:240px 1fr;min-height:230px}.plant-thumb{height:100%;min-height:230px}.plant-mini-content{padding:24px 24px 22px}.plant-mini h4{font-size:25px;margin-bottom:10px}.plant-mini .fit{color:#7c684f}.plant-mini small{font-size:13px}.plant-section-note{margin:0 0 32px;color:#596052;font-size:18px;max-width:760px}.plant-section-note strong{color:var(--green)}.meaning{margin-top:10px;padding:10px 12px;border-radius:16px;background:#f2eadb;color:#5f513c;font-size:13px;line-height:1.55}.meaning b{color:var(--green)}.quiz-demo{grid-column:1/-1;background:rgba(255,253,247,.12);border:1px solid rgba(255,253,247,.22);border-radius:28px;padding:24px;margin-top:18px}.quiz-demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.quiz-demo-card{background:#fffdf7;color:var(--green);border-radius:22px;padding:18px}.quiz-demo-card small{display:block;color:#746f62;margin-top:6px;line-height:1.45}.quiz-question-set{grid-column:1/-1;margin-top:22px;background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.22);border-radius:30px;padding:26px}.quiz-question-set h3{color:#fffdf7;margin:0 0 18px;font-size:26px}.question-grid{display:grid;gap:16px}.question-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:20px}.question-card strong{display:block;font-size:18px;margin-bottom:10px}.answer-pills{display:flex;flex-wrap:wrap;gap:8px}.answer-pills span{font-size:13px;background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 10px;color:#365342}.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.answer-pills{display:block}.answer-pills span{display:inline-block;margin:4px 4px 4px 0}}
+.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.quiz-demo-grid{grid-template-columns:1fr}}
+.quiz-question-set{grid-column:1/-1;margin-top:22px;background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.22);border-radius:30px;padding:26px}.quiz-question-set h3{color:#fffdf7;margin:0 0 18px;font-size:26px}.question-grid{display:grid;gap:16px}.question-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:20px}.question-card strong{display:block;font-size:18px;margin-bottom:10px}.answer-pills{display:flex;flex-wrap:wrap;gap:8px}.answer-pills span{font-size:13px;background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 10px;color:#365342}.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.answer-pills{display:block}.answer-pills span{display:inline-block;margin:4px 4px 4px 0}}
+.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.plant-mini{grid-template-columns:1fr}.plant-thumb{height:210px;min-height:210px}}
+.meaning{margin-top:10px;padding:10px 12px;border-radius:16px;background:#f2eadb;color:#5f513c;font-size:13px;line-height:1.55}.meaning b{color:var(--green)}.quiz-demo{grid-column:1/-1;background:rgba(255,253,247,.12);border:1px solid rgba(255,253,247,.22);border-radius:28px;padding:24px;margin-top:18px}.quiz-demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.quiz-demo-card{background:#fffdf7;color:var(--green);border-radius:22px;padding:18px}.quiz-demo-card small{display:block;color:#746f62;margin-top:6px;line-height:1.45}.quiz-question-set{grid-column:1/-1;margin-top:22px;background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.22);border-radius:30px;padding:26px}.quiz-question-set h3{color:#fffdf7;margin:0 0 18px;font-size:26px}.question-grid{display:grid;gap:16px}.question-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:20px}.question-card strong{display:block;font-size:18px;margin-bottom:10px}.answer-pills{display:flex;flex-wrap:wrap;gap:8px}.answer-pills span{font-size:13px;background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 10px;color:#365342}.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.answer-pills{display:block}.answer-pills span{display:inline-block;margin:4px 4px 4px 0}}
+.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.quiz-demo-grid{grid-template-columns:1fr}}
+.quiz-question-set{grid-column:1/-1;margin-top:22px;background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.22);border-radius:30px;padding:26px}.quiz-question-set h3{color:#fffdf7;margin:0 0 18px;font-size:26px}.question-grid{display:grid;gap:16px}.question-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:20px}.question-card strong{display:block;font-size:18px;margin-bottom:10px}.answer-pills{display:flex;flex-wrap:wrap;gap:8px}.answer-pills span{font-size:13px;background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 10px;color:#365342}.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.answer-pills{display:block}.answer-pills span{display:inline-block;margin:4px 4px 4px 0}}
+.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.position-intro,.balcony-band,.photo-mosaic,.mini-place-cards,.balcony-cols{grid-template-columns:1fr}.photo-mosaic{grid-template-rows:auto}.photo-tile,.photo-tile.big{height:260px;grid-row:auto}.balcony-cols{border-left:0}.balcony-col{border-left:0;border-top:1px solid var(--line)}}
+.mini-place{background:rgba(255,253,247,.92) url('./plant-botanical-line-art-v7.png') right bottom/190px auto no-repeat}.mini-place svg{display:none}.soft-card.sketch-card{background:#fffdf7 url('./plant-botanical-line-art-v7.png') right bottom/58% auto no-repeat}.sketch-card svg{display:none}.line-art-watermark{position:absolute;right:-40px;bottom:-30px;width:340px;opacity:.16;pointer-events:none}
+.mini-place{padding:0;overflow:hidden;background:rgba(255,253,247,.94)}.mini-place-photo{height:190px;overflow:hidden;border-bottom:1px solid var(--line);background:#e7dfd0}.mini-place-photo img{width:100%;height:100%;object-fit:cover;display:block}.mini-place-body{padding:22px;position:relative}.plant-mini{padding:0;overflow:hidden}.plant-thumb{height:190px;overflow:hidden;border-bottom:1px solid #e4d8c7;background:#e7dfd0}.plant-thumb img{width:100%;height:100%;object-fit:cover;display:block}.plant-mini-content{padding:18px}.color-strip{display:none!important}
+.plant-thumb{position:relative}.plant-groups-v3{gap:34px}.group-block{background:linear-gradient(180deg,#fffdf7,#f7f0e6);padding:34px}.group-title{align-items:end}.plant-mini{display:grid;grid-template-columns:240px 1fr;min-height:230px}.plant-thumb{height:100%;min-height:230px}.plant-mini-content{padding:24px 24px 22px}.plant-mini h4{font-size:25px;margin-bottom:10px}.plant-mini .fit{color:#7c684f}.plant-mini small{font-size:13px}.plant-section-note{margin:0 0 32px;color:#596052;font-size:18px;max-width:760px}.plant-section-note strong{color:var(--green)}.meaning{margin-top:10px;padding:10px 12px;border-radius:16px;background:#f2eadb;color:#5f513c;font-size:13px;line-height:1.55}.meaning b{color:var(--green)}.quiz-demo{grid-column:1/-1;background:rgba(255,253,247,.12);border:1px solid rgba(255,253,247,.22);border-radius:28px;padding:24px;margin-top:18px}.quiz-demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.quiz-demo-card{background:#fffdf7;color:var(--green);border-radius:22px;padding:18px}.quiz-demo-card small{display:block;color:#746f62;margin-top:6px;line-height:1.45}.quiz-question-set{grid-column:1/-1;margin-top:22px;background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.22);border-radius:30px;padding:26px}.quiz-question-set h3{color:#fffdf7;margin:0 0 18px;font-size:26px}.question-grid{display:grid;gap:16px}.question-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:20px}.question-card strong{display:block;font-size:18px;margin-bottom:10px}.answer-pills{display:flex;flex-wrap:wrap;gap:8px}.answer-pills span{font-size:13px;background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 10px;color:#365342}.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.answer-pills{display:block}.answer-pills span{display:inline-block;margin:4px 4px 4px 0}}
+.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.quiz-demo-grid{grid-template-columns:1fr}}
+.quiz-question-set{grid-column:1/-1;margin-top:22px;background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.22);border-radius:30px;padding:26px}.quiz-question-set h3{color:#fffdf7;margin:0 0 18px;font-size:26px}.question-grid{display:grid;gap:16px}.question-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:20px}.question-card strong{display:block;font-size:18px;margin-bottom:10px}.answer-pills{display:flex;flex-wrap:wrap;gap:8px}.answer-pills span{font-size:13px;background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 10px;color:#365342}.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.answer-pills{display:block}.answer-pills span{display:inline-block;margin:4px 4px 4px 0}}
+.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.plant-mini{grid-template-columns:1fr}.plant-thumb{height:210px;min-height:210px}}
+.meaning{margin-top:10px;padding:10px 12px;border-radius:16px;background:#f2eadb;color:#5f513c;font-size:13px;line-height:1.55}.meaning b{color:var(--green)}.quiz-demo{grid-column:1/-1;background:rgba(255,253,247,.12);border:1px solid rgba(255,253,247,.22);border-radius:28px;padding:24px;margin-top:18px}.quiz-demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.quiz-demo-card{background:#fffdf7;color:var(--green);border-radius:22px;padding:18px}.quiz-demo-card small{display:block;color:#746f62;margin-top:6px;line-height:1.45}.quiz-question-set{grid-column:1/-1;margin-top:22px;background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.22);border-radius:30px;padding:26px}.quiz-question-set h3{color:#fffdf7;margin:0 0 18px;font-size:26px}.question-grid{display:grid;gap:16px}.question-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:20px}.question-card strong{display:block;font-size:18px;margin-bottom:10px}.answer-pills{display:flex;flex-wrap:wrap;gap:8px}.answer-pills span{font-size:13px;background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 10px;color:#365342}.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.answer-pills{display:block}.answer-pills span{display:inline-block;margin:4px 4px 4px 0}}
+.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.quiz-demo-grid{grid-template-columns:1fr}}
+.quiz-question-set{grid-column:1/-1;margin-top:22px;background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.22);border-radius:30px;padding:26px}.quiz-question-set h3{color:#fffdf7;margin:0 0 18px;font-size:26px}.question-grid{display:grid;gap:16px}.question-card{background:#fffdf7;color:var(--green);border-radius:24px;padding:20px}.question-card strong{display:block;font-size:18px;margin-bottom:10px}.answer-pills{display:flex;flex-wrap:wrap;gap:8px}.answer-pills span{font-size:13px;background:#edf2e7;border:1px solid #d2dec9;border-radius:999px;padding:6px 10px;color:#365342}.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.answer-pills{display:block}.answer-pills span{display:inline-block;margin:4px 4px 4px 0}}
+.you-section{background:linear-gradient(180deg,#fffdf7,#f3eadc);border:1px solid var(--line);border-radius:42px;padding:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center;box-shadow:0 18px 52px rgba(50,55,42,.07)}.you-section .micro-list{display:grid;gap:14px;margin-top:22px}.micro-item{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:24px;padding:18px 20px;color:#55594f}.micro-item strong{color:var(--green)}.you-quote{font-size:28px;line-height:1.55;color:var(--green);font-weight:750}.scene-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.scene-tags span{background:#edf2e7;border:1px solid #d2dec9;color:#365342;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:750}@media(max-width:880px){.you-section{grid-template-columns:1fr;padding:30px}}
+@media(max-width:880px){.wrap{padding:0 22px}.nav-inner{height:auto;min-height:66px}.nav-links{display:none}.hero{padding:34px 0 72px}.hero-grid,.two,.anchor-panel,.plant-layout,.quiz{grid-template-columns:1fr}.h1{font-size:49px}.h2{font-size:34px}.lead{font-size:18px}.hero-photo{min-height:auto;aspect-ratio:4/5}.hero-photo img{object-fit:contain;background:#e7dfd0}.hero-note{left:18px;right:18px;bottom:18px;font-size:16px}.hero-small-card{display:none}.section{padding:72px 0}.anchor-grid,.position-grid,.condition-band,.mini-illus,.place-grid,.plant-mini-grid,.color-strip,.story-wide,.feature-place,.feature-place:nth-child(even),.condition-visual-grid,.quiz-steps{grid-template-columns:1fr}.plant-row{grid-template-columns:94px 1fr}.feature-place:nth-child(even) .visual-frame{order:0}.plant-row img{width:94px;height:94px}.quiz-cards{grid-template-columns:1fr}.section-head{display:block}}
+
+/* v16 hero background + interactive quiz polish */
+.hero{position:relative;min-height:760px;padding:120px 0 130px;background:linear-gradient(90deg,rgba(250,246,237,.96) 0%,rgba(250,246,237,.86) 38%,rgba(250,246,237,.22) 72%,rgba(250,246,237,.08) 100%),url('./plant-hero-painted-banner-v13.jpg') center right/cover no-repeat;overflow:hidden}.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:180px;background:linear-gradient(180deg,rgba(250,246,237,0),var(--cream));pointer-events:none}.hero-grid{position:relative;z-index:1;display:block;min-height:auto}.hero-copy{max-width:620px;background:rgba(255,253,247,.70);border:1px solid rgba(221,210,192,.68);border-radius:42px;padding:42px 44px;backdrop-filter:blur(8px);box-shadow:0 24px 80px rgba(48,52,42,.10)}.hero-copy .lead{color:#414b40}.hero-bg-note{position:relative;z-index:2;margin:22px 0 0 8vw;max-width:330px;background:rgba(32,63,49,.86);color:#fffdf7;border-radius:24px;padding:14px 18px;font-size:16px;line-height:1.45;backdrop-filter:blur(10px);box-shadow:0 20px 60px rgba(20,35,27,.18)}.answer-pills span{cursor:pointer;transition:.18s ease}.answer-pills span:hover,.answer-pills span.is-selected{background:#315b45;color:#fffdf7;border-color:#315b45}.live-result{grid-column:1/-1;margin-top:16px;background:#fffdf7;color:var(--green);border-radius:28px;padding:24px 26px;border:1px solid rgba(255,253,247,.45)}.live-result .result-label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8a7a5f;font-weight:800;margin-bottom:8px}.live-result strong{font-size:22px;display:block;margin-bottom:8px}.live-result p{margin:0;color:#5d6258;line-height:1.7}@media(max-width:880px){.hero{min-height:720px;padding:84px 0 96px;background:linear-gradient(180deg,rgba(250,246,237,.62) 0%,rgba(250,246,237,.36) 42%,rgba(250,246,237,.94) 78%,var(--cream) 100%),url('./plant-hero-painted-banner-v13.jpg') center top/cover no-repeat}.hero-copy{margin-top:300px;padding:28px 26px;border-radius:32px;background:rgba(255,253,247,.84)}.hero-bg-note{margin:18px 22px 0;font-size:15px;border-radius:22px}.hero .h1{font-size:45px}.hero .lead{font-size:17px}.btn-row{flex-wrap:wrap}.btn{width:100%}}
+
+/* v17 position illustration + flip cards */
+.position-illustration-card{position:relative;border-radius:34px;overflow:hidden;border:1px solid var(--line);background:#e7dfd0;box-shadow:var(--shadow);min-height:520px}.position-illustration-card img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}.position-illustration-note{position:absolute;left:28px;bottom:28px;max-width:360px;background:rgba(32,63,49,.84);color:#fffdf7;border-radius:26px;padding:18px 22px;line-height:1.55;backdrop-filter:blur(8px)}.plant-thumb img[src*="monstera"]{object-position:center center}.plant-thumb img[src*="pittosporum"],.plant-thumb img[src*="baishui"]{object-position:center center}.flip-grid{perspective:1000px}.flip-card{min-height:150px;cursor:pointer}.flip-inner{position:relative;min-height:150px;transform-style:preserve-3d;transition:transform .55s ease}.flip-card:hover .flip-inner,.flip-card.is-flipped .flip-inner{transform:rotateY(180deg)}.flip-front,.flip-back{position:absolute;inset:0;border-radius:22px;background:#fffdf7;color:var(--green);backface-visibility:hidden;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:20px;font-weight:850}.flip-front:after{content:"點一下翻牌";position:absolute;bottom:16px;font-size:12px;color:#9a8a70;letter-spacing:.08em}.flip-back{transform:rotateY(180deg);display:block;text-align:left;font-size:16px}.flip-back b{display:block;font-size:20px;margin-bottom:8px}.flip-back small{color:#665f52;line-height:1.55}@media(max-width:880px){.position-intro{grid-template-columns:1fr}.position-illustration-card,.position-illustration-card img{min-height:360px}.position-illustration-note{left:18px;right:18px;bottom:18px}.flip-card,.flip-inner{min-height:132px}}
+
+/* v18 hand-painted result cards */
+.flip-grid{gap:18px}.flip-card{min-height:210px}.flip-inner{min-height:210px}.flip-front,.flip-back{overflow:hidden;isolation:isolate;border:1px solid rgba(255,253,247,.65);box-shadow:0 18px 45px rgba(24,42,31,.16);color:#fffdf7;text-shadow:0 2px 14px rgba(25,38,29,.36)}.flip-front{font-size:24px;letter-spacing:.02em}.flip-front:before,.flip-back:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--card-img) center/cover no-repeat;filter:saturate(.94) contrast(.96)}.flip-front:after{color:rgba(255,253,247,.88);text-shadow:none}.flip-front .nothing{display:none}.flip-front:before{transform:scale(1.04)}.flip-front:after,.flip-back:after{z-index:1}.flip-front,.flip-back{background:transparent}.flip-front::selection,.flip-back::selection{background:rgba(255,253,247,.25)}.flip-front{align-items:flex-end;justify-content:flex-start;text-align:left;padding:26px}.flip-front:after{left:26px;right:auto;bottom:22px;transform:translateY(28px);font-weight:700}.flip-front{padding-bottom:58px}.flip-front::after{content:"點一下翻牌";position:absolute;font-size:12px;letter-spacing:.12em}.flip-back{padding:24px;background:transparent}.flip-back:after,.flip-front .veil{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(32,63,49,.16),rgba(32,63,49,.78))}.flip-back:after{background:linear-gradient(180deg,rgba(32,63,49,.82),rgba(32,63,49,.92))}.flip-back b,.flip-back small{position:relative;z-index:2;color:#fffdf7}.flip-back small{color:rgba(255,253,247,.88)}.card-luck{--card-img:url('./plant-hero-painted-banner-v13.jpg')}.card-calm{--card-img:url('./plant-position-human-illustration-v17.jpg')}.card-balcony{--card-img:url('./plant-position-mosaic-new-v13.jpg')}@media(max-width:880px){.flip-card,.flip-inner{min-height:190px}}
+.brand-subline{margin:18px 0 0;color:#6b765f;font-size:15px;font-weight:750;letter-spacing:.04em}.brand span:last-child{font-family:var(--serif);font-size:22px;letter-spacing:.08em;color:var(--green)}
+
+/* v21 fuller illustrated quiz area */
+.quiz{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 10%,rgba(214,224,195,.20),transparent 28%),radial-gradient(circle at 8% 86%,rgba(247,240,228,.18),transparent 30%),linear-gradient(135deg,#203f31,#315b45)}.quiz:before{content:"";position:absolute;left:-56px;top:-44px;width:310px;height:310px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.22;transform:rotate(-18deg);pointer-events:none}.quiz:after{content:"";position:absolute;left:-38px;bottom:-70px;width:380px;height:380px;background:url('./plant-position-human-illustration-v17.jpg') center/cover no-repeat;border-radius:48% 52% 43% 57%;opacity:.16;filter:saturate(.85) contrast(.9);pointer-events:none}.quiz>div{position:relative;z-index:1}.quiz-outcome{position:relative;overflow:hidden}.quiz-outcome:after{content:"";position:absolute;right:-34px;bottom:-38px;width:150px;height:150px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.16}.question-card{position:relative;overflow:hidden}.question-card:after{content:"";position:absolute;right:-24px;bottom:-30px;width:118px;height:118px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.08;pointer-events:none}.quiz-question-set{background:rgba(255,253,247,.14);box-shadow:inset 0 1px 0 rgba(255,253,247,.12)}.quiz-question-set h3:after{content:"  ✦ 依直覺選，不用想太久";font-size:13px;letter-spacing:.08em;color:rgba(255,253,247,.72);font-weight:600;margin-left:10px}.live-result{position:relative;overflow:hidden}.live-result:after{content:"";position:absolute;right:-40px;top:-38px;width:170px;height:170px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.10;pointer-events:none}@media(max-width:880px){.quiz:before{width:220px;height:220px}.quiz:after{width:260px;height:260px;opacity:.10}.quiz-question-set h3:after{display:block;margin:8px 0 0}}
+
+/* v22 remove abrupt floating green note */
+.hero-bg-note{display:none!important}.hero-inline-note{margin:18px 0 0;display:inline-flex;background:rgba(32,63,49,.08);border:1px solid rgba(32,63,49,.12);color:#365342;border-radius:999px;padding:10px 14px;font-size:14px;font-weight:750;letter-spacing:.02em}
+
+/* v23: stronger green game, non-repeating illustrated cards */
+.quiz:before,.quiz:after{display:none!important}.question-card:after{display:none!important}.quiz-question-set h3:after{content:"  第二步｜選現在的生活狀態"}.quiz-outcome{background:rgba(255,253,247,.12);border:1px solid rgba(255,253,247,.22);border-radius:26px;padding:20px 22px;margin-top:20px}.card-game{grid-column:1/-1;margin-top:20px;background:rgba(255,253,247,.13);border:1px solid rgba(255,253,247,.24);border-radius:32px;padding:26px;position:relative;overflow:hidden}.card-game:before{content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.11;pointer-events:none}.card-game-head{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:18px;color:#fffdf7}.card-game-head strong{font-size:24px}.card-game-head span{font-size:13px;color:rgba(255,253,247,.72)}.oracle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.oracle-card{appearance:none;border:1px solid rgba(255,253,247,.36);border-radius:26px;padding:0;overflow:hidden;background:#fffdf7;color:var(--green);text-align:left;cursor:pointer;box-shadow:0 18px 44px rgba(18,35,26,.16);transition:.22s ease;position:relative}.oracle-card:hover,.oracle-card.is-picked{transform:translateY(-4px);box-shadow:0 24px 60px rgba(18,35,26,.24);border-color:#fffdf7}.oracle-card img{width:100%;height:150px;object-fit:cover;display:block;filter:saturate(.88) contrast(.96)}.oracle-card span{display:block;font-size:18px;font-weight:900;padding:16px 16px 4px}.oracle-card small{display:block;color:#706858;line-height:1.45;padding:0 16px 18px}.oracle-card:after{content:"選這張";position:absolute;right:12px;top:12px;background:rgba(32,63,49,.82);color:#fffdf7;border-radius:999px;padding:6px 10px;font-size:12px;letter-spacing:.08em}.card-result{margin-top:18px;background:#fffdf7;color:var(--green);border-radius:26px;padding:22px 24px;position:relative;overflow:hidden}.card-result:after{content:"";position:absolute;right:-34px;bottom:-42px;width:170px;height:170px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.10}.card-result b{font-size:22px;display:block;margin-bottom:8px}.card-result p{margin:0;color:#55594f;line-height:1.7;max-width:820px}.quiz-demo{display:none!important}@media(max-width:880px){.card-game-head{display:block}.oracle-grid{grid-template-columns:1fr 1fr}.oracle-card img{height:130px}}@media(max-width:560px){.oracle-grid{grid-template-columns:1fr}}
+
+/* v24 dedicated mobile hero for iPhone 16 Pro */
+.mobile-hero-art{display:none;margin:0;border-radius:30px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 52px rgba(48,52,42,.12);background:#e7dfd0}.mobile-hero-art img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center right}@media(max-width:600px){body{overflow-x:hidden}.wrap{padding:0 18px}.hero{min-height:auto!important;padding:22px 0 54px!important;background:linear-gradient(180deg,#f7f1e6 0%,#fbf6ed 56%,var(--cream) 100%)!important}.hero:after{height:72px}.hero-grid{display:grid!important;gap:18px!important}.mobile-hero-art{display:block}.hero-copy{margin-top:0!important;padding:24px 22px 26px!important;border-radius:30px!important;background:rgba(255,253,247,.92)!important;max-width:none!important}.hero .h1{font-size:42px!important;line-height:1.08!important;margin:14px 0 18px!important}.hero .lead{font-size:16.5px!important;line-height:1.65!important}.brand-subline{font-size:13.5px!important;line-height:1.55}.hero-inline-note{white-space:normal;border-radius:18px;font-size:13px;line-height:1.45}.btn-row{margin-top:22px!important;gap:10px!important}.btn{width:100%;padding:14px 18px!important}.nav{position:sticky}.nav-inner{padding:0 18px}.brand span:last-child{font-size:20px}.section{padding:58px 0}.quiz{border-radius:30px!important;padding:28px 18px!important}.oracle-grid{grid-template-columns:1fr!important}.oracle-card img{height:170px}.card-game,.quiz-question-set{padding:20px!important;border-radius:26px!important}}@media(min-width:601px) and (max-width:880px){.mobile-hero-art{display:block}.hero{background:linear-gradient(180deg,#f7f1e6 0%,#fbf6ed 60%,var(--cream) 100%)!important}.hero-copy{margin-top:0!important}.hero-grid{display:grid!important;gap:22px!important}}
+
+/* v25 mobile readability guard: no text under 12px */
+@media(max-width:600px){
+  body{font-size:16px!important;line-height:1.65!important}
+  small,.source,.chip,.meta,.fit,.plant-mini small,.oracle-card small,.flip-front:after,.flip-front::after,.result-label,.live-result .result-label,.quiz-question-set h3:after,.card-game-head span,.mini-place p,.balcony-col p,.plant-mini p,.plant-section-note,.footer{font-size:max(12px,1em)!important;line-height:1.55!important}
+  .eyebrow{font-size:12px!important;line-height:1.45!important}
+  .nav,.nav a,.brand,.brand span{font-size:12px!important}
+  .brand span:last-child{font-size:20px!important}
+  .answer-pills span{font-size:13px!important;line-height:1.45!important;padding:8px 11px!important}
+  .oracle-card:after{font-size:12px!important}
+  .mini-place .meta,.group-title span{font-size:12px!important;line-height:1.45!important}
+  .plant-mini-content{font-size:14px!important}
+  .meaning{font-size:13px!important;line-height:1.55!important}
+}
+
+/* v26 desktop green-game balance: stop long right column */
+@media(min-width:881px){
+  #match .quiz{display:block!important;padding:64px!important;border-radius:46px!important}
+  #match .quiz>div:first-child{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:end;margin-bottom:30px}
+  #match .quiz>div:first-child>p{font-size:18px;line-height:1.75;margin:0;color:rgba(255,253,247,.86)}
+  #match .quiz-outcome{margin-top:0!important;align-self:stretch;display:flex;align-items:center;background:rgba(255,253,247,.14)!important}
+  #match .quiz-steps{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:18px!important;margin:0 0 22px!important}
+  #match .quiz-step{min-height:150px!important;padding:22px!important}
+  #match .quiz-question-set{margin-top:22px!important;padding:28px!important}
+  #match .question-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
+  #match .question-card:nth-child(5){grid-column:1/-1}
+  #match .live-result{margin-top:18px!important}
+  #match .card-game{margin-top:18px!important}
+  #match .oracle-card img{height:138px!important}
+}
+
+/* v30 outdoor plant cards back to natural full-photo style */
+.plant-thumb img[src*="baishui"],.oracle-card img[src*="baishui"],.plant-thumb img[src*="pittosporum"],.oracle-card img[src*="pittosporum"]{object-fit:cover!important;object-position:center center!important;padding:0!important;background:#e7dfd0!important}
+
+/* v31 remove redundant 1-3 explanation cards */
+#match .quiz-steps{display:block!important;margin-top:0!important}#match .quiz-step{display:none!important}@media(min-width:881px){#match .quiz-question-set{margin-top:0!important}#match .quiz>div:first-child{margin-bottom:24px!important}}
+
+/* v32 oracle cards use unique hand-drawn illustrations */
+.oracle-card img{height:190px!important;object-fit:cover!important;object-position:center!important;filter:saturate(.94) contrast(.98)!important}.oracle-card{background:#fffaf0!important}.oracle-card:after{content:"選這張牌"!important}
+
+/* v33 mobile overflow safety after real-device check */
+@media(max-width:600px){
+  html,body{width:100%!important;max-width:100%!important;overflow-x:hidden!important;}
+  .wrap{width:100%!important;max-width:100%!important;padding-left:18px!important;padding-right:18px!important;overflow:hidden!important;}
+  section,.section,.hero,.nav,.footer{width:100%!important;max-width:100%!important;overflow:hidden!important;}
+  .hero-copy,.you-section,.soft-card,.story-words,.card-game,.quiz-question-set,.question-card,.oracle-card,.group-block,.plant-mini,.mini-place,.balcony-band,.anchor-panel,.quiz,.position-illustration-card,.full-photo,.mood-photo{width:100%!important;max-width:100%!important;}
+  .h1,.h2,.h3,.lead,p,small,span,strong,b{overflow-wrap:anywhere;}
+}
+
+/* v35 mobile reading fix: force plant/match blocks to one column and prevent right clipping */
+@media(max-width:700px){
+  .two,.story-wide,.feature-place,.feature-place:nth-child(even),.plant-layout,.plant-mini-grid,.position-grid,.place-grid,.condition-band,.condition-visual-grid,.quiz,.quiz-cards,.quiz-steps,.oracle-grid,.mini-illus,.anchor-grid,.balcony-cols{display:grid!important;grid-template-columns:1fr!important;gap:18px!important;}
+  .feature-place:nth-child(even) .visual-frame{order:0!important;}
+  .plant-mini,.plant-row,.mini-place,.place-card,.condition,.condition-visual,.quiz-step,.oracle-card,.soft-card,.group-block,.card-game,.quiz-question-set,.live-result,.card-result{max-width:100%!important;min-width:0!important;overflow:hidden!important;}
+  .plant-thumb,.plant-thumb img,.plant-mini img,.oracle-card img,.mini-place-photo img{max-width:100%!important;}
+  .plant-mini{display:block!important;}
+  .plant-thumb{margin-bottom:14px!important;}
+  .section-head{display:block!important;}
+}
+
+/* final mobile breathing room: prevent perceived edge clipping on Telegram/iPhone screenshots */
+@media(max-width:700px){
+  .wrap{padding-left:28px!important;padding-right:28px!important;}
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.plant-mini,.mini-place,.question-card,.card-game,.card-result,.live-result,.quiz-question-set,.place-copy,.condition-visual,.quiet-cta{
+    max-width:100%!important;width:100%!important;margin-left:auto!important;margin-right:auto!important;
+  }
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.place-copy{padding-left:24px!important;padding-right:24px!important;}
+  p,.lead,.body-lg,.quote,.you-quote,small{max-width:100%!important;word-break:normal!important;overflow-wrap:break-word!important;}
+  .h1{font-size:40px!important;letter-spacing:-.035em!important;}
+  .h2{font-size:31px!important;}
+}
+
+/* mobile wrap correction: allow Chinese copy to break naturally */
+@media(max-width:700px){
+  .nowrap{white-space:normal!important;}
+  .lead,.brand-subline,.hero-inline-note,.story-words p,.you-section p,.micro-item,.quote{white-space:normal!important;word-break:break-all!important;overflow-wrap:anywhere!important;}
+  .hero-copy{max-width:calc(100vw - 56px)!important;}
+}
+
+/* v37 strict mobile layout reset: keep every block inside viewport */
+@media(max-width:700px){
+  *{max-width:100%!important;}
+  html,body{width:100%!important;max-width:100%!important;margin:0!important;overflow-x:hidden!important;}
+  .wrap{width:100%!important;max-width:100%!important;margin:0!important;padding-left:16px!important;padding-right:16px!important;}
+  .nav-inner{height:auto!important;min-height:62px!important;padding-top:10px!important;padding-bottom:10px!important;}
+  .nav-links{display:none!important;}
+  .hero{padding-top:18px!important;}
+  .hero-grid,.two,.story-wide,.feature-place,.feature-place:nth-child(even),.plant-layout,.plant-mini-grid,.position-grid,.place-grid,.condition-band,.condition-visual-grid,.quiz,.quiz-cards,.quiz-steps,.oracle-grid,.mini-illus,.anchor-grid,.balcony-cols{
+    display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:18px!important;width:100%!important;
+  }
+  .feature-place:nth-child(even) .visual-frame{order:0!important;}
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.plant-mini,.mini-place,.question-card,.card-game,.card-result,.live-result,.quiz-question-set,.place-copy,.condition-visual,.quiet-cta,.anchor-panel,.visual-frame,.mood-photo,.full-photo{
+    width:100%!important;max-width:100%!important;min-width:0!important;margin-left:0!important;margin-right:0!important;box-sizing:border-box!important;overflow:hidden!important;
+  }
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.place-copy,.card-game,.quiz-question-set{padding-left:20px!important;padding-right:20px!important;}
+  .plant-mini{display:block!important;padding:16px!important;}
+  .plant-thumb{width:100%!important;margin:0 0 14px 0!important;}
+  .plant-thumb img,.plant-mini img,.oracle-card img,.mini-place-photo img,img{width:100%!important;max-width:100%!important;height:auto;}
+  p,.lead,.brand-subline,.hero-inline-note,.story-words p,.you-section p,.micro-item,.quote,.you-quote,small,span,strong,b,h1,h2,h3,h4{
+    white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important;min-width:0!important;
+  }
+  .h1{font-size:38px!important;line-height:1.12!important;letter-spacing:-.025em!important;}
+  .h2{font-size:30px!important;line-height:1.18!important;}
+  .section{padding-top:54px!important;padding-bottom:54px!important;}
+}
+
+/* v38 remove sketch-like decorative botanical line art from content cards */
+.card-game:before,.card-result:after,.live-result:after,.question-card:after,.illus svg,.sketch-card svg{display:none!important;}
+
+/* v38 final: remove remaining plant line drawings from large visual frames */
+.visual-frame svg,.position-illustration-card svg{display:none!important;}
+
+/* v38 final2: remove background botanical sketch watermarks */
+.mini-place,.soft-card.sketch-card{background-image:none!important;}
+.line-art-watermark{display:none!important;}
+
+/* v39 complete-plant-photo rule: do not crop plant photos in plant cards */
+.plant-thumb{height:auto!important;min-height:260px!important;display:flex!important;align-items:center!important;justify-content:center!important;background:#eee4d6!important;padding:14px!important;}
+.plant-thumb img{width:100%!important;height:auto!important;max-height:360px!important;object-fit:contain!important;object-position:center center!important;border-radius:18px!important;display:block!important;}
+.oracle-card img{height:220px!important;object-fit:contain!important;object-position:center center!important;background:#eee4d6!important;padding:10px!important;}
+@media(max-width:700px){.plant-thumb{min-height:230px!important;padding:12px!important}.plant-thumb img{max-height:320px!important}.oracle-card img{height:210px!important;object-fit:contain!important}}
+
+/* v40 telegram/mobile safe inset: keep cards away from rounded browser edges */
+@media(max-width:700px){
+  body{background:var(--bg)!important;}
+  .wrap{width:auto!important;max-width:none!important;margin-left:18px!important;margin-right:18px!important;padding-left:0!important;padding-right:0!important;}
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.plant-mini,.mini-place,.question-card,.card-game,.card-result,.live-result,.quiz-question-set,.place-copy,.condition-visual,.quiet-cta,.anchor-panel,.visual-frame,.mood-photo,.full-photo,.balcony-band{
+    width:auto!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;box-sizing:border-box!important;
+  }
+  .read-note{max-width:100%!important;padding-left:10px!important;padding-right:10px!important;box-sizing:border-box!important;}
+  p,.lead,.brand-subline,.hero-inline-note,.story-words p,.you-section p,.micro-item,.quote,.you-quote,small,span,strong,b,h1,h2,h3,h4{
+    max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important;
+  }
+  .plant-thumb{min-height:250px!important;}
+  .plant-thumb img{object-fit:contain!important;max-height:340px!important;}
+}
+
+/* v41 oracle cards are hand-painted cards; plant cards remain complete photos */
+.oracle-card img{height:260px!important;object-fit:cover!important;object-position:center center!important;background:#fff8ea!important;padding:0!important;}
+@media(max-width:700px){.oracle-card img{height:250px!important;object-fit:cover!important;padding:0!important;}}
+
+/* v42 mobile headline readability: prevent oversized story copy from hitting browser edges */
+@media(max-width:700px){
+  .you-section{padding:26px 18px!important;border-radius:28px!important;}
+  .you-section .eyebrow{font-size:11px!important;letter-spacing:.14em!important;line-height:1.4!important;}
+  .you-section .h2{font-size:30px!important;line-height:1.24!important;letter-spacing:-.02em!important;margin-bottom:18px!important;}
+  .you-quote{font-size:24px!important;line-height:1.45!important;letter-spacing:-.015em!important;}
+  .you-section p,.you-section .micro-item{font-size:16px!important;line-height:1.75!important;}
+}
+@media(max-width:390px){
+  .you-section .h2{font-size:28px!important;}
+  .you-quote{font-size:22px!important;}
+}
+
+/* v43 stronger mobile text safe-area: make story text narrower than card */
+@media(max-width:700px){
+  .wrap{width:calc(100vw - 48px)!important;max-width:calc(100vw - 48px)!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important;}
+  .you-section,.story-words,.hero-copy,.soft-card,.group-block,.place-copy{padding-left:18px!important;padding-right:18px!important;}
+  .you-section .h2,.you-quote,.you-section p,.you-section .micro-item,.story-words p,.read-note,.lead,.brand-subline{
+    max-width:calc(100vw - 96px)!important;margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important;
+  }
+  .you-section .h2{font-size:27px!important;line-height:1.28!important;}
+  .you-quote{font-size:21px!important;line-height:1.55!important;}
+}
+
+/* v44 mobile compact quiz and balcony direction sections */
+@media(max-width:700px){
+  .quiz{padding:26px 18px!important;border-radius:28px!important;gap:18px!important;}
+  .quiz .h2{font-size:29px!important;line-height:1.25!important;margin-bottom:14px!important;}
+  .quiz .body-lg{font-size:16px!important;line-height:1.75!important;}
+  .quiz-outcome{padding:16px 18px!important;border-radius:22px!important;margin-top:14px!important;}
+  .quiz-question-set{padding:18px!important;border-radius:24px!important;margin-top:16px!important;}
+  .quiz-question-set h3{font-size:24px!important;line-height:1.35!important;margin-bottom:14px!important;}
+  .question-card{padding:16px!important;border-radius:20px!important;}
+  .question-card strong{font-size:17px!important;line-height:1.45!important;}
+  .answer-pills{gap:7px!important;}
+  .answer-pills span{font-size:12.5px!important;padding:6px 9px!important;}
+  .card-game{padding:18px!important;border-radius:24px!important;}
+  .card-game-head strong{font-size:21px!important;}
+
+  .balcony-band{display:block!important;border-radius:24px!important;overflow:hidden!important;}
+  .balcony-copy{padding:22px 20px!important;}
+  .balcony-copy .h3{font-size:25px!important;line-height:1.3!important;}
+  .balcony-copy p{font-size:16px!important;line-height:1.7!important;margin-bottom:0!important;}
+  .balcony-cols{display:block!important;border-left:0!important;}
+  .balcony-col{padding:18px 20px!important;border-left:0!important;border-top:1px solid rgba(221,210,192,.85)!important;min-height:0!important;}
+  .balcony-col h4{font-size:20px!important;margin-bottom:8px!important;}
+  .balcony-col p{font-size:15.5px!important;line-height:1.65!important;margin:0!important;}
+}
+
+/* v45 mobile fixes: quiz title line control, balcony icons, correct pittosporum */
+@media(max-width:700px){
+  .quiz .h2{font-size:27px!important;line-height:1.28!important;letter-spacing:-.01em!important;word-break:keep-all!important;}
+  .quiz .h2 br{display:block!important;}
+  .quiz .eyebrow{font-size:11px!important;letter-spacing:.12em!important;}
+  .balcony-col{position:relative!important;padding-left:58px!important;}
+  .balcony-col:before{position:absolute;left:20px;top:20px;width:26px;height:26px;border-radius:999px;display:grid;place-items:center;background:#edf2e7;border:1px solid #d2dec9;color:#315b45;font-size:15px;font-weight:800;}
+  .balcony-col:nth-child(1):before{content:"朝";}
+  .balcony-col:nth-child(2):before{content:"光";}
+  .balcony-col:nth-child(3):before{content:"曬";}
+  .balcony-col:nth-child(4):before{content:"陰";}
+}
+
+/* v46 formal cleanup: no internal notes, cleaner plant cards */
+.plant-mini .meaning{font-size:13px!important;padding:9px 11px!important;}
+.plant-mini p,.plant-mini small{line-height:1.55!important;}
+@media(max-width:700px){
+  .plant-mini-content{padding:18px!important;}
+  .plant-mini h4{font-size:23px!important;margin-bottom:8px!important;}
+  .plant-mini .fit{font-size:14px!important;line-height:1.5!important;}
+  .plant-mini p{font-size:14.5px!important;margin:7px 0!important;}
+  .plant-mini small{font-size:13.5px!important;}
+  .plant-mini .meaning{font-size:13px!important;line-height:1.5!important;margin-top:8px!important;}
+}
+
+/* v47 final mobile safe width + explicit match steps */
+.match-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px;}
+.match-steps span{background:rgba(255,253,247,.14);border:1px solid rgba(255,253,247,.25);border-radius:18px;padding:12px 10px;color:#fffdf7;font-weight:750;text-align:center;font-size:14px;line-height:1.35;}
+.match-steps b{display:block;font-size:20px;line-height:1;color:#ead9b9;margin-bottom:5px;}
+@media(max-width:700px){
+  .wrap{width:calc(100vw - 76px)!important;max-width:314px!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important;}
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.plant-mini,.mini-place,.question-card,.card-game,.card-result,.live-result,.quiz-question-set,.place-copy,.condition-visual,.quiet-cta,.anchor-panel,.visual-frame,.mood-photo,.full-photo,.balcony-band{
+    width:100%!important;max-width:100%!important;box-sizing:border-box!important;
+  }
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.place-copy,.quiz,.card-game,.quiz-question-set{padding-left:16px!important;padding-right:16px!important;}
+  .match-steps{grid-template-columns:1fr!important;gap:8px!important;margin-top:14px!important;}
+  .match-steps span{display:flex;align-items:center;gap:10px;text-align:left;font-size:15px!important;padding:10px 12px!important;}
+  .match-steps b{margin:0!important;font-size:18px!important;}
+  .quiz .h2{font-size:25px!important;}
+}
+
+/* v48 real game flow */
+.game-flow{gap:18px!important;}
+.game-panel{grid-column:1/-1;background:rgba(255,253,247,.12);border:1px solid rgba(255,253,247,.22);border-radius:28px;padding:24px;}
+.game-panel-head span{display:block;font-size:12px;letter-spacing:.16em;color:#ead9b9;font-weight:900;margin-bottom:6px;}
+.game-panel-head h3{color:#fffdf7;font-size:26px;margin:0 0 6px;}
+.game-panel-head p{margin:0 0 16px;color:rgba(255,253,247,.78);}
+.choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.choice-card{appearance:none;border:1px solid rgba(255,253,247,.25);background:#fffdf7;color:var(--green);border-radius:22px;padding:16px;text-align:left;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 14px 34px rgba(18,35,26,.12);transition:.18s ease;}
+.choice-card span{display:block;margin-top:6px;font-size:12.5px;line-height:1.45;color:#706858;font-weight:650;}
+.choice-card.is-selected{background:#ead9b9;border-color:#fffdf7;transform:translateY(-2px);}
+@media(max-width:700px){.game-panel{padding:18px!important;border-radius:24px!important}.choice-grid{grid-template-columns:1fr!important;gap:9px!important}.choice-card{font-size:17px!important;padding:14px!important}.game-panel-head h3{font-size:24px!important}}
+
+/* v49 reduce copy, stronger game feel, lighter plant cards */
+.match-steps{gap:14px!important;}
+.match-steps span{border-radius:22px!important;box-shadow:0 12px 28px rgba(18,35,26,.12);}
+.choice-card{position:relative;}
+.choice-card:after{content:"選我";position:absolute;right:12px;top:12px;font-size:11px;letter-spacing:.08em;color:#9a8a70;background:#f4eadb;border-radius:999px;padding:4px 7px;font-weight:800;}
+.choice-card.is-selected{background:#ead9b9!important;border-color:#fffdf7!important;box-shadow:0 18px 42px rgba(18,35,26,.22)!important;transform:translateY(-3px)!important;}
+.choice-card.is-selected:after{content:"已選";background:#315b45;color:#fffdf7;}
+.card-result{border:1px solid rgba(234,217,185,.75)!important;box-shadow:0 18px 45px rgba(18,35,26,.12)!important;}
+.card-result b:before{content:"你的植物結果卡｜";font-size:13px;letter-spacing:.08em;color:#a87855;display:block;margin-bottom:6px;}
+.plant-mini .fit{font-size:13px!important;}
+.plant-mini p{font-size:13.5px!important;}
+.plant-mini small{font-size:13px!important;}
+.plant-mini .meaning{font-size:12.5px!important;}
+@media(max-width:700px){
+  .match-steps{gap:10px!important;}
+  .match-steps span{display:grid!important;grid-template-columns:34px 1fr!important;align-items:center!important;column-gap:10px!important;white-space:normal!important;}
+  .match-steps b{width:28px;height:28px;display:grid!important;place-items:center;background:rgba(255,253,247,.18);border-radius:999px;}
+  .choice-card{padding-right:58px!important;}
+  .choice-card span{font-size:12.5px!important;}
+  .plant-mini-content{padding:16px!important;}
+  .plant-mini small{display:none!important;}
+  .plant-mini .meaning{margin-top:7px!important;}
+}
+
+/* v50: match section only — stronger game UI */
+#match .quiz{align-items:start!important;}
+#match .game-intro p{max-width:520px;color:rgba(255,253,247,.86);}
+#match .match-steps span{background:rgba(255,253,247,.16)!important;border-color:rgba(255,253,247,.30)!important;}
+#match .game-panel{background:rgba(255,253,247,.13)!important;}
+#match .choice-card{min-height:112px;display:flex;flex-direction:column;justify-content:flex-end;}
+#match .choice-card:after{content:"點選";}
+#match .choice-card.is-selected:after{content:"已選";}
+#match .card-result{background:#fffdf7!important;color:var(--green)!important;}
+#match .card-result p strong{color:#a87855;}
+@media(max-width:700px){
+  #match .quiz{padding:24px 16px!important;}
+  #match .game-intro .h2{font-size:28px!important;line-height:1.25!important;}
+  #match .match-steps{grid-template-columns:1fr!important;}
+  #match .choice-card{min-height:88px!important;}
+  #match .oracle-grid{grid-template-columns:1fr!important;}
+}
+
+/* v50b: match anchor should show game immediately on mobile */
+@media(max-width:700px){
+  #match.section{padding-top:18px!important;padding-bottom:42px!important;scroll-margin-top:72px!important;}
+  #match .wrap{width:calc(100vw - 36px)!important;max-width:354px!important;margin-left:auto!important;margin-right:auto!important;}
+  #match .quiz{margin-top:0!important;gap:16px!important;}
+  #match .game-intro{margin:0!important;}
+  #match .game-panel:first-child{margin-top:0!important;}
+}
+
+/* v51 半夏只修配對區：步驟間距與結果卡視覺，其餘版面不動 */
+#match .match-steps{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;margin-top:20px!important;}
+#match .match-steps span{display:grid!important;grid-template-columns:36px 1fr!important;align-items:center!important;column-gap:10px!important;min-height:58px!important;text-align:left!important;white-space:normal!important;}
+#match .match-steps b{width:32px!important;height:32px!important;display:grid!important;place-items:center!important;margin:0!important;border-radius:999px!important;background:rgba(255,253,247,.20)!important;color:#ead9b9!important;}
+#match .card-result{padding:26px!important;}
+#match .result-kicker{font-size:12px!important;letter-spacing:.16em!important;text-transform:uppercase!important;color:#a87855!important;font-weight:900!important;margin-bottom:8px!important;}
+#match .card-result b:before{content:none!important;}
+#match .result-lines{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin-top:16px!important;}
+#match .result-lines span{display:block!important;background:#f5eddf!important;border:1px solid #e3d3bb!important;border-radius:18px!important;padding:12px 14px!important;color:#455143!important;line-height:1.55!important;}
+#match .result-lines strong{display:block!important;color:var(--green)!important;font-size:12px!important;letter-spacing:.08em!important;margin-bottom:3px!important;}
+#match .result-lines span:last-child{grid-column:1/-1!important;}
+@media(max-width:700px){#match .match-steps{grid-template-columns:1fr!important;gap:10px!important;}#match .match-steps span{min-height:52px!important;}#match .result-lines{grid-template-columns:1fr!important;}#match .card-result{padding:22px!important;}}
+
+/* v58 desktop readability: balcony direction copy should not be tiny */
+@media(min-width:701px){
+  .balcony-copy p{font-size:17px!important;line-height:1.75!important;}
+  .balcony-col{padding:30px 22px!important;}
+  .balcony-col h4{font-size:21px!important;line-height:1.35!important;margin-bottom:10px!important;}
+  .balcony-col p{font-size:16px!important;line-height:1.75!important;margin:0!important;color:#4f564d!important;}
+}
+
+/* v59 desktop back-to-top button */
+.back-top{position:fixed;right:28px;bottom:28px;z-index:40;width:54px;height:54px;border-radius:999px;display:grid;place-items:center;background:rgba(32,63,49,.92);color:#fffdf7;text-decoration:none;font-weight:900;font-size:20px;box-shadow:0 18px 48px rgba(18,35,26,.22);border:1px solid rgba(255,253,247,.35);backdrop-filter:blur(10px);}
+.back-top:hover{transform:translateY(-2px);background:#203f31;}
+@media(max-width:700px){.back-top{display:none!important;}}
+
+/* v60 restore desktop hand-drawn monstera on story quote card */
+@media(min-width:701px){
+  .soft-card.sketch-card{background:#fffdf7 url('./plant-botanical-line-art-v7.png') right bottom/58% auto no-repeat!important;}
+  .soft-card.sketch-card svg{display:block!important;position:absolute!important;right:0!important;bottom:0!important;width:86%!important;height:auto!important;opacity:.42!important;pointer-events:none!important;}
+}
+
+/* v61 result naming + flip-card interaction */
+#match .oracle-card{transform-style:preserve-3d!important;will-change:transform!important;}
+#match .oracle-card.is-picked{transform:translateY(-4px) rotateY(8deg)!important;}
+#match .oracle-card.is-picked:after{content:"已翻開"!important;background:#315b45!important;color:#fffdf7!important;}
+#match .card-result.is-revealed{animation:resultReveal .46s ease both;}
+@keyframes resultReveal{0%{opacity:.25;transform:translateY(18px) scale(.97) rotateX(8deg)}100%{opacity:1;transform:translateY(0) scale(1) rotateX(0)}}
+#match .share-title{display:block;font-size:15px!important;line-height:1.6!important;color:#7d6244!important;margin-top:8px!important;}
+
+/* v62 remove accidental line crossing match step pills */
+#match .match-steps,#match .match-steps span,#match .match-steps b{position:relative!important;text-decoration:none!important;background-image:none!important;}
+#match .match-steps:before,#match .match-steps:after,#match .match-steps span:before,#match .match-steps span:after{content:none!important;display:none!important;}
+#match .match-steps{overflow:visible!important;}
+#match .match-steps span{z-index:1!important;}
+
+/* v63 closing consultation section */
+.closing-consult{padding:96px 0 118px;background:linear-gradient(180deg,#f6f0e5,#efe6d8);}
+.closing-panel{position:relative;overflow:hidden;border-radius:42px;min-height:520px;background:#203f31 url('./closing-assets-v63/consultation-bg.jpg') center/cover no-repeat;box-shadow:0 28px 80px rgba(32,45,34,.18);border:1px solid rgba(221,210,192,.8);}
+.closing-panel:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,45,34,.88),rgba(20,45,34,.62) 44%,rgba(20,45,34,.18));}
+.closing-content{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:end;min-height:520px;padding:52px;color:#fffdf7;}
+.closing-copy .eyebrow{color:#ead9b9}.closing-copy .h2{color:#fffdf7}.closing-copy p{font-size:18px;line-height:1.8;color:rgba(255,253,247,.86);max-width:520px;}
+.consult-form{background:rgba(255,253,247,.92);color:var(--green);border:1px solid rgba(255,253,247,.65);border-radius:30px;padding:28px;box-shadow:0 20px 58px rgba(20,45,34,.18);backdrop-filter:blur(12px);}
+.consult-form h3{margin:0 0 10px;font-size:25px;color:var(--green)}.consult-form p{margin:0 0 18px;color:#5b5f55;line-height:1.65}.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.consult-field{background:#f5eddf;border:1px solid #e3d3bb;border-radius:18px;padding:14px 16px;min-height:58px;color:#4f564d}.consult-field.full{grid-column:1/-1;min-height:92px}.consult-field b{display:block;color:#a87855;font-size:12px;letter-spacing:.08em;margin-bottom:4px}.consult-submit{margin-top:16px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--green);color:#fffdf7;padding:13px 20px;font-weight:900;text-decoration:none}.consult-note{font-size:13px!important;color:#777060!important;margin-top:12px!important;}
+@media(max-width:800px){.closing-consult{padding:64px 0 84px}.closing-panel{border-radius:30px}.closing-panel:before{background:linear-gradient(180deg,rgba(20,45,34,.82),rgba(20,45,34,.58));}.closing-content{grid-template-columns:1fr;min-height:auto;padding:28px}.consult-grid{grid-template-columns:1fr}.closing-copy p{font-size:16px}}
+
+/* v64 closing: full-page render + real fillable consultation form */
+.closing-consult{position:relative;min-height:100vh;padding:0!important;background:#203f31 url('./closing-assets-v63/consultation-bg.jpg') center/cover no-repeat!important;}
+.closing-consult:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,45,34,.90),rgba(20,45,34,.68) 48%,rgba(20,45,34,.30));}
+.closing-consult .wrap{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;}
+.closing-panel{width:100%;min-height:auto!important;background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;}
+.closing-panel:before{display:none!important;}
+.closing-content{min-height:auto!important;padding:86px 0!important;}
+.consult-input,.consult-select,.consult-textarea{width:100%;border:1px solid #e3d3bb;border-radius:16px;background:#fffdf7;color:#2f3f34;font:inherit;padding:12px 14px;outline:none;}
+.consult-input:focus,.consult-select:focus,.consult-textarea:focus{border-color:#a87855;box-shadow:0 0 0 3px rgba(168,120,85,.15);}
+.consult-textarea{min-height:94px;resize:vertical;}
+.consult-field{padding:0!important;background:transparent!important;border:0!important;min-height:0!important;}
+.consult-field label{display:block;color:#a87855;font-size:12px;letter-spacing:.08em;font-weight:900;margin-bottom:6px;}
+.consult-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px;}
+.consult-submit{border:0;cursor:pointer;font:inherit;}
+.consult-secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid #d9c8af;color:var(--green);background:#fffdf7;padding:12px 18px;font-weight:850;text-decoration:none;}
+@media(max-width:800px){.closing-consult .wrap{min-height:auto}.closing-content{padding:58px 0!important}.closing-consult:before{background:linear-gradient(180deg,rgba(20,45,34,.86),rgba(20,45,34,.62));}}
+
+/* v65 contact modal instead of Google Form */
+.contact-modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(20,35,27,.62);backdrop-filter:blur(8px);}
+.contact-modal.is-open{display:flex;}
+.contact-box{width:min(560px,100%);background:#fffdf7;color:var(--green);border-radius:32px;padding:30px;border:1px solid #e3d3bb;box-shadow:0 32px 90px rgba(18,35,26,.28);position:relative;}
+.contact-close{position:absolute;right:18px;top:16px;width:36px;height:36px;border-radius:999px;border:1px solid #d9c8af;background:#fff8ea;color:var(--green);font-size:20px;cursor:pointer;}
+.contact-box h3{margin:0 0 8px;font-size:28px;color:var(--green);}.contact-box p{margin:0 0 18px;color:#5b5f55;line-height:1.7}.contact-grid{display:grid;gap:12px}.contact-grid label{font-size:12px;letter-spacing:.08em;color:#a87855;font-weight:900;display:block;margin-bottom:6px}.contact-grid input{width:100%;border:1px solid #e3d3bb;border-radius:16px;background:#fffaf0;color:#2f3f34;font:inherit;padding:12px 14px;outline:none}.contact-grid input:focus{border-color:#a87855;box-shadow:0 0 0 3px rgba(168,120,85,.15)}.contact-submit{margin-top:16px;border:0;border-radius:999px;background:var(--green);color:#fffdf7;padding:13px 20px;font:inherit;font-weight:900;cursor:pointer}.contact-success{display:none;margin-top:14px;background:#edf2e7;border:1px solid #d2dec9;border-radius:16px;padding:12px 14px;color:#315b45;font-weight:800}.contact-success.is-visible{display:block;}
+
+/* v69 brand mark from logo standard */
+.brand{gap:10px!important;letter-spacing:.06em!important;}
+.brand-mark{width:38px!important;height:38px!important;border:0!important;border-radius:0!important;display:inline-grid!important;place-items:center!important;}
+.brand-mark svg{width:38px;height:38px;display:block;}
+.brand-word{font-family:var(--serif)!important;font-size:24px!important;letter-spacing:.12em!important;color:#244635!important;font-weight:700!important;}
+@media(max-width:600px){.brand-mark,.brand-mark svg{width:34px!important;height:34px!important}.brand-word{font-size:21px!important;}}
+
+
+
+/* v70 Aster mobile aesthetic pass: safer rhythm + keep desktop illustrations visible on mobile */
+@media(max-width:700px){
+  html,body{overflow-x:hidden!important;background:var(--bg)!important;}
+  .wrap{width:calc(100vw - 40px)!important;max-width:360px!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important;overflow:visible!important;}
+  .section{padding:62px 0!important;}
+  .hero{padding-top:18px!important;padding-bottom:58px!important;}
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.plant-mini,.mini-place,.question-card,.card-game,.card-result,.live-result,.quiz-question-set,.place-copy,.condition-visual,.quiet-cta,.anchor-panel,.visual-frame,.mood-photo,.full-photo,.balcony-band,.closing-panel{
+    width:100%!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important;
+  }
+  .hero-copy,.story-words,.soft-card,.you-section,.place-copy,.group-block{padding-left:20px!important;padding-right:20px!important;border-radius:28px!important;}
+  .h1{font-size:39px!important;line-height:1.12!important;letter-spacing:-.035em!important;}
+  .h2{font-size:30px!important;line-height:1.28!important;letter-spacing:-.02em!important;}
+  .h3{font-size:23px!important;line-height:1.35!important;}
+  .lead,.body-lg,.story-words p,.place-copy p,.you-section p{font-size:16.5px!important;line-height:1.78!important;word-break:normal!important;overflow-wrap:break-word!important;}
+  .btn-row{display:grid!important;grid-template-columns:1fr!important;width:100%!important;}
+  .btn{width:100%!important;min-height:48px!important;white-space:normal!important;line-height:1.35!important;}
+  .section-head{margin-bottom:24px!important;}
+  .section-head p{font-size:16px!important;line-height:1.75!important;}
+
+  /* bring the desktop botanical/Monstera illustration back into mobile, but softly */
+  .soft-card.sketch-card{display:block!important;position:relative!important;min-height:330px!important;padding-bottom:150px!important;background:#fffdf7 url('./plant-botanical-line-art-v7.png') right 18px bottom 8px/72% auto no-repeat!important;overflow:hidden!important;}
+  .soft-card.sketch-card svg{display:block!important;position:absolute!important;right:-18px!important;bottom:-18px!important;width:82%!important;height:auto!important;opacity:.22!important;pointer-events:none!important;}
+  .visual-frame{display:block!important;min-height:280px!important;border-radius:30px!important;}
+  .visual-frame svg{display:block!important;right:-4px!important;bottom:4px!important;width:82%!important;opacity:.58!important;}
+  .visual-label{left:18px!important;top:18px!important;font-size:12px!important;}
+  .visual-note{left:18px!important;right:18px!important;bottom:18px!important;font-size:14.5px!important;line-height:1.6!important;max-width:none!important;}
+
+  /* make the game and result feel intentional, not cramped */
+  #match .wrap{width:calc(100vw - 40px)!important;max-width:360px!important;}
+  #match .quiz{padding:26px 18px!important;border-radius:30px!important;gap:18px!important;}
+  #match .game-panel{padding:18px!important;border-radius:24px!important;}
+  #match .choice-card{min-height:92px!important;border-radius:20px!important;}
+  #match .oracle-card img{height:210px!important;}
+
+  /* balcony direction card: keep desktop structure, but stack elegantly */
+  .balcony-band{border-radius:28px!important;}
+  .balcony-copy{padding:24px 20px!important;}
+  .balcony-col{padding:22px 18px 22px 58px!important;}
+}
+@media(max-width:390px){
+  .wrap,#match .wrap{width:calc(100vw - 34px)!important;max-width:356px!important;}
+  .h1{font-size:37px!important;}
+  .h2{font-size:28px!important;}
+}
+
+
+
+/* v70b mobile overflow seal: nav padding and wide children */
+@media(max-width:700px){
+  *,*::before,*::after{box-sizing:border-box!important;min-width:0!important;}
+  html,body{width:100%!important;max-width:100vw!important;overflow-x:clip!important;}
+  body>*{max-width:100vw!important;overflow-x:clip!important;}
+  img,svg,video,canvas{max-width:100%!important;height:auto;}
+  .nav .wrap.nav-inner{width:calc(100vw - 40px)!important;max-width:360px!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important;}
+  .nav-inner{padding-left:0!important;padding-right:0!important;}
+  .brand{max-width:100%!important;min-width:0!important;}
+  .brand-word{white-space:nowrap!important;}
+  .hero-grid,.two,.story-wide,.feature-place,.feature-place:nth-child(even),.plant-layout,.position-intro,.plant-mini-grid,.position-grid,.place-grid,.condition-band,.condition-visual-grid,.quiz,.quiz-cards,.quiz-steps,.oracle-grid,.mini-illus,.anchor-grid,.balcony-cols,.mini-place-cards,.consult-grid,.closing-content{
+    width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important;
+  }
+  .hero-photo,.position-illustration-card,.photo-mosaic,.photo-tile,.photo-tile.big,.mini-place-photo,.plant-thumb,.oracle-card img{max-width:100%!important;overflow:hidden!important;}
+  .closing-consult .wrap{width:calc(100vw - 40px)!important;max-width:360px!important;padding-left:0!important;padding-right:0!important;}
+}
+
+
+
+/* v70c mobile gallery-safe width: visible side breathing room */
+@media(max-width:700px){
+  .wrap,.nav .wrap.nav-inner,#match .wrap,.closing-consult .wrap{
+    width:calc(100vw - 72px)!important;
+    max-width:318px!important;
+    margin-left:auto!important;margin-right:auto!important;
+    padding-left:0!important;padding-right:0!important;
+    overflow:visible!important;
+  }
+  .hero-copy,.you-section,.story-words,.soft-card,.group-block,.plant-mini,.mini-place,.question-card,.card-game,.card-result,.live-result,.quiz-question-set,.place-copy,.condition-visual,.quiet-cta,.anchor-panel,.visual-frame,.mood-photo,.full-photo,.balcony-band,.closing-panel,.quiz{
+    max-width:318px!important;width:100%!important;margin-left:auto!important;margin-right:auto!important;overflow:hidden!important;
+  }
+  .section-head,.read-note{max-width:318px!important;margin-left:auto!important;margin-right:auto!important;}
+  .hero-photo,.mobile-hero-art,.position-illustration-card{max-width:318px!important;margin-left:auto!important;margin-right:auto!important;}
+}
+@media(max-width:390px){
+  .wrap,.nav .wrap.nav-inner,#match .wrap,.closing-consult .wrap{width:calc(100vw - 64px)!important;max-width:326px!important;}
+}
+/* v70 desktop rhythm CTA and stronger card flip */
+.section-transition-cta{display:none;}
+@media(min-width:881px){
+  .section-transition-cta{margin:36px auto 0;padding:28px 34px;border-radius:30px;background:linear-gradient(135deg,#244635,#315b45);color:#fffdf7;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:0 18px 52px rgba(32,63,49,.16);}
+  .section-transition-cta strong{font-family:var(--serif);font-size:24px;letter-spacing:.02em;}
+  .section-transition-cta p{margin:6px 0 0;color:rgba(255,253,247,.78);font-size:16px;line-height:1.65;}
+  .section-transition-cta a{flex:0 0 auto;text-decoration:none;background:#fffdf7;color:#244635;border-radius:999px;padding:12px 18px;font-weight:900;box-shadow:0 10px 26px rgba(18,35,26,.16);}
+  #match .oracle-card:not(.is-picked)::before{content:"翻開這張語氣牌";position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:radial-gradient(circle at 50% 38%,rgba(255,253,247,.22),transparent 34%),linear-gradient(145deg,rgba(36,70,53,.94),rgba(49,91,69,.88));color:#fffdf7;font-family:var(--serif);font-size:25px;letter-spacing:.16em;text-indent:.16em;border-radius:26px;transition:.24s ease;box-shadow:inset 0 0 0 1px rgba(255,253,247,.28),inset 0 0 0 10px rgba(255,253,247,.06);}
+  #match .oracle-card:not(.is-picked):hover::before{opacity:.18;transform:scale(.96);}
+  #match .oracle-card.is-picked{animation:cardFlipOpen .48s ease both;}
+  @keyframes cardFlipOpen{0%{transform:translateY(0) rotateY(0)}55%{transform:translateY(-6px) rotateY(90deg)}100%{transform:translateY(-4px) rotateY(0)}}
+  .flip-picked{display:inline-flex;margin:0 0 10px;padding:7px 12px;border-radius:999px;background:#edf2e7;color:#315b45;font-size:13px;font-weight:900;letter-spacing:.06em;}
+}
+
+
+/* v71 mobile hamburger quick-jump menu */
+.mobile-menu-toggle{display:none;border:1px solid rgba(36,70,53,.24);background:rgba(255,253,247,.78);border-radius:999px;width:46px;height:40px;align-items:center;justify-content:center;flex-direction:column;gap:4px;padding:0;box-shadow:0 10px 26px rgba(50,55,42,.08)}
+.mobile-menu-toggle span{display:block;width:18px;height:2px;background:var(--green);border-radius:999px;transition:.22s ease}
+.mobile-nav-menu{display:none}
+@media(max-width:880px){
+  .nav{overflow:visible!important;z-index:80!important}
+  .nav .wrap.nav-inner{width:calc(100vw - 28px)!important;max-width:362px!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}
+  .mobile-menu-toggle{display:flex!important;flex:0 0 46px;margin-left:auto;position:relative;z-index:91}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .mobile-nav-menu{display:grid!important;visibility:hidden;position:fixed;left:50%;top:70px;transform:translateX(-50%) translateY(-10px);width:min(342px,calc(100vw - 36px));z-index:90;background:rgba(255,253,247,.98);border:1px solid rgba(221,210,192,.92);border-radius:28px;padding:10px;box-shadow:0 24px 70px rgba(36,48,37,.22);opacity:0;pointer-events:none;transition:.22s ease;backdrop-filter:blur(18px)}
+  .mobile-nav-menu.is-open{visibility:visible;opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+  .mobile-nav-menu a{display:flex;justify-content:space-between;align-items:center;gap:14px;text-decoration:none;color:var(--green);font-weight:850;padding:14px 15px;border-radius:20px;border:1px solid transparent}
+  .mobile-nav-menu a+a{margin-top:4px}
+  .mobile-nav-menu a:hover,.mobile-nav-menu a:focus{background:#edf2e7;border-color:#d2dec9;outline:none}
+  .mobile-nav-menu a span{font-size:12px;font-weight:650;color:#7a7467;text-align:right;line-height:1.35}
+}
+
+
+/* v78 mobile polish after integrated main: safer hamburger + original Monstera without excess blank */
+@media(max-width:700px){
+  .nav .wrap.nav-inner{width:calc(100vw - 64px)!important;max-width:326px!important;padding-left:0!important;padding-right:0!important;overflow:visible!important;}
+  .mobile-menu-toggle{width:44px!important;height:40px!important;flex:0 0 44px!important;margin-right:0!important;}
+  .soft-card.sketch-card{min-height:auto!important;padding-bottom:116px!important;background:#fffdf7 url('./plant-botanical-line-art-v7.png') center bottom 18px/220px auto no-repeat!important;}
+  .soft-card.sketch-card svg{display:none!important;}
+  .soft-card.sketch-card::after{display:none!important;content:none!important;}
+}
+
+
+
+/* v79 mobile full pass: repair rhythm, plant cards, and match width */
+@media(max-width:700px){
+  main>section,.hero{scroll-margin-top:82px!important;}
+  .hero{padding-bottom:36px!important;}
+  #story.section{padding-top:44px!important;}
+  .read-note{margin-bottom:24px!important;}
+  .wrap{width:calc(100vw - 48px)!important;max-width:342px!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important;}
+  .you-section{margin-top:18px!important;padding-left:24px!important;padding-right:24px!important;}
+  .you-section .h2,.you-section .body-lg,.you-section .you-quote,.you-section .micro-list{max-width:278px!important;margin-left:auto!important;margin-right:auto!important;}
+  .you-section .h2{font-size:29px!important;line-height:1.30!important;letter-spacing:-.015em!important;}
+  .you-section .body-lg,.you-section .you-quote{line-height:1.82!important;}
+  .you-section .scene-tags{max-width:282px!important;margin-left:auto!important;margin-right:auto!important;}
+  .mobile-hero-art img{object-position:center center!important;object-fit:cover!important;transform:none!important;transform-origin:center center;}
+  .mobile-hero-art{background:#eee4d6!important;}
+
+  .mood-photo,.position-illustration-card{min-height:0!important;}
+  .mood-photo img,.position-illustration-card img{height:auto!important;min-height:0!important;aspect-ratio:4/3!important;object-fit:cover!important;}
+  .mood-photo .hero-note,.position-illustration-note{position:static!important;margin:0!important;border-radius:0 0 26px 26px!important;max-width:none!important;background:rgba(32,63,49,.90)!important;}
+
+  #plants .group-block{padding:20px!important;border-radius:28px!important;}
+  #plants .group-title{display:block!important;padding-bottom:12px!important;margin-bottom:16px!important;}
+  #plants .group-title h3{font-size:24px!important;line-height:1.32!important;margin-bottom:6px!important;word-break:keep-all!important;}
+  #plants .group-title span{display:block!important;text-align:left!important;font-size:13px!important;line-height:1.45!important;}
+  #plants .plant-mini-grid{gap:16px!important;}
+  #plants .plant-mini{display:block!important;min-height:0!important;padding:0!important;overflow:hidden!important;}
+  #plants .plant-thumb{height:210px!important;min-height:210px!important;background:#f3eadc!important;}
+  #plants .plant-thumb img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;display:block!important;}
+  #plants .plant-mini-content{padding:16px!important;}
+  #plants .plant-mini h4{font-size:22px!important;line-height:1.32!important;word-break:keep-all!important;}
+  #plants .plant-mini p{font-size:14px!important;line-height:1.55!important;}
+
+  #match .wrap{width:calc(100vw - 40px)!important;max-width:350px!important;}
+  #match .quiz{padding:22px 14px!important;border-radius:28px!important;}
+  #match .game-panel,#match .card-game,#match .quiz-question-set,#match .live-result,#match .card-result{padding-left:16px!important;padding-right:16px!important;}
+  #match .choice-card{min-height:86px!important;}
+}
+
+/* v77 consultation match carry-in hint */
+.consult-match-hint{display:none;margin:0 0 14px;padding:12px 14px;border-radius:18px;background:#edf2e7;border:1px solid #d2dec9;color:#315b45;font-size:14px;font-weight:850;line-height:1.55;}
+.consult-match-hint.is-visible{display:block;}
+
+
+/* v78 mobile match progress: lighter game cue */
+@media(max-width:700px){
+  #match .match-steps{display:flex!important;grid-template-columns:none!important;gap:7px!important;margin-top:18px!important;overflow:visible!important;}
+  #match .match-steps span{display:flex!important;align-items:center!important;justify-content:center!important;min-height:0!important;padding:7px 8px!important;border-radius:999px!important;font-size:12px!important;line-height:1.2!important;text-align:center!important;background:rgba(255,253,247,.12)!important;border-color:rgba(255,253,247,.20)!important;box-shadow:none!important;white-space:nowrap!important;}
+  #match .match-steps b{width:20px!important;height:20px!important;display:inline-grid!important;place-items:center!important;margin:0 5px 0 0!important;font-size:12px!important;background:rgba(255,253,247,.20)!important;color:#fffdf7!important;}
+}
+
+/* v80 mobile plant cards: avoid narrow portrait image strips */
+@media(max-width:700px){
+  #plants .plant-thumb{height:230px!important;min-height:230px!important;padding:0!important;background:#e7dfd0!important;display:block!important;}
+  #plants .plant-thumb img{width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;border-radius:0!important;padding:0!important;display:block!important;}
+}
+
+/* v82 mobile breathing-space ornament and centered hero plants */
+@media(max-width:700px){
+  .mobile-hero-art img{content:url('./plant-hero-mobile-original-remix-v83.jpg')!important;object-position:center center!important;transform:none!important;}
+  .quiet-cta{position:relative!important;margin-bottom:18px!important;}
+  .quiet-cta::after{content:"";display:block;width:86px;height:30px;margin:18px auto -4px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.18;filter:saturate(.8);}
+  .you-section{position:relative!important;}
+  .you-section .scene-tags{position:relative!important;padding-bottom:42px!important;}
+  .you-section .scene-tags::after{content:"";position:absolute;right:4px;bottom:4px;width:76px;height:38px;background:url('./plant-botanical-line-art-v7.png') center/contain no-repeat;opacity:.14;pointer-events:none;}
+}
+
+/* v106 UX companion layer: add optional real-life constraints before recommendation */
+.ux-reassure{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 6px}
+.ux-reassure div{background:rgba(255,252,244,.78);border:1px solid rgba(111,139,104,.18);border-radius:22px;padding:16px 18px;box-shadow:0 12px 32px rgba(36,70,53,.06)}
+.ux-reassure b{display:block;color:#244635;font-size:15px;margin-bottom:6px}
+.ux-reassure span{display:block;color:#65745e;font-size:13px;line-height:1.65}
+.result-meaning{background:#fffaf0;border:1px solid rgba(178,122,85,.22);border-radius:20px;padding:16px 18px;margin:14px 0;color:#4b5945;line-height:1.72}
+.result-meaning strong{display:block;color:#244635;font-size:16px;margin-bottom:6px}
+.recommend-stack{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.recommend-item{background:rgba(255,255,255,.82);border:1px solid rgba(111,139,104,.18);border-radius:18px;padding:14px}
+.recommend-item small{display:block;color:#b27a55;letter-spacing:.08em;font-size:11px;margin-bottom:5px}
+.recommend-item b{display:block;color:#244635;font-size:15px;margin:0 0 5px}
+.recommend-item span{display:block;color:#65745e;font-size:12.5px;line-height:1.55}
+.care-hints{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.care-hints span{background:#eef4ea;border-radius:999px;padding:9px 12px;color:#40513f;font-size:12.5px;line-height:1.35}
+.result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.result-actions a,.result-actions button{border:0;border-radius:999px;padding:11px 16px;background:#244635;color:#fff;font-weight:700;text-decoration:none;cursor:pointer;font-size:14px}
+.result-actions button{background:#fff;border:1px solid rgba(36,70,53,.24);color:#244635}
+.result-toast{display:none;margin-top:10px;color:#6f8b68;font-size:13px}.result-toast.is-visible{display:block}
+.match-soft-note{margin-top:18px;color:#65745e;font-size:14px;line-height:1.7}
+.quick-constraint{background:linear-gradient(135deg,rgba(255,252,244,.92),rgba(238,244,234,.78));border:1px solid rgba(111,139,104,.22);border-radius:28px;padding:20px;margin:16px 0 4px;box-shadow:0 18px 48px rgba(36,70,53,.07)}
+.quick-constraint-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:14px}
+.quick-constraint-head span{display:inline-block;color:#b27a55;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
+.quick-constraint-head h3{margin:0;color:#244635;font-size:20px;line-height:1.35}
+.quick-constraint-head p{margin:0;color:#65745e;font-size:13.5px;line-height:1.7;max-width:420px}
+.constraint-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.constraint-group{background:rgba(255,255,255,.64);border:1px solid rgba(111,139,104,.14);border-radius:22px;padding:14px}
+.constraint-group b{display:block;color:#244635;margin-bottom:10px;font-size:14px}
+.constraint-pills{display:flex;flex-wrap:wrap;gap:8px}
+.constraint-pills .choice-card{padding:10px 12px;border-radius:999px;font-size:13px;min-height:0;text-align:left}
+.constraint-pills .choice-card span{display:none}
+.fit-diagnosis{background:#f4efe4;border-radius:18px;padding:14px 16px;margin:14px 0;color:#4d5d49;font-size:13.5px;line-height:1.65}
+.fit-diagnosis b{display:block;color:#244635;margin-bottom:4px}
+.result-card-preview.is-ready{border-color:rgba(178,122,85,.38);box-shadow:0 18px 54px rgba(178,122,85,.12)}
+@media(max-width:700px){.ux-reassure,.recommend-stack,.care-hints,.constraint-grid{grid-template-columns:1fr}.ux-reassure{gap:10px}.quick-constraint{padding:16px;border-radius:22px}.quick-constraint-head{display:block}.quick-constraint-head p{margin-top:8px}.result-actions a,.result-actions button{width:100%;text-align:center}.result-meaning{font-size:15px!important}}
+
+/* v85 mobile typography audit: minimum 12px + prettier line rhythm */
+@media(max-width:700px){
+  body{font-size:16px!important;line-height:1.76!important;}
+  p,.lead,.body-lg,.brand-subline,.hero-inline-note,.story-words p,.you-section p,.place-copy p,.plant-mini p,.condition-visual p,.balcony-col p,.consult-form p,.contact-box p{font-size:16px!important;line-height:1.78!important;}
+  small,.source,.plant-mini small,.group-title span,.anchor span,.place-meta,.fit,.meaning,.chip,.scene-tags span,.answer-pills span,.result-label,.result-kicker,.flip-picked,.visual-label,.consult-note,.mobile-nav-menu a span{font-size:12.5px!important;line-height:1.55!important;}
+  .eyebrow,.you-section .eyebrow,#match .eyebrow{font-size:12px!important;line-height:1.55!important;letter-spacing:.14em!important;}
+  .nav-links a,.brand-word{line-height:1.35!important;}
+  .h1{line-height:1.10!important;}
+  .h2{line-height:1.27!important;}
+  .h3,.group-title h3,.plant-mini h4{line-height:1.34!important;}
+  .match-steps span{font-size:13px!important;line-height:1.45!important;}
+  .match-steps b{font-size:16px!important;line-height:1.2!important;}
+  #match .choice-card span,#match .oracle-card small,#match .result-lines span{font-size:13px!important;line-height:1.55!important;}
+  label,input,textarea,select,button{font-size:14px!important;line-height:1.45!important;}
+  .btn{font-size:15px!important;line-height:1.38!important;}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="植覺配首頁"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 38c0 8 5 14 12 14s12-6 12-14H20Z" stroke="#244635" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 39V17" stroke="#244635" stroke-width="4" stroke-linecap="round"/><path d="M32 26C21 25 14 18 12 9c11 1 19 7 20 17Z" stroke="#244635" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 27c10-2 17-8 20-17-10 1-18 7-20 17Z" stroke="#244635" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="31" r="4" fill="#B27A55"/><path d="M17 58h30" stroke="#244635" stroke-width="3" stroke-linecap="round"/></svg></span><span class="brand-word">植覺配</span></a>
+    <div class="nav-links">
+      <a href="#story">品牌記憶</a><a href="#positions">依位置找</a><a href="#conditions">看光與風</a><a href="#plants">植物性格</a><a href="#match" class="nav-cta">開始配對</a>
+    </div>
+    <button class="mobile-menu-toggle" type="button" aria-label="開啟快速選單" aria-expanded="false" aria-controls="mobileNavMenu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav-menu" id="mobileNavMenu" aria-hidden="true">
+    <a href="#story">品牌記憶<span>先看品牌感覺</span></a>
+    <a href="#positions">依位置找<span>客廳、玄關、書桌</span></a>
+    <a href="#conditions">看光與風<span>方位與照顧條件</span></a>
+    <a href="#plants">植物性格<span>找到適合的植物</span></a>
+    <a href="#match">開始配對<span>直接玩植物配對</span></a>
+  </div>
+</nav>
+<header id="top" class="hero">
+  <div class="wrap hero-grid">
+    <figure class="mobile-hero-art"><img src="./plant-hero-first-light-aesthetic-v84.png" alt="植覺配手機版首頁美學植物站標"></figure>
+    <div class="hero-copy">
+      <div class="eyebrow">植覺配｜Plants for Home</div>
+      <h1 class="h1">植物讓家，<br>變得不一樣</h1>
+      <p class="lead">植物不是裝飾，是讓家多一個可以停下來的角落。</p><p class="brand-subline">用植物的直覺，配對家的位置與人的狀態。</p><p class="hero-inline-note">讓光、風和角落，都有停留的理由。</p>
+      <div class="btn-row"><a class="btn primary" href="#match">先選一個家的角落</a><a class="btn ghost" href="#positions">慢慢看位置與植物</a></div>
+    </div>
+
+  </div>
+</header>
+<main>
+  <section id="story" class="section">
+    <div class="wrap story-flow">
+      <div class="read-note">先看見家的角落，再找到放得住、養得活，也能讓心慢下來的植物。</div>
+      <div class="story-wide">
+        <div class="story-words">
+          <div class="eyebrow">Brand Memory</div>
+          <h2 class="h2">植物不是裝飾，<br>是家的狀態</h2>
+          <p>有些家不是少了裝飾，而是少了一個會呼吸的角落。</p><p>植物放在對的位置，家就多了一個能把人接住的地方。</p>
+        </div>
+        <div class="mood-photo"><img src="./plant-story-painted-corner-v13.jpg" alt="植物放在對的位置的畫感情境"><div class="hero-note">植物放在對的位置，<br>家會先慢下來。</div></div>
+      </div>
+      <div class="story-wide">
+        <div class="soft-card sketch-card">
+          <p class="quote">它不是突然改變生活，<br>只是每天安靜地長一點，<br>讓家慢慢有了回應。</p>
+          <svg class="monstera-line" viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="龜背芋線稿"><path d="M210 286C210 230 212 171 218 86" stroke="#6f8b68" stroke-width="4" stroke-linecap="round"/><path d="M219 86C188 58 143 58 111 84C78 111 69 154 79 193C90 237 125 266 166 264C191 263 207 246 216 224C227 249 248 266 276 264C319 261 351 229 359 187C367 147 354 107 322 82C290 57 249 59 219 86Z" stroke="#6f8b68" stroke-width="4" stroke-linejoin="round"/><path d="M219 88C209 130 205 174 207 232" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M207 116C174 92 139 94 111 117" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M204 147C169 126 127 132 94 160" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M205 180C170 163 129 174 101 209" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M211 211C181 200 150 212 131 243" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M235 116C269 92 303 95 330 119" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M236 148C273 127 313 134 345 162" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M233 181C269 164 311 176 340 211" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M227 212C258 201 290 214 309 244" stroke="#6f8b68" stroke-width="3" stroke-linecap="round"/><path d="M96 129C120 130 138 143 149 164" stroke="#6f8b68" stroke-width="4" stroke-linecap="round"/><path d="M86 181C115 175 140 188 155 211" stroke="#6f8b68" stroke-width="4" stroke-linecap="round"/><path d="M342 130C318 130 300 144 289 165" stroke="#6f8b68" stroke-width="4" stroke-linecap="round"/><path d="M354 181C324 176 300 189 285 212" stroke="#6f8b68" stroke-width="4" stroke-linecap="round"/><ellipse cx="176" cy="126" rx="10" ry="22" transform="rotate(-32 176 126)" stroke="#6f8b68" stroke-width="3"/><ellipse cx="166" cy="183" rx="9" ry="20" transform="rotate(-44 166 183)" stroke="#6f8b68" stroke-width="3"/><ellipse cx="264" cy="126" rx="10" ry="22" transform="rotate(32 264 126)" stroke="#6f8b68" stroke-width="3"/><ellipse cx="275" cy="184" rx="9" ry="20" transform="rotate(44 275 184)" stroke="#6f8b68" stroke-width="3"/></svg>
+        </div>
+        <div class="story-words">
+          <div class="eyebrow">Real Life</div>
+          <h2 class="h2">工作很煩，<br>植物很安靜</h2>
+          <p>工作很煩，植物很安靜。</p><p>你不一定需要很大的改變，只需要一個能讓視線停下來的位置。</p>
+        </div>
+      </div>
+      <div class="quiet-cta"><strong>先從一個你最想改變的位置開始。</strong><br>不是一次改完整個家，而是看看哪一種植物，能讓那個地方慢慢變得不一樣。</div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="wrap you-section">
+      <div>
+        <div class="eyebrow">Why It Feels Like You</div>
+        <h2 class="h2">不是買一盆植物，<br>是讓家重新接住你。</h2>
+        <p class="body-lg">真正療癒的不是擺得多漂亮，而是每天願意多看一眼，讓家慢慢有回應。</p>
+        <div class="scene-tags"><span>陽台小花園</span><span>小造景</span><span>早晨澆水</span><span>新葉</span></div>
+      </div>
+      <div>
+        <p class="you-quote">如果你也曾經被一片新葉、一點早晨的光接住，這裡就是為你整理的植物入口。</p>
+        <div class="micro-list">
+          <div class="micro-item"><strong>小造景不是裝飾。</strong> 它讓角落有故事。</div><div class="micro-item"><strong>澆水不是工作。</strong> 它讓節奏慢下來。</div><div class="micro-item"><strong>植物配置不是美化。</strong> 是讓光、風、位置和人重新對齊。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="positions" class="section">
+    <div class="wrap ref-position">
+      <div class="position-intro">
+        <div class="position-intro-copy" style="position:relative"><div class="eyebrow">Position × Plant</div><h2 class="h2">每個家的位置，<br>都有適合它的植物。</h2><p class="lead">光線、通風、方位、動線與生活習慣不同，適合留下來的植物也不同。先看家的位置，再選能真正住下來的綠意。</p></div>
+        <div class="position-illustration-card">
+          <img src="./plant-position-human-illustration-v17.jpg" alt="人在家中照顧植物的舒適手繪情境">
+          <div class="position-illustration-note">不是每個角落都要放滿，<br>而是讓植物剛好接住人的生活。</div>
+        </div>
+      </div>
+      <div class="mini-place-cards">
+        <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/living.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>客廳主角</h3><div class="meta">家的核心｜明亮散射光</div><p>一盆大型植物會替客廳撐出重心，讓空間不只是家具的集合。</p><p class="fit">適合植物：龜背芋、琴葉榕、天堂鳥</p></div></article>
+        <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/entry.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>玄關</h3><div class="meta">進門第一眼｜穩定、圓潤</div><p>玄關要接住回家的人，不需要熱鬧，但要讓第一眼安定下來。</p><p class="fit">適合植物：金錢樹、福祿桐、圓葉植物</p></div></article>
+        <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/desk.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>書桌／工作角落</h3><div class="meta">小空間｜不干擾</div><p>工作很煩時，旁邊有一點安靜的綠，就像有東西陪你慢下來。</p><p class="fit">適合植物：孔雀木、小型觀葉、多肉</p></div></article>
+        <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/dining.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>餐桌</h3><div class="meta">日常視線中心｜儀式感</div><p>一束花或小花器，會讓吃飯和聊天多一點被好好對待的感覺。</p><p class="fit">適合植物：季節花材、香草、小花器</p></div></article>
+        <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/window.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>室內窗邊</h3><div class="meta">明亮但非曝曬｜接住光</div><p>窗邊不是有光就好，植物要能接住光，也不能被光傷到。</p><p class="fit">適合植物：龜背芋、黃金葛、粗肋草</p></div></article>
+        <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/shelf.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>層架／電視櫃</h3><div class="meta">冷硬線條｜生活細節</div><p>小盆栽、水耕瓶、小造景能讓櫃面不再只是機器和線條。</p><p class="fit">適合植物：水耕植物、小盆栽、垂墜植物</p></div></article>
+        <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/balcony.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>開放／半開放陽台</h3><div class="meta">戶外條件｜風與光</div><p>開放陽台需要能承受風、光與溫度變化的植物，選對了，才真的能長久留下來。</p><p class="fit">適合植物：斑葉海桐、白水木、斑葉非洲茉莉</p></div></article>
+        <article class="mini-place"><div class="mini-place-photo"><img src="./plant-v9-assets/locations/directions.jpg" alt="位置情境圖"></div><div class="mini-place-body"><svg viewBox="0 0 120 120"><path d="M60 104V20"/><path d="M60 56C34 48 20 30 18 10c28 2 44 20 42 46Z"/><path d="M62 68c30-8 48-28 52-54-30 4-50 24-52 54Z"/><path d="M60 88c-24-4-42-18-52-40 26-1 46 16 52 40Z"/></svg><h3>小造景角落</h3><div class="meta">家的個性｜活潑細節</div><p>小盆栽、小動物、畫作與光線可以一起形成家的表情。</p><p class="fit">適合植物：小盆栽、多肉、水耕組合</p></div></article>
+      </div>
+      <div class="balcony-band"><div class="balcony-copy"><h3 class="h3">陽台不只是一種陽台</h3><p>同樣是陽台，方位不同，光、風與曝曬也不同。先看方向，再選真正能留下來的植物。</p></div><div class="balcony-cols"><div class="balcony-col"><h4>東向</h4><p>光線溫和，適合需要明亮但不曝曬的植物。</p></div><div class="balcony-col"><h4>南向</h4><p>日照充足，適合喜光、能承受較高光照的植物。</p></div><div class="balcony-col"><h4>西向</h4><p>午後曝曬強，需選耐熱、耐曬且排水好的植物。</p></div><div class="balcony-col"><h4>北向</h4><p>光線較弱，適合耐陰、喜散射光的植物。</p></div></div></div>
+      <div class="section-transition-cta"><div><strong>還不確定放哪裡？</strong><p>先做一次植物配對，從家的位置和現在的狀態開始縮小範圍。</p></div><a href="#match">先做一次植物配對</a></div>
+    </div>
+  </section>
+
+  <section id="conditions" class="section">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Light × Wind × Direction</div><h2 class="h2">喜歡植物很簡單，<br>選對植物比較難</h2></div><p>植物能不能留下來，不只看喜不喜歡，也看光、風、方位與照顧節奏。</p></div>
+      <div class="condition-visual-grid">
+        <div class="condition-visual"><svg viewBox="0 0 64 64"><path d="M32 8v8M32 48v8M8 32h8M48 32h8M18 18l6 6M40 40l6 6M46 18l-6 6M24 40l-6 6M24 32a8 8 0 1 0 16 0 8 8 0 0 0-16 0Z"/></svg><h3 class="h3">光線</h3><p>直射光、散射光、半陰，會決定植物能不能健康留下。</p></div>
+        <div class="condition-visual"><svg viewBox="0 0 64 64"><path d="M10 22h32c8 0 8-10 0-10M10 34h42c8 0 8 10 0 10M10 46h24"/></svg><h3 class="h3">風</h3><p>陽台、窗邊、高樓層，風的強弱會改變植物選擇。</p></div>
+        <div class="condition-visual"><svg viewBox="0 0 64 64"><path d="M32 8l18 48-18-10-18 10L32 8Z"/><path d="M32 8v38"/></svg><h3 class="h3">方位</h3><p>東向溫和、南向光足、西向曝曬、北向偏陰，不可混在一起講。</p></div>
+        <div class="condition-visual"><svg viewBox="0 0 64 64"><path d="M22 12h20v40H22zM28 20h8M28 30h8M18 52h28M42 28c8 2 10 12 2 18"/></svg><h3 class="h3">生活習慣</h3><p>多久澆水、會不會出國、想療癒還是遮擋，都會影響配置。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plants" class="section">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">20 Plant Characters</div><h2 class="h2">20 種家的綠意性格，<br>找到適合你生活的那一株。</h2></div><p>不是每個人都是綠手指。先用幾個重點，找到適合你生活節奏的那一株。</p></div>
+      <div class="plant-groups-v3">
+        <div class="group-block"><div class="group-title"><h3>客廳主景型｜讓家有重心</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/monstera.jpg" alt="龜背芋 圖片"></div><div class="plant-mini-content"><h4>龜背芋</h4><div class="fit">適合想讓客廳有存在感的人</div><p>明亮散射光｜水分中等｜需留生長空間</p><small>家的意象：大葉撐住空間，像家裡有一個會呼吸的主角。</small><div class="meaning"><b>小風水：</b>開展人緣、帶動人氣流動，適合讓客廳氣場打開。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/fiddle.jpg" alt="琴葉榕 圖片"></div><div class="plant-mini-content"><h4>琴葉榕</h4><div class="fit">適合有明亮窗邊、願意觀察葉況的人</div><p>明亮光｜怕亂搬｜需穩定照顧</p><small>家的意象：高挑、有氣質，讓客廳像生活雜誌但不冷。</small><div class="meaning"><b>小風水：</b>向上生長、提升氣勢，適合做空間主景與事業成長感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/radermachera.jpg" alt="小豆樹 圖片"></div><div class="plant-mini-content"><h4>小豆樹</h4><div class="fit">適合喜歡柔軟樹形與自然感的人</div><p>明亮散射光｜水分中等｜需通風</p><small>家的意象：讓角落有樹的感覺，溫柔但有骨架。</small><div class="meaning"><b>小風水：</b>柔和生長、帶來貴人與陪伴感，適合安定小角落。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v38-assets/species/moneytree.jpg" alt="發財樹 圖片"></div><div class="plant-mini-content"><h4>發財樹</h4><div class="fit">適合想要穩定、好照顧主景的人</div><p>明亮至半陰｜少水｜新手友善</p><small>家的意象：穩住客廳，也有慢慢累積的祝福感。</small><div class="meaning"><b>小風水：</b>招財納氣、穩穩累積，適合玄關或客廳迎好運。</div></div></article>
+        </div></div>
+        <div class="group-block"><div class="group-title"><h3>玄關／穩定祝福型｜讓回家第一眼更穩</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/zz.jpg" alt="金錢樹 圖片"></div><div class="plant-mini-content"><h4>金錢樹</h4><div class="fit">適合忙碌、常忘記澆水的人</div><p>耐低光｜少水｜出國耐受高</p><small>家的意象：圓厚葉片像把入口穩住，不是招金感，是累積感。</small><div class="meaning"><b>小風水：</b>聚財、守財、耐久穩定，適合入口與財位意象。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v41-assets/species/polyscias.jpg" alt="福祿桐 圖片"></div><div class="plant-mini-content"><h4>福祿桐</h4><div class="fit">適合想讓玄關更圓潤、有福氣的人</div><p>明亮散射光｜水分中等｜怕積水</p><small>家的意象：讓進門第一眼更圓滿、更有人味。</small><div class="meaning"><b>小風水：</b>福氣圓滿、家庭和樂，適合回家第一眼的位置。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/snake.jpg" alt="虎尾蘭 圖片"></div><div class="plant-mini-content"><h4>虎尾蘭</h4><div class="fit">適合新手、低維護、想要俐落線條的人</div><p>耐陰耐旱｜少水｜出國友善</p><small>家的意象：乾淨、挺直，適合需要秩序感的入口。</small><div class="meaning"><b>小風水：</b>守護、擋煞、建立界線，適合需要乾淨秩序的空間。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/peperomia.jpg" alt="圓葉椒草 圖片"></div><div class="plant-mini-content"><h4>圓葉椒草</h4><div class="fit">適合小玄關、小櫃面與租屋族</div><p>明亮散射光｜少量澆水｜小空間友善</p><small>家的意象：小小一盆，也能讓入口有柔和表情。</small><div class="meaning"><b>小風水：</b>圓融、和氣、小空間聚氣，適合櫃面與玄關小角落。</div></div></article>
+        </div></div>
+        <div class="group-block"><div class="group-title"><h3>桌面／小角落陪伴型｜工作很煩時的安靜</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v38-assets/species/aralia.jpg" alt="孔雀木 圖片"></div><div class="plant-mini-content"><h4>孔雀木</h4><div class="fit">適合書桌、工作角落，喜歡細緻葉形的人</div><p>明亮散射光｜水分中等｜避免太乾</p><small>家的意象：像一個安靜陪伴，不吵也不搶畫面。</small><div class="meaning"><b>小風水：</b>整理思緒、提升專注，也有貴人扶持的細緻感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/aglaonema.jpg" alt="粗肋草 圖片"></div><div class="plant-mini-content"><h4>粗肋草</h4><div class="fit">適合室內明亮角落與新手</div><p>散射光｜水分中等｜避免曝曬</p><small>家的意象：用斑紋和顏色讓小角落有層次。</small><div class="meaning"><b>小風水：</b>活絡陰角、柔化低氣壓，讓室內多一點好氣色。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./zhijue-card-assets-v37/cute-world-landscape-gen.jpg" alt="多肉小盆 圖片"></div><div class="plant-mini-content"><h4>多肉小盆</h4><div class="fit">適合窗邊、小桌面、照顧頻率低的人</div><p>高光｜少水｜怕悶濕</p><small>家的意象：小小的生命感，適合慢慢觀察。</small><div class="meaning"><b>小風水：</b>穩定累積、守住小確幸，適合桌面與工作旁的小祝福。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./zhijue-card-assets-v37/work-calm-landscape-gen.jpg" alt="白鶴芋 圖片"></div><div class="plant-mini-content"><h4>白鶴芋</h4><div class="fit">適合想要一點花感、空間柔和的人</div><p>半陰至散射光｜喜濕｜缺水會垂</p><small>家的意象：白色花苞讓角落安靜、乾淨、有呼吸。</small><div class="meaning"><b>小風水：</b>淨化、平衡、安定情緒，讓空間更清爽乾淨。</div></div></article>
+        </div></div>
+        <div class="group-block"><div class="group-title"><h3>層架／水耕／流動型｜讓冷硬線條變柔和</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/pothos.jpg" alt="黃金葛 圖片"></div><div class="plant-mini-content"><h4>黃金葛</h4><div class="fit">適合新手、層架、水耕與垂墜感</div><p>耐陰｜水分彈性高｜很好照顧</p><small>家的意象：讓綠意沿著層架流動，冷硬線條變柔。</small><div class="meaning"><b>小風水：</b>生生不息、延展好運，適合柔化層架與帶動流動感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v30-assets/species/syngonium.jpg" alt="合果芋 圖片"></div><div class="plant-mini-content"><h4>合果芋</h4><div class="fit">適合想要葉色變化、又不想太難照顧的人</div><p>散射光｜水分中等｜可水耕</p><small>家的意象：有一點活潑，讓家不只是米色和木頭。</small><div class="meaning"><b>小風水：</b>方向明確、關係圓融，適合讓小角落變活潑。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v38-assets/species/ivy.jpg" alt="常春藤 圖片"></div><div class="plant-mini-content"><h4>常春藤</h4><div class="fit">適合喜歡垂墜、歐式窗邊感的人</div><p>明亮光｜喜通風｜怕悶熱</p><small>家的意象：讓牆邊和層架長出時間感。</small><div class="meaning"><b>小風水：</b>長久、延續、關係連結，適合牆面與層架的柔和生長感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v38-assets/species/spider.jpg" alt="吊蘭 圖片"></div><div class="plant-mini-content"><h4>吊蘭</h4><div class="fit">適合明亮窗邊、想要輕盈線條的人</div><p>散射光｜水分中等｜繁殖容易</p><small>家的意象：像一串會呼吸的線條，讓空間變輕。</small><div class="meaning"><b>小風水：</b>清新、延續、子株繁生，有家庭生生不息的意象。</div></div></article>
+        </div></div>
+        <div class="group-block"><div class="group-title"><h3>陽台／戶外光感型｜接住風、光與外面的衝感</h3><span>適合誰｜光線水分｜注意與家的意象</span></div><div class="plant-mini-grid">
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v45-assets/species/variegated-pittosporum.jpg" alt="斑葉海桐 圖片"></div><div class="plant-mini-content"><h4>斑葉海桐</h4><div class="fit">適合開放或半開放陽台，作為前段柔和屏障</div><p>戶外光｜耐風｜需通風與修剪</p><small>家的意象：葉緣帶亮、枝葉較密，放在陽台前段接住視線與風。</small><div class="meaning"><b>小風水：</b>擋風、屏障、提亮外氣，適合陽台形成保護感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v38-assets/species/baishui.jpg" alt="白水木 圖片"></div><div class="plant-mini-content"><h4>白水木</h4><div class="fit">適合有日照與通風的戶外位置</div><p>戶外強光｜耐曬｜需排水</p><small>家的意象：以微微歪斜的枝幹和銀綠葉色形成姿態，像陽台裡一棵有風的樹。</small><div class="meaning"><b>小風水：</b>安定、清涼、化解外在衝感，適合放在陽台底部形成沉穩的守護感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./zhijue-card-assets-v37/african-jasmine-styled-landscape-gen.jpg" alt="斑葉非洲茉莉 圖片"></div><div class="plant-mini-content"><h4>斑葉非洲茉莉</h4><div class="fit">適合半開放陽台、需要濃綠與斑葉層次的位置</div><p>明亮戶外光｜通風｜需修剪維持圓密樹冠</p><small>家的意象：白色圓盆、圓密樹冠與黃綠斑葉，讓明亮牆面旁的戶外角落變得整齊、清爽、有景觀感。</small><div class="meaning"><b>小風水：</b>提亮、穩定、整理陽台氣場，讓空間有清爽明亮的景觀感。</div></div></article>
+          <article class="plant-mini"><div class="plant-thumb"><img src="./plant-v38-assets/species/rosemary.jpg" alt="迷迭香 圖片"></div><div class="plant-mini-content"><h4>迷迭香</h4><div class="fit">適合有陽光、喜歡香氣與料理感的人</div><p>全日照｜少水｜怕悶濕</p><small>家的意象：一點香氣，讓陽台和餐桌之間有生活連結。</small><div class="meaning"><b>小風水：</b>淨化、提神、守護日常，也讓家有清醒的生活味。</div></div></article>
+        </div></div>
+      </div>
+      <div class="section-transition-cta"><div><strong>選不出來也沒關係。</strong><p>讓植覺配幫你縮小範圍，先配對，再留下植物顧問可以回覆的線索。</p></div><a href="#match">讓植覺配幫你配</a></div>
+      </div>
+  </section>
+
+  <section id="match" class="section">
+    <div class="wrap quiz game-v50">
+      <div class="game-intro">
+        <div class="eyebrow">Plant Match</div>
+        <h2 class="h2">先讀懂一個角落，<br>再配一盆剛剛好的植物</h2>
+        <p>這不是考試，也不是植物百科。只要用很生活的方式回答：想改變哪裡、現在需要什麼、光線與照顧習慣大概如何。</p>
+        <div class="match-steps" aria-label="植物配對三步驟"><span><b>1</b> 選角落</span><span><b>2</b> 選狀態</span><span><b>+</b> 補光線/照顧</span><span><b>3</b> 選語氣</span></div>
+        <div class="ux-reassure" aria-label="配對安心提示"><div><b>不用懂植物</b><span>用家的位置和你的感覺回答就好。</span></div><div><b>先給 3 種方向</b><span>最適合、最好照顧、最有氛圍，不只一個答案。</span></div><div><b>可以帶去諮詢</b><span>結果會自動整理成植物顧問看得懂的線索。</span></div></div>
+      </div>
+      <div class="quiz-steps game-flow">
+        <div class="game-panel"><div class="game-panel-head"><span>STEP 1</span><h3>你想先改變哪個角落？</h3></div><div class="choice-grid location-grid">
+          <button class="choice-card" data-game="place">玄關<span>回家第一眼先穩下來</span></button>
+          <button class="choice-card" data-game="place">書桌<span>工作很煩時有一點安靜</span></button>
+          <button class="choice-card" data-game="place">客廳<span>讓家的中心長出主角</span></button>
+          <button class="choice-card" data-game="place">窗邊<span>把光留在一個位置</span></button>
+          <button class="choice-card" data-game="place">陽台<span>讓風和外面的衝感變柔和</span></button>
+          <button class="choice-card" data-game="place">小造景<span>養一個會讓你靠近的小世界</span></button>
+        </div></div>
+        <div class="game-panel"><div class="game-panel-head"><span>STEP 2</span><h3>你現在最需要什麼？</h3></div><div class="choice-grid state-grid">
+          <button class="choice-card" data-game="state">安定<span>穩住心和家的入口</span></button>
+          <button class="choice-card" data-game="state">放鬆<span>讓視線停下來</span></button>
+          <button class="choice-card" data-game="state">提亮<span>讓角落多一點光</span></button>
+          <button class="choice-card" data-game="state">好運<span>從進門開始有祝福感</span></button>
+          <button class="choice-card" data-game="state">陪伴<span>不吵，但一直在</span></button>
+          <button class="choice-card" data-game="state">活起來<span>把冷硬處變成生活</span></button>
+        </div></div>
+        <div class="quick-constraint" aria-label="光線與照顧習慣補充">
+          <div class="quick-constraint-head"><div><span>Optional but useful</span><h3>再補兩個現實條件，推薦會更準</h3></div><p>如果不確定也沒關係，選「不確定」就好。這一步是為了避免推薦出漂亮但養不住的植物。</p></div>
+          <div class="constraint-grid">
+            <div class="constraint-group"><b>這個角落的光線比較像？</b><div class="constraint-pills">
+              <button class="choice-card" data-game="light">偏陰<span>離窗較遠或北向</span></button>
+              <button class="choice-card" data-game="light">柔光<span>明亮但不直曬</span></button>
+              <button class="choice-card" data-game="light">強光<span>南向或西曬</span></button>
+              <button class="choice-card" data-game="light">不確定<span>先請顧問判斷</span></button>
+            </div></div>
+            <div class="constraint-group"><b>你希望照顧難度？</b><div class="constraint-pills">
+              <button class="choice-card" data-game="habit">低維護<span>常忘記澆水</span></button>
+              <button class="choice-card" data-game="habit">每天會看<span>願意觀察葉況</span></button>
+              <button class="choice-card" data-game="habit">可修剪<span>願意整理造型</span></button>
+              <button class="choice-card" data-game="habit">新手安心<span>先不要太難</span></button>
+            </div></div>
+          </div>
+        </div>
+        <div class="live-result" id="liveResult"><div class="result-label">目前選擇</div><strong>先選一個角落和一種狀態。</strong><p>植覺配會先讀懂這個位置，再把植物、照顧難度與家的感覺配在一起。</p></div>
+        <div class="card-game"><div class="card-game-head"><strong>STEP 3｜選一種生活語氣</strong><span>前兩步決定植物，這一步只決定家的氛圍。</span></div>
+          <div class="oracle-grid">
+            <button class="oracle-card" data-card="morning"><img src="./life-tone-assets-v57/morning.png" alt="晨光停留"><span>晨光停留</span><small>讓角落先亮起來</small></button>
+            <button class="oracle-card" data-card="breath"><img src="./life-tone-assets-v57/breath.png" alt="鬆一口氣"><span>鬆一口氣</span><small>把煩躁慢慢放下</small></button>
+            <button class="oracle-card" data-card="tiny"><img src="./life-tone-assets-v57/tiny.png" alt="小宇宙"><span>小宇宙</span><small>讓角落有一點故事</small></button>
+            <button class="oracle-card" data-card="guard"><img src="./life-tone-assets-v57/guard.png" alt="守護感"><span>守護感</span><small>替家接住外面的風</small></button>
+          </div>
+          <div class="card-result result-card-preview" id="cardResult">
+            <div class="result-kicker">植物結果卡預覽</div>
+            <b>先選完三步，這裡會變成你的配對卡</b>
+            <p>結果會先說明「你的空間狀態」，再給三種植物方向：最適合、最好照顧、最有氛圍。</p>
+            <div class="result-lines">
+              <span><strong>主植物</strong>依你的角落與狀態決定</span>
+              <span><strong>安心提示</strong>會標出低維護、光線、澆水節奏</span>
+              <span><strong>下一步</strong>可直接帶入諮詢單</span>
+            </div>
+            <p class="match-soft-note">不用一次選對。這張卡的目的，是先幫你把家的角落說清楚。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consult" class="closing-consult">
+    <div class="wrap">
+      <div class="closing-panel">
+        <div class="closing-content">
+          <div class="closing-copy">
+            <div class="eyebrow">Next Step</div>
+            <h2 class="h2">想讓哪個角落，
+真的開始變不一樣？</h2>
+            <p>測完之後，可以把你家的位置、光線和想了解的植物留下來。我們會依照家的條件，整理更適合你的植物方向。</p>
+          </div>
+          <form class="consult-form" id="plantConsultForm" aria-label="植物諮詢表單">
+            <h3>植物諮詢單</h3>
+            <p>先留下家的位置、光線和照顧習慣；如果剛剛做過配對，結果會自動帶入，植物顧問就能更快讀懂你的角落。</p>
+            <div class="consult-match-hint" id="consultMatchHint" aria-live="polite"></div>
+            <div class="consult-grid">
+              <div class="consult-field"><label for="consultPlace">想改變的位置</label><select class="consult-select" id="consultPlace" name="place"><option>玄關</option><option>書桌／工作角落</option><option>客廳</option><option>窗邊</option><option>陽台</option><option>小造景角落</option><option>不確定，想請你判斷</option></select></div>
+              <div class="consult-field"><label for="consultLight">目前光線</label><select class="consult-select" id="consultLight" name="light"><option>東向柔光</option><option>南向光足</option><option>西曬較強</option><option>北向偏陰</option><option>不確定，想請你判斷</option></select></div>
+              <div class="consult-field"><label for="consultPlant">想了解的植物</label><input class="consult-input" id="consultPlant" name="plant" list="plantIdeas" placeholder="例：金錢樹、白水木、龜背芋，或不確定想請你推薦"><datalist id="plantIdeas"><option value="不確定，想請你推薦"><option value="想了解耐陰植物"><option value="想了解低維護植物"><option value="想了解陽台植物"></datalist></div>
+              <div class="consult-field"><label for="consultHabit">照顧習慣</label><select class="consult-select" id="consultHabit" name="habit"><option>常忘記澆水</option><option>每天會看一下</option><option>願意修剪整理</option><option>常出差，希望低維護</option><option>新手，想從簡單開始</option></select></div>
+              <div class="consult-field full"><label for="consultNote">想補充的狀況</label><textarea class="consult-textarea" id="consultNote" name="note" placeholder="例：想讓陽台比較有遮擋、書桌不要太煩、玄關想要穩一點。"></textarea></div>
+            </div>
+            <div class="consult-actions"><button class="consult-submit" type="submit">送出諮詢</button></div>
+            <p class="consult-note">送出後會跳出聯絡資料視窗。留下資料後，植物顧問會再和你聯絡。</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap">植覺配｜讓植物配對家的位置與人的狀態。<span style="opacity:.55"> UX v106</span></div></footer>
+
+<script>
+(() => {
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobileNavMenu');
+  const closeMobileMenu = () => {
+    if (!menuToggle || !mobileMenu) return;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    mobileMenu.classList.remove('is-open');
+  };
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      const open = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!open));
+      mobileMenu.setAttribute('aria-hidden', String(open));
+      mobileMenu.classList.toggle('is-open', !open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileMenu(); });
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.classList.contains('is-open')) return;
+      if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMobileMenu();
+    });
+  }
+
+  const result = document.getElementById('liveResult');
+  const selected = {};
+  let latestMatchResult = null;
+
+  let consultPayload = {};
+  const makeResult = () => {
+    if (!result) return;
+    const place = selected.place;
+    const state = selected.state;
+    if (!place && !state) {
+      result.innerHTML = `<div class="result-label">目前選擇</div><strong>先選一個角落和一種狀態。</strong><p>植覺配會先讀懂這個位置，再把植物、照顧難度與家的感覺配在一起。</p>`;
+      return;
+    }
+    const extra = [selected.light, selected.habit].filter(Boolean).join('｜');
+    const title = place && state ? `你選了：${place} × ${state}` : `已選：${place || state}`;
+    const body = place && state ? `很好，這個角落的基本狀態已經清楚了。${extra ? '你也補了：' + extra + '。' : '如果願意，再補光線與照顧習慣會更準。'}最後選一種生活語氣，結果會整理成一張可帶去諮詢的配對卡。` : '再選另一個選項，主植物方向會更準。';
+    result.innerHTML = `<div class="result-label">目前選擇</div><strong>${title}</strong><p>${body}</p>`;
+  };
+  const updateConsultMatchHint = () => {
+    const hint = document.getElementById('consultMatchHint');
+    if (!hint) return;
+    if (!latestMatchResult) {
+      hint.classList.remove('is-visible');
+      hint.textContent = '';
+      return;
+    }
+    hint.textContent = `已帶入你的配對結果：${latestMatchResult.place} × ${latestMatchResult.state} × ${latestMatchResult.tone}｜主提案：${latestMatchResult.plant}。如果可以，諮詢時再補一張現場照，會更準。`;
+    hint.classList.add('is-visible');
+    const lightSelect = document.getElementById('consultLight');
+    const habitSelect = document.getElementById('consultHabit');
+    if (lightSelect && latestMatchResult.light) {
+      const map = {'偏陰':'北向偏陰','柔光':'東向柔光','強光':'西曬較強','不確定':'不確定，想請你判斷'};
+      lightSelect.value = map[latestMatchResult.light] || lightSelect.value;
+    }
+    if (habitSelect && latestMatchResult.habit) {
+      const map = {'低維護':'常忘記澆水','每天會看':'每天會看一下','可修剪':'願意修剪整理','新手安心':'新手，想從簡單開始'};
+      habitSelect.value = map[latestMatchResult.habit] || habitSelect.value;
+    }
+  };
+  document.querySelectorAll('.choice-card').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.game || 'choice';
+      document.querySelectorAll(`.choice-card[data-game="${group}"]`).forEach(x => x.classList.remove('is-selected'));
+      btn.classList.add('is-selected');
+      selected[group] = btn.childNodes[0].textContent.trim();
+      latestMatchResult = null;
+      updateConsultMatchHint();
+      makeResult();
+    });
+  });
+  const cardResult = document.getElementById('cardResult');
+  const placePlan = {
+    '玄關': { plant:'金錢樹＋福祿桐', easy:'虎尾蘭', mood:'圓葉椒草', spot:'玄關／入口櫃', care:'少水、耐陰、避免積水', image:'回家第一眼先穩下來', read:'這個入口需要的是穩，不是熱鬧；植物要讓回家第一眼先放慢。' },
+    '書桌': { plant:'白鶴芋＋孔雀木', easy:'黃金葛', mood:'孔雀木', spot:'書桌旁／工作角落', care:'明亮散射光、保持微濕', image:'工作很煩時，有一點安靜陪著你', read:'這個位置需要安靜陪伴，不要干擾工作，也不要太需要被照顧。' },
+    '客廳': { plant:'龜背芋＋琴葉榕', easy:'發財樹', mood:'小豆樹', spot:'客廳主視覺角落', care:'明亮散射光、水分中等', image:'讓家的中心長出會呼吸的主角', read:'客廳需要一個有重心的綠意，讓空間不只是家具集合，而是有生活的中心。' },
+    '窗邊': { plant:'黃金葛＋合果芋', easy:'粗肋草', mood:'常春藤', spot:'室內窗邊／層架', care:'散射光、水分彈性高', image:'把光留在一個柔和的位置', read:'窗邊不只是有光，它需要一株能把光變柔、讓視線停留的植物。' },
+    '陽台': { plant:'斑葉海桐＋白水木', easy:'迷迭香', mood:'斑葉非洲茉莉', spot:'開放／半開放陽台', care:'戶外光、通風、排水要好', image:'替家接住風、光與外面的衝感', read:'陽台要先看風、曬與排水；植物要能留下來，才會真的變成風景。' },
+    '小造景': { plant:'多肉小盆＋小動物造景', easy:'水耕黃金葛', mood:'小型白鶴芋', spot:'櫃面／窗邊小角落', care:'高光、少水、避免悶濕', image:'養一個會讓你靠近的小世界', read:'這裡適合做成一個會想靠近的小世界，重點是比例、留白和每天願意看一眼。' }
+  };
+  const stateTune = {
+    '安定': { title:'安定入口組', add:'選擇圓葉、厚葉或樹形穩的植物，讓角落先把心穩住。', blessing:'穩定、聚氣、把回家的節奏放慢' },
+    '放鬆': { title:'鬆一口氣角落', add:'植物不要太搶戲，葉色柔和、線條安靜，讓視線可以停下來。', blessing:'淨化、降噪、讓煩躁慢慢退開' },
+    '提亮': { title:'晨光提亮組', add:'加入斑葉、淺色盆器或靠近光的位置，讓角落多一點亮度。', blessing:'提亮氣場、讓家有清爽感' },
+    '好運': { title:'好運迎門組', add:'用圓潤、向上或有祝福感的植物，放在每天會看見的位置。', blessing:'聚財、圓滿、迎接好的開始' },
+    '陪伴': { title:'安靜陪伴組', add:'選小一點、能每天觀察變化的植物，不吵但一直在。', blessing:'陪伴、貴人、把日常接回來' },
+    '活起來': { title:'角落甦醒組', add:'用垂墜、斑葉或小造景，把冷硬角落變成有故事的地方。', blessing:'流動、生氣、讓空間重新有表情' }
+  };
+
+  const fitDiagnosis = (light, habit) => {
+    const lightText = {
+      '偏陰':'光線偏弱，推薦會優先避開太需要直射光的植物。',
+      '柔光':'明亮散射光很適合多數室內觀葉，是安全漂亮的條件。',
+      '強光':'光線較強，需注意西曬、葉片灼傷與水分蒸散。',
+      '不確定':'光線尚未確認，建議諮詢時補一張白天現場照。'
+    }[light || '不確定'];
+    const habitText = {
+      '低維護':'照顧節奏要低壓，會優先推薦耐旱或容錯高的選項。',
+      '每天會看':'你可以接受觀察葉況，植物選擇可以更細緻。',
+      '可修剪':'可以加入樹形或需要整理的植物，畫面完成度會更高。',
+      '新手安心':'先讓成功率變高，比一次挑戰高難度更重要。'
+    }[habit || '新手安心'];
+    return { lightText, habitText };
+  };
+  const habitCareHint = (habit) => ({
+    '低維護':'常忘記澆水：優先低維護與排水好的盆器',
+    '每天會看':'每天會看：可選葉況反應細緻的植物',
+    '可修剪':'願意修剪：可做樹形或層次更完整的配置',
+    '新手安心':'新手安心：先選容錯率高、好恢復的植物'
+  }[habit || '新手安心']);
+
+  const resultName = (place, state, toneName, base, tune) => {
+    if (place === '玄關' && state === '安定') return `玄關安定型：回家第一眼的穩定植栽`;
+    if (toneName === '晨光停留') return `晨光${place}配方：把一天慢慢接住`;
+    if (toneName === '鬆一口氣') return `${place}放鬆型：讓煩躁先停下來`;
+    if (toneName === '小宇宙') return `${place}小宇宙：養一個會想靠近的角落`;
+    if (toneName === '守護感') return `${place}守護組：替家接住外面的風`;
+    return `${place}${state}組：${base.plant}`;
+  };
+  const cardTone = {
+    morning: { name:'晨光停留', tone:'這個角落適合放在每天會被光照到、也會被你看見的位置，像早上先替家點一盞小燈。' },
+    breath: { name:'鬆一口氣', tone:'這個角落不用太熱鬧，重點是讓視線停下來，幫人從工作和訊息裡退回生活。' },
+    tiny: { name:'小宇宙', tone:'這個角落可以多一點可愛細節，讓植物、小物和光線變成一個會想靠近的小世界。' },
+    guard: { name:'守護感', tone:'這個角落適合做成安定的邊界，替家接住外面的風、光和壓力。' }
+  };
+  document.querySelectorAll('.oracle-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.oracle-card').forEach(c => c.classList.remove('is-picked'));
+      card.classList.add('is-picked');
+      const place = selected.place || '玄關';
+      const state = selected.state || '安定';
+      const base = placePlan[place] || placePlan['玄關'];
+      const tune = stateTune[state] || stateTune['安定'];
+      const tone = cardTone[card.dataset.card] || cardTone.morning;
+      const light = selected.light || '不確定';
+      const habit = selected.habit || '新手安心';
+      const fit = fitDiagnosis(light, habit);
+      const name = resultName(place, state, tone.name, base, tune);
+      latestMatchResult = {
+        place,
+        state,
+        tone: tone.name,
+        plant: base.plant,
+        resultName: name,
+        spot: base.spot,
+        care: base.care,
+        image: base.image,
+        light,
+        habit,
+        stateTitle: tune.title
+      };
+      updateConsultMatchHint();
+      if (cardResult) {
+        cardResult.classList.remove('is-revealed');
+        cardResult.classList.add('is-ready');
+        cardResult.innerHTML = `<div class="result-kicker">你的植物結果卡</div><div class="flip-picked">你翻到的是：${tone.name}</div><b>${name}<span class="share-title">${tune.title}：${base.plant}</span></b><div class="result-meaning"><strong>你的空間狀態</strong>${base.read} ${tone.tone}</div><div class="fit-diagnosis"><b>現實條件提醒</b>${fit.lightText}<br>${fit.habitText}</div><div class="recommend-stack"><div class="recommend-item"><small>BEST FIT</small><b>${base.plant}</b><span>最貼近這個位置與狀態的主提案。</span></div><div class="recommend-item"><small>EASIEST</small><b>${base.easy}</b><span>如果你怕養死，可以先從這個低壓版本開始。</span></div><div class="recommend-item"><small>MOST MOOD</small><b>${base.mood}</b><span>如果你最在意畫面與氣質，可以看這個方向。</span></div></div><div class="result-lines"><span><strong>適合位置</strong>${base.spot}</span><span><strong>照顧節奏</strong>${base.care}</span><span><strong>狀態加成</strong>${tune.add}</span><span><strong>家的意象</strong>${base.image}</span></div><div class="care-hints"><span>${habitCareHint(habit)}</span><span>${light === '不確定' ? '光線不確定：諮詢時補一張現場照' : '光線條件：' + light}</span><span>想要品牌感：用盆器與留白一起配</span></div><div class="result-actions"><a href="#consult">帶著這張卡去諮詢</a><button type="button" id="copyMatchCard">複製我的配對卡</button></div><div class="result-toast" id="copyMatchToast">已複製配對卡文字。</div>`;
+        const copyBtn = document.getElementById('copyMatchCard');
+        if (copyBtn) copyBtn.addEventListener('click', async () => {
+          const text = `植覺配｜我的植物配對卡
+角落：${place}
+狀態：${state}
+生活語氣：${tone.name}
+光線：${light}
+照顧習慣：${habit}
+空間狀態：${base.read}
+最適合：${base.plant}
+最好照顧：${base.easy}
+最有氛圍：${base.mood}
+適合位置：${base.spot}
+照顧節奏：${base.care}`;
+          try { await navigator.clipboard.writeText(text); } catch (e) {}
+          const toast = document.getElementById('copyMatchToast');
+          if (toast) { toast.classList.add('is-visible'); setTimeout(() => toast.classList.remove('is-visible'), 1800); }
+        });
+        requestAnimationFrame(() => cardResult.classList.add('is-revealed'));
+        requestAnimationFrame(() => cardResult.scrollIntoView({ behavior:'smooth', block:'start' }));
+      }
+    });
+  });
+
+  const getContactModal = () => document.getElementById('contactModal');
+  const getContactSummary = () => document.getElementById('contactSummary');
+  const getContactSuccess = () => document.getElementById('contactSuccess');
+  const openContactModal = () => { const modal = getContactModal(); if (modal) modal.classList.add('is-open'); };
+  const closeContactModal = () => { const modal = getContactModal(); if (modal) modal.classList.remove('is-open'); };
+  const consultForm = document.getElementById('plantConsultForm');
+  if (consultForm) {
+    consultForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formPayload = Object.fromEntries(new FormData(consultForm).entries());
+      consultPayload = latestMatchResult ? { ...formPayload, match: latestMatchResult } : formPayload;
+      const contactSummary = getContactSummary();
+      const contactSuccess = getContactSuccess();
+      if (contactSummary) {
+        contactSummary.textContent = latestMatchResult
+          ? `你剛配到：${latestMatchResult.place} × ${latestMatchResult.state} × ${latestMatchResult.tone}｜推薦植物：${latestMatchResult.plant}｜${latestMatchResult.resultName}`
+          : `你想了解：${formPayload.place || '家裡某個角落'}／${formPayload.light || '光線待確認'}／${formPayload.plant || '想請我們推薦植物'}`;
+      }
+      if (contactSuccess) contactSuccess.classList.remove('is-visible');
+      openContactModal();
+    });
+  }
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-close-contact]')) closeContactModal();
+    if (e.target.id === 'contactModal') closeContactModal();
+  });
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const contact = Object.fromEntries(new FormData(contactForm).entries());
+      console.log('植覺配諮詢資料', { consult: consultPayload, contact });
+      const contactSuccess = getContactSuccess();
+      if (contactSuccess) contactSuccess.classList.add('is-visible');
+    });
+  }
+})();
+</script>
+
+
+<div class="contact-modal" id="contactModal" role="dialog" aria-modal="true" aria-label="留下聯絡資料">
+  <div class="contact-box">
+    <button class="contact-close" type="button" data-close-contact aria-label="關閉">×</button>
+    <h3>留下聯絡資料</h3>
+    <p id="contactSummary">留下資料後，植物顧問會依照你的植物諮詢內容，再和你聯絡。</p>
+    <form id="contactForm" class="contact-grid">
+      <div><label for="contactName">姓名</label><input id="contactName" name="name" required placeholder="請輸入姓名"></div>
+      <div><label for="contactLine">LINE ID</label><input id="contactLine" name="line" placeholder="例：@yourline 或 LINE ID"></div>
+      <div><label for="contactPhone">聯絡電話</label><input id="contactPhone" name="phone" inputmode="tel" placeholder="請輸入電話"></div>
+      <div><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" placeholder="請輸入 Email"></div>
+      <button class="contact-submit" type="submit">確認送出</button>
+      <div class="contact-success" id="contactSuccess">已留下資料。植物顧問會再和你聯絡。</div>
+    </form>
+  </div>
+</div>
+
+<a class="back-top" href="#top" aria-label="回到上方">↑</a>
+</body>
+</html>
+
+
+<!-- v36 correction: reference photos are identity calibration only; website examples use other styled spaces, not the user home balcony as the main示意. -->
